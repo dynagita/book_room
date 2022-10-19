@@ -15,8 +15,14 @@
             Error = error;
         }
 
+        public CommonResponse(int status, string error)
+        {
+            Status = status;
+            Error = error;
+        }
+
         public static CommonResponse<T> Ok(T data) => new CommonResponse<T>(200, data, string.Empty);
 
-        public static CommonResponse<T> BadRequest(T data, string error) => new CommonResponse<T>(200, data, error);
+        public static CommonResponse<T> BadRequest(string error) => new CommonResponse<T>(400, error);
     }
 }
