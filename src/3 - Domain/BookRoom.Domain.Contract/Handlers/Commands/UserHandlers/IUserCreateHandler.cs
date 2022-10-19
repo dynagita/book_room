@@ -1,6 +1,6 @@
-﻿using BookRoom.Domain.Contract.Requests.Commands.User;
+﻿using BookRoom.Domain.Contract.Requests.Commands.UserCommands;
 using BookRoom.Domain.Contract.Responses;
-using BookRoom.Domain.Contract.Responses.User;
+using BookRoom.Domain.Contract.Responses.UserResponses;
 using MediatR;
 
 namespace BookRoom.Domain.Contract.Handlers.Commands.User

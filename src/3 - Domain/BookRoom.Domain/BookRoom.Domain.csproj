@@ -10,4 +10,12 @@
     <Folder Include="Repositories\MongoDb\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.2.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BookRoom.Domain.Contract\BookRoom.Domain.Contract.csproj" />
+  </ItemGroup>
+
 </Project>

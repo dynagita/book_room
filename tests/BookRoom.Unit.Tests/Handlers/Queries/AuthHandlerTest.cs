@@ -1,13 +1,13 @@
 ﻿using AutoBogus;
-using BookRoom.Application.Handlers.Queries.Auth;
+using BookRoom.Application.Handlers.Queries.AuthQueries;
 using BookRoom.Domain.Contract.Handlers.Queries.Auth;
-using BookRoom.Domain.Contract.Requests.Commands.User;
-using BookRoom.Domain.Contract.Responses.User;
+using BookRoom.Domain.Contract.Requests.Commands.UserCommands;
+using BookRoom.Domain.Contract.Responses.UserResponses;
 using BookRoom.Domain.Contract.Responses;
 using BookRoom.Domain.Contract.UseCases.Auth;
 using Moq;
-using BookRoom.Domain.Contract.Requests.Queries.Auth;
-using BookRoom.Domain.Contract.Responses.Auth;
+using BookRoom.Domain.Contract.Requests.Queries.AuthQueries;
+using BookRoom.Domain.Contract.Responses.AuthResponses;
 using FluentAssertions;
 
 namespace BookRoom.Unit.Tests.Handlers.Queries

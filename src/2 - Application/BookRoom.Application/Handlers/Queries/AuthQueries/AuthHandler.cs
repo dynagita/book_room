@@ -1,10 +1,10 @@
 ﻿using BookRoom.Domain.Contract.Handlers.Queries.Auth;
-using BookRoom.Domain.Contract.Requests.Queries.Auth;
+using BookRoom.Domain.Contract.Requests.Queries.AuthQueries;
 using BookRoom.Domain.Contract.Responses;
-using BookRoom.Domain.Contract.Responses.Auth;
+using BookRoom.Domain.Contract.Responses.AuthResponses;
 using BookRoom.Domain.Contract.UseCases.Auth;
 
-namespace BookRoom.Application.Handlers.Queries.Auth
+namespace BookRoom.Application.Handlers.Queries.AuthQueries
 {
     public class AuthHandler : IAuthHandler
     {

@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using BookRoom.Domain.Contract.Requests.Commands.User;
-using BookRoom.Domain.Contract.Responses.User;
+using BookRoom.Domain.Contract.Requests.Commands.UserCommands;
+using BookRoom.Domain.Contract.Responses.UserResponses;
 using BookRoom.Domain.Entities;
 
 namespace BookRoom.Application.Mappers

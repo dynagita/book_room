@@ -1,11 +1,15 @@
 ﻿using AutoBogus;
+using BookRoom.Application.Extensions;
 using BookRoom.Application.UseCases.Auth;
-using BookRoom.Domain.Contract.Requests.Queries.Auth;
+using BookRoom.Domain.Contract.Configurations;
+using BookRoom.Domain.Contract.Constants;
+using BookRoom.Domain.Contract.Requests.Queries.AuthQueries;
 using BookRoom.Domain.Contract.UseCases.Auth;
 using BookRoom.Domain.Repositories.EntityFramework;
 using BookRoom.Unit.Tests.Utils;
 using FluentAssertions;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Moq;
 
 namespace BookRoom.Unit.Tests.UseCases.Auth
@@ -15,33 +19,53 @@ namespace BookRoom.Unit.Tests.UseCases.Auth
         private readonly IAuthenticateUseCase _useCase;
         private readonly Mock<IUserRepository> _repository;
         private readonly Mock<ILogger<AuthenticateUseCase>> _logger;
+        private readonly ITokenCreateUseCase _tokenCreator;
+        private readonly Mock<IOptions<AuthenticationConfiguration>> _options;
         public AuthenticateUseCaseTest()
         {
             _repository = new Mock<IUserRepository>();
             _logger = new Mock<ILogger<AuthenticateUseCase>>();
-            _useCase = new AuthenticateUseCase(_repository.Object, MapperCreate.CreateMappers(), _logger.Object);
+            _options = new Mock<IOptions<AuthenticationConfiguration>>();
+            _options.Setup(x => x.Value)
+                .Returns(new AuthenticationConfiguration()
+                {
+                    AuthSecret = "MySuperSecretKey"
+                });
+            _tokenCreator = new TokenCreateUseCase(_options.Object);
+
+            _useCase = new AuthenticateUseCase(_repository.Object, 
+                MapperCreate.CreateMappers(), 
+                _logger.Object,
+                _tokenCreator);
         }
 
         [Fact(DisplayName = "ShouldAuthenticate")]
         public async Task ShouldAuthenticate()
         {
             var user = new AutoFaker<Domain.Entities.User>().Generate();
-            
-            _repository.Setup(x => x.GetByMailAsync(user.Email, It.IsAny<CancellationToken>()))
-                .ReturnsAsync(user);
+
             var request = new AuthRequest()
             {
                 Email = user.Email,
                 Password = user.Password
             };
+
+            user.Password = user.Password.ComputeHash();
+
+            _repository.Setup(x => x.GetByMailAsync(user.Email, It.IsAny<CancellationToken>()))
+                .ReturnsAsync(user);
+            
             var auth = await _useCase.HandleAsync(request, new CancellationToken());
 
             auth.Data.Token
                 .Should()
                 .NotBeNull();
+            auth.Data.Token
+                .Should()
+                .NotBeEmpty();
             auth.Error
                 .Should()
-                .BeNull();
+                .BeEmpty();
             auth.Data.User
                 .Should()
                 .NotBeNull();
@@ -61,15 +85,15 @@ namespace BookRoom.Unit.Tests.UseCases.Auth
             };
             var auth = await _useCase.HandleAsync(request, new CancellationToken());
 
-            auth.Data.Token
+            auth.Data
                 .Should()
                 .BeNull();
             auth.Error
                 .Should()
-                .NotBeNull();
-            auth.Data.User
+                .Be(ErrorMessages.AuthMessages.USER_NOTFOUND);
+            auth.Status
                 .Should()
-                .BeNull();
+                .Be(400);
         }
 
         [Fact(DisplayName = "ShouldFailPassword")]
@@ -86,15 +110,15 @@ namespace BookRoom.Unit.Tests.UseCases.Auth
             };
             var auth = await _useCase.HandleAsync(request, new CancellationToken());
 
-            auth.Data.Token
+            auth.Status
                 .Should()
-                .BeNull();
+                .Be(400);
             auth.Error
                 .Should()
-                .NotBeNull();
-            auth.Data.User
+                .Be(ErrorMessages.AuthMessages.PASSWORD_NOTMATCH);
+            auth.Data
                 .Should()
-                .NotBeNull();
+                .BeNull();
         }
     }
 }

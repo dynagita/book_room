@@ -1,7 +1,7 @@
-﻿using BookRoom.Domain.Contract.Responses.User;
+﻿using BookRoom.Domain.Contract.Responses.UserResponses;
 using System.Diagnostics.CodeAnalysis;
 
-namespace BookRoom.Domain.Contract.Responses.Auth
+namespace BookRoom.Domain.Contract.Responses.AuthResponses
 {
     [ExcludeFromCodeCoverage]
     public class AuthResponse

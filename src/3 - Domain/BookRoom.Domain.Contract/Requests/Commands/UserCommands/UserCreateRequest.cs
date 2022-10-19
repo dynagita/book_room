@@ -1,9 +1,9 @@
 ﻿using BookRoom.Domain.Contract.Responses;
-using BookRoom.Domain.Contract.Responses.User;
+using BookRoom.Domain.Contract.Responses.UserResponses;
 using MediatR;
 using System.Diagnostics.CodeAnalysis;
 
-namespace BookRoom.Domain.Contract.Requests.Commands.User
+namespace BookRoom.Domain.Contract.Requests.Commands.UserCommands
 {
     [ExcludeFromCodeCoverage]
     public class UserCreateRequest : IRequest<CommonResponse<UserResponse>>

@@ -1,11 +1,11 @@
 ﻿using BookRoom.Domain.Contract.Handlers.Commands.User;
-using BookRoom.Domain.Contract.Requests.Commands.User;
+using BookRoom.Domain.Contract.Requests.Commands.UserCommands;
 using BookRoom.Domain.Contract.Responses;
-using BookRoom.Domain.Contract.Responses.User;
+using BookRoom.Domain.Contract.Responses.UserResponses;
 using BookRoom.Domain.Contract.UseCases.User;
 using MediatR;
 
-namespace BookRoom.Application.Handlers.Commands.User
+namespace BookRoom.Application.Handlers.Commands.UserHandlers
 {
     public class UserCreateHandler : IUserCreateHandler
     {

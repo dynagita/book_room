@@ -1,6 +1,8 @@
 ﻿using AutoBogus;
-using BookRoom.Application.UseCases.User;
-using BookRoom.Domain.Contract.Requests.Commands.User;
+using BookRoom.Application.Extensions;
+using BookRoom.Application.UseCases.UserUseCases;
+using BookRoom.Domain.Contract.Constants;
+using BookRoom.Domain.Contract.Requests.Commands.UserCommands;
 using BookRoom.Domain.Contract.UseCases.User;
 using BookRoom.Domain.Repositories.EntityFramework;
 using BookRoom.Unit.Tests.Utils;
@@ -33,6 +35,7 @@ namespace BookRoom.Unit.Tests.UseCases.User
 
             var userResult = mapper.Map<Domain.Entities.User>(request);
             userResult.Id = 1;
+            userResult.Password = userResult.Password.ComputeHash();
 
             _repository.Setup(x => x.InsertAsync(It.IsAny<Domain.Entities.User>(), It.IsAny<CancellationToken>()))
                 .ReturnsAsync(userResult);
@@ -43,6 +46,38 @@ namespace BookRoom.Unit.Tests.UseCases.User
                 .Reference
                 .Should()
                 .Be(1);
+            response.Status
+                .Should()
+                .Be(200);
+        }
+
+        [Fact(DisplayName = "ShouldHasEmailRegistered")]
+        public async Task ShouldHasEmailRegistered()
+        {
+            var mapper = MapperCreate.CreateMappers();
+
+            var request = new AutoFaker<UserCreateRequest>().Generate();
+
+            var userResult = mapper.Map<Domain.Entities.User>(request);
+            userResult.Id = 1;
+
+            _repository.Setup(x => x.GetByMailAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
+                .ReturnsAsync(userResult);
+
+            _repository.Setup(x => x.InsertAsync(It.IsAny<Domain.Entities.User>(), It.IsAny<CancellationToken>()))
+                .ReturnsAsync(userResult);
+
+            var response = await _useCase.HandleAsync(request, new CancellationToken());
+
+            response.Status
+                .Should()
+                .Be(400);
+            response.Data
+                .Should()
+                .BeNull();
+            response.Error
+                .Should()
+                .Be(ErrorMessages.UserMessages.USER_REGISTERED);
         }
 
         [Fact(DisplayName = "ShouldNotCreateUser")]
@@ -55,19 +90,23 @@ namespace BookRoom.Unit.Tests.UseCases.User
             var userResult = mapper.Map<Domain.Entities.User>(request);
             userResult.Id = 1;
 
+            _repository.Setup(x => x.GetByMailAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
+                .ThrowsAsync(new Exception());
+
             _repository.Setup(x => x.InsertAsync(It.IsAny<Domain.Entities.User>(), It.IsAny<CancellationToken>()))
                 .ThrowsAsync(new Exception());
 
             var response = await _useCase.HandleAsync(request, new CancellationToken());
 
-            response.Data
-                .Reference
+            response.Status
                 .Should()
-                .Be(0);
+                .Be(400);
+            response.Data
+                .Should()
+                .BeNull();
             response.Error
                 .Should()
-                .NotBeNull();
+                .Be(ErrorMessages.EXCEPTION_ERROR);
         }
-
     }
 }

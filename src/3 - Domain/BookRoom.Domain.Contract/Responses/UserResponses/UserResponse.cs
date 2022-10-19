@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 
-namespace BookRoom.Domain.Contract.Responses.User
+namespace BookRoom.Domain.Contract.Responses.UserResponses
 {
     [ExcludeFromCodeCoverage]
     public class UserResponse
