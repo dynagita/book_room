@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BookRoom.WebApi.Controllers
 {
+    /// <summary>
+    /// User controller, used to managed locked users endpoints
+    /// </summary>
     [ApiController]
     [Route("/[controller]")]
-    [Authorize]
     public class UserController : ControllerBase
     {
         private readonly IMediator _mediator;
@@ -19,6 +21,11 @@ namespace BookRoom.WebApi.Controllers
             _mediator = mediator;
         }
 
+        /// <summary>
+        /// Responsible for creating a new user for get access to system
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         [HttpPost]
         [ProducesResponseType(statusCode: 200, Type = typeof(CommonResponse<UserResponse>))]
         [ProducesResponseType(statusCode: 400, Type = typeof(CommonResponse<UserResponse>))]

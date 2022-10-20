@@ -6,6 +6,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BookRoom.WebApi.Controllers
 {
+    /// <summary>
+    /// Controller used to manage authentications endpoints
+    /// </summary>
     [ApiController]
     [Route("/[controller]")]
     public class AuthenticationController : ControllerBase
@@ -17,6 +20,11 @@ namespace BookRoom.WebApi.Controllers
             _mediator = mediator;
         }
 
+        /// <summary>
+        /// Responsible for creating a token for user access locked endpoints
+        /// </summary>
+        /// <param name="request">User informations, e-mail and password</param>
+        /// <returns>Token and user informations</returns>
         [HttpPost]
         [ProducesResponseType(statusCode: 200, Type = typeof(CommonResponse<AuthResponse>))]
         [ProducesResponseType(statusCode: 400, Type = typeof(CommonResponse<AuthResponse>))]

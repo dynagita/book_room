@@ -7,9 +7,13 @@ using BookRoom.Domain.Contract.Configurations;
 using BookRoom.Domain.Contract.UseCases.Auth;
 using BookRoom.Domain.Contract.UseCases.User;
 using MediatR;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Tokens;
 using System.Diagnostics.CodeAnalysis;
+using System.Reflection;
+using System.Text;
 
 namespace BookRoom.Application
 {
@@ -20,7 +24,7 @@ namespace BookRoom.Application
         public static IServiceCollection AddApplication(this IServiceCollection services, IConfiguration configuration)
         {
             return services
-                .AddConfigurations(configuration)
+                .AddConfigurations(configuration)                
                 .AddProfiles()
                 .AddUseCases()
                 .AddHandlers();
@@ -36,10 +40,13 @@ namespace BookRoom.Application
 
         public static IServiceCollection AddHandlers(this IServiceCollection services)
         {
-            services.AddMediatR(
-                typeof(AuthHandler),
-                typeof(UserCreateHandler)
-                );
+            var assemblies = new[]
+            {
+                Assembly.GetExecutingAssembly(),
+                typeof(AuthHandler).Assembly,
+                typeof(UserCreateHandler).Assembly
+            };
+            services.AddMediatR(assemblies);
             return services;
         }
 
@@ -52,11 +59,10 @@ namespace BookRoom.Application
         }
 
         public static IServiceCollection AddConfigurations(this IServiceCollection services, IConfiguration configuration)
-        {
-            services.AddSingleton((serviceProvider) => {
-                var authConfig = new AuthenticationConfiguration();
+        {  
+            services.Configure<AuthenticationConfiguration>((authConfig) =>
+            {
                 configuration.Bind(nameof(AuthenticationConfiguration), authConfig);
-                return authConfig;
             });
             return services;
         }

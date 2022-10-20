@@ -7,5 +7,7 @@
         public DateTime DatInc { get; set; }
 
         public DateTime DatAlt { get; set; }
+
+        public bool Active { get; set; }
     }
 }
