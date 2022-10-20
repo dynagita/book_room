@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookRoom.WebApi", "src\1 - WebApi\BookRoom.WebApi.csproj", "{259AE87C-D492-42A6-8EC7-F22C9291FF2F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookRoom.WebApi", "BookRoom.WebApi\src\1 - WebApi\BookRoom.WebApi.csproj", "{259AE87C-D492-42A6-8EC7-F22C9291FF2F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - WebApi", "1 - WebApi", "{0B61A094-2DE4-4633-8AF1-B731E2FCD859}"
 EndProject
@@ -13,23 +13,85 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Domain", "3 - Domain", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infrastructure", "4 - Infrastructure", "{4FD5D44D-1FCA-4A5B-AF5B-AC7F5B3CC959}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookRoom.Application.IoC", "src\2 - Application\BookRoom.Application.IoC\BookRoom.Application.IoC.csproj", "{C09FA629-1EAB-4C2C-9061-A37A205A41A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookRoom.Application.IoC", "BookRoom.WebApi\src\2 - Application\BookRoom.Application.IoC\BookRoom.Application.IoC.csproj", "{C09FA629-1EAB-4C2C-9061-A37A205A41A5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookRoom.Application", "src\2 - Application\BookRoom.Application\BookRoom.Application.csproj", "{FBEB74F1-139F-4BF8-94CF-A67A8FCF955D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookRoom.Application", "BookRoom.WebApi\src\2 - Application\BookRoom.Application\BookRoom.Application.csproj", "{FBEB74F1-139F-4BF8-94CF-A67A8FCF955D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookRoom.Domain.Contract", "src\3 - Domain\BookRoom.Domain.Contract\BookRoom.Domain.Contract.csproj", "{E3B1C57F-978F-41D9-AE14-31D539377FF9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookRoom.Domain.Contract", "BookRoom.WebApi\src\3 - Domain\BookRoom.Domain.Contract\BookRoom.Domain.Contract.csproj", "{E3B1C57F-978F-41D9-AE14-31D539377FF9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookRoom.Domain", "src\3 - Domain\BookRoom.Domain\BookRoom.Domain.csproj", "{592DA2EA-0F58-4736-9FE2-DC21EAC5A0D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookRoom.Domain", "BookRoom.WebApi\src\3 - Domain\BookRoom.Domain\BookRoom.Domain.csproj", "{592DA2EA-0F58-4736-9FE2-DC21EAC5A0D0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookRoom.Infrastructure", "src\4 - Infrastructure\BookRoom.Infrastructure\BookRoom.Infrastructure.csproj", "{9E4570C7-757C-4E0C-89E5-ACF3980460D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookRoom.Infrastructure", "BookRoom.WebApi\src\4 - Infrastructure\BookRoom.Infrastructure\BookRoom.Infrastructure.csproj", "{9E4570C7-757C-4E0C-89E5-ACF3980460D6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E3FAAF28-E268-4DAE-B4D6-3C91C3D9B1C2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{F12CCB39-6447-45FD-AF8E-BD1E5B3BA7CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookRoom.Unit.Tests", "tests\BookRoom.Unit.Tests\BookRoom.Unit.Tests.csproj", "{BB092755-7F25-47F0-B6C0-CE3030D635A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookRoom.Unit.Tests", "BookRoom.WebApi\tests\BookRoom.Unit.Tests\BookRoom.Unit.Tests.csproj", "{BB092755-7F25-47F0-B6C0-CE3030D635A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookRoom.Integration.Tests", "tests\BookRoom.Integration.Tests\BookRoom.Integration.Tests.csproj", "{28E09FE7-D95D-4433-850B-46D1D1770D93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookRoom.Integration.Tests", "BookRoom.WebApi\tests\BookRoom.Integration.Tests\BookRoom.Integration.Tests.csproj", "{28E09FE7-D95D-4433-850B-46D1D1770D93}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BookRoom.WebApi", "BookRoom.WebApi", "{5CB512BE-037C-4DE9-8FE5-C75E65CB5F36}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BookRoom.Service", "BookRoom.Service", "{178D21B6-7372-40B6-B776-F9F840ED9C9C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BookRoom.Readness.WebApi", "BookRoom.Readness.WebApi", "{5EF2E0ED-1915-441C-BBCB-0EEFFADF6AAF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{184CF5A7-5421-44DB-8E26-344E42E5D9FD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C9D0AFFF-0E6A-4BBA-A012-9DD0BAFB3325}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{92F6CA26-765D-417C-992A-419F0057A088}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{721FB16E-47DB-4096-A596-5D29178E031A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - WebApi", "1 - WebApi", "{DBD2778B-F0D1-4198-BAF7-095E900AB385}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Application", "2 - Application", "{FFD11A3D-11F7-4A99-A8DC-C4CBD4689F3A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Domain", "3 - Domain", "{F2CB9E53-4818-417E-8C84-35E79520D96E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infrastructure", "4 - Infrastructure", "{FEEA3B9F-260D-4C8B-9893-83D5A3E27D94}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - WebApi", "1 - WebApi", "{603405B9-E24D-498A-9E26-7ACF7E0230A8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Application", "2 - Application", "{87ECDB59-C3CD-492F-A84B-49F366119FDD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Domain", "3 - Domain", "{EA867745-74FD-4882-943A-F29378DDEA4E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infrastructure", "4 - Infrastructure", "{CDFFBF98-9493-4431-9CD6-C025944BE1B0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookRoom.Readness.Infrastructure", "BookRoom.Readness.WebApi\src\4 - Infrastructure\BookRoom.Readness.Infrastructure\BookRoom.Readness.Infrastructure.csproj", "{B7CD2843-1120-4423-8841-41A7F1492499}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookRoom.Readness.Domain.Contract", "BookRoom.Readness.WebApi\src\3 - Domain\BookRoom.Readness.Domain.Contract\BookRoom.Readness.Domain.Contract.csproj", "{2FC603F2-70A3-49CD-8C0B-5D825AFA8F94}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookRoom.Readness.Domain", "BookRoom.Readness.WebApi\src\3 - Domain\BookRoom.Readness.Domain\BookRoom.Readness.Domain.csproj", "{A6D5A49F-AB0E-432D-BE59-99E689C28495}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookRoom.Readness.Application", "BookRoom.Readness.WebApi\src\2 - Application\BookRoom.Readness.Application\BookRoom.Readness.Application.csproj", "{2062CECD-F342-4C3F-AC0D-E2C54ADD24EB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookRoom.Readness.Application.IoC", "BookRoom.Readness.WebApi\src\2 - Application\BookRoom.Readness.Application.IoC\BookRoom.Readness.Application.IoC.csproj", "{5BE39AAA-536B-4EDA-ACE6-0EF5DC338DA0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookRoom.Readness.Unit.Tests", "BookRoom.Readness.WebApi\tests\BookRoom.Readness.Unit.Tests\BookRoom.Readness.Unit.Tests.csproj", "{DB2180F2-925F-481C-8010-572F0C774C95}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookRoom.Readness.Integration.Tests", "BookRoom.Readness.WebApi\tests\BookRoom.Readness.Integration.Tests\BookRoom.Readness.Integration.Tests.csproj", "{9E191CE7-DF4A-4FD9-920C-8EE43A38E9D9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookRoom.Service", "BookRoom.Service\src\1 - WebApi\BookRoom.Service\BookRoom.Service.csproj", "{46AB58C0-3359-4998-A9D8-2DCF35078C9C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookRoom.Readness.WebApi", "BookRoom.Readness.WebApi\src\1 - WebApi\BookRoom.Readness.WebApi\BookRoom.Readness.WebApi.csproj", "{CD35C350-B35B-470E-BDF7-A28A2DCA4A39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookRoom.Service.Application", "BookRoom.Service\src\2 - Application\BookRoom.Service.Application\BookRoom.Service.Application.csproj", "{77C5784E-1EAE-47E4-8C73-7C39A95AA948}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookRoom.Service.Application.IoC", "BookRoom.Service\src\2 - Application\BookRoom.Service.Application.IoC\BookRoom.Service.Application.IoC.csproj", "{C36C1887-757B-412A-A9A8-1A5E97285211}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookRoom.Service.Domain.Contract", "BookRoom.Service\src\3 - Domain\BookRoom.Service.Domain.Contract\BookRoom.Service.Domain.Contract.csproj", "{EBDDB0B4-9E68-4864-BC7E-99A54F0156AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookRoom.Service.Domain", "BookRoom.Service\src\3 - Domain\BookRoom.Service.Domain\BookRoom.Service.Domain.csproj", "{2C8B0B70-754E-4C9C-BE8B-EFBF8CB50CF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookRoom.Service.Infrastructure", "BookRoom.Service\src\4 - Infrastructure\BookRoom.Service.Infrastructure\BookRoom.Service.Infrastructure.csproj", "{D3C36294-1D13-4764-B69A-0AB7005EDC7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookRoom.Service.Unit.Tests", "BookRoom.Service\tests\BookRoom.Service.Unit.Tests\BookRoom.Service.Unit.Tests.csproj", "{F839B01A-7707-49BF-B6C1-9198B1F690D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookRoom.Service.Integration.Tests", "BookRoom.Service\tests\BookRoom.Service.Integration.Tests\BookRoom.Service.Integration.Tests.csproj", "{40CBE8F8-41E3-4B31-8658-00359791119C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +131,70 @@ Global
 		{28E09FE7-D95D-4433-850B-46D1D1770D93}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28E09FE7-D95D-4433-850B-46D1D1770D93}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28E09FE7-D95D-4433-850B-46D1D1770D93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7CD2843-1120-4423-8841-41A7F1492499}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7CD2843-1120-4423-8841-41A7F1492499}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7CD2843-1120-4423-8841-41A7F1492499}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7CD2843-1120-4423-8841-41A7F1492499}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FC603F2-70A3-49CD-8C0B-5D825AFA8F94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FC603F2-70A3-49CD-8C0B-5D825AFA8F94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FC603F2-70A3-49CD-8C0B-5D825AFA8F94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FC603F2-70A3-49CD-8C0B-5D825AFA8F94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6D5A49F-AB0E-432D-BE59-99E689C28495}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6D5A49F-AB0E-432D-BE59-99E689C28495}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6D5A49F-AB0E-432D-BE59-99E689C28495}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6D5A49F-AB0E-432D-BE59-99E689C28495}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2062CECD-F342-4C3F-AC0D-E2C54ADD24EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2062CECD-F342-4C3F-AC0D-E2C54ADD24EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2062CECD-F342-4C3F-AC0D-E2C54ADD24EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2062CECD-F342-4C3F-AC0D-E2C54ADD24EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BE39AAA-536B-4EDA-ACE6-0EF5DC338DA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BE39AAA-536B-4EDA-ACE6-0EF5DC338DA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BE39AAA-536B-4EDA-ACE6-0EF5DC338DA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BE39AAA-536B-4EDA-ACE6-0EF5DC338DA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB2180F2-925F-481C-8010-572F0C774C95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB2180F2-925F-481C-8010-572F0C774C95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB2180F2-925F-481C-8010-572F0C774C95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB2180F2-925F-481C-8010-572F0C774C95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E191CE7-DF4A-4FD9-920C-8EE43A38E9D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E191CE7-DF4A-4FD9-920C-8EE43A38E9D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E191CE7-DF4A-4FD9-920C-8EE43A38E9D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E191CE7-DF4A-4FD9-920C-8EE43A38E9D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46AB58C0-3359-4998-A9D8-2DCF35078C9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46AB58C0-3359-4998-A9D8-2DCF35078C9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46AB58C0-3359-4998-A9D8-2DCF35078C9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46AB58C0-3359-4998-A9D8-2DCF35078C9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD35C350-B35B-470E-BDF7-A28A2DCA4A39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD35C350-B35B-470E-BDF7-A28A2DCA4A39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD35C350-B35B-470E-BDF7-A28A2DCA4A39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD35C350-B35B-470E-BDF7-A28A2DCA4A39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77C5784E-1EAE-47E4-8C73-7C39A95AA948}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77C5784E-1EAE-47E4-8C73-7C39A95AA948}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77C5784E-1EAE-47E4-8C73-7C39A95AA948}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77C5784E-1EAE-47E4-8C73-7C39A95AA948}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C36C1887-757B-412A-A9A8-1A5E97285211}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C36C1887-757B-412A-A9A8-1A5E97285211}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C36C1887-757B-412A-A9A8-1A5E97285211}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C36C1887-757B-412A-A9A8-1A5E97285211}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBDDB0B4-9E68-4864-BC7E-99A54F0156AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBDDB0B4-9E68-4864-BC7E-99A54F0156AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBDDB0B4-9E68-4864-BC7E-99A54F0156AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBDDB0B4-9E68-4864-BC7E-99A54F0156AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C8B0B70-754E-4C9C-BE8B-EFBF8CB50CF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C8B0B70-754E-4C9C-BE8B-EFBF8CB50CF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C8B0B70-754E-4C9C-BE8B-EFBF8CB50CF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C8B0B70-754E-4C9C-BE8B-EFBF8CB50CF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3C36294-1D13-4764-B69A-0AB7005EDC7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3C36294-1D13-4764-B69A-0AB7005EDC7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3C36294-1D13-4764-B69A-0AB7005EDC7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3C36294-1D13-4764-B69A-0AB7005EDC7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F839B01A-7707-49BF-B6C1-9198B1F690D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F839B01A-7707-49BF-B6C1-9198B1F690D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F839B01A-7707-49BF-B6C1-9198B1F690D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F839B01A-7707-49BF-B6C1-9198B1F690D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40CBE8F8-41E3-4B31-8658-00359791119C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40CBE8F8-41E3-4B31-8658-00359791119C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40CBE8F8-41E3-4B31-8658-00359791119C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40CBE8F8-41E3-4B31-8658-00359791119C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -84,8 +210,38 @@ Global
 		{E3B1C57F-978F-41D9-AE14-31D539377FF9} = {40CC7C96-1B00-4915-8608-D425383EEBB9}
 		{592DA2EA-0F58-4736-9FE2-DC21EAC5A0D0} = {40CC7C96-1B00-4915-8608-D425383EEBB9}
 		{9E4570C7-757C-4E0C-89E5-ACF3980460D6} = {4FD5D44D-1FCA-4A5B-AF5B-AC7F5B3CC959}
+		{E3FAAF28-E268-4DAE-B4D6-3C91C3D9B1C2} = {5CB512BE-037C-4DE9-8FE5-C75E65CB5F36}
+		{F12CCB39-6447-45FD-AF8E-BD1E5B3BA7CE} = {5CB512BE-037C-4DE9-8FE5-C75E65CB5F36}
 		{BB092755-7F25-47F0-B6C0-CE3030D635A5} = {F12CCB39-6447-45FD-AF8E-BD1E5B3BA7CE}
 		{28E09FE7-D95D-4433-850B-46D1D1770D93} = {F12CCB39-6447-45FD-AF8E-BD1E5B3BA7CE}
+		{184CF5A7-5421-44DB-8E26-344E42E5D9FD} = {178D21B6-7372-40B6-B776-F9F840ED9C9C}
+		{C9D0AFFF-0E6A-4BBA-A012-9DD0BAFB3325} = {178D21B6-7372-40B6-B776-F9F840ED9C9C}
+		{92F6CA26-765D-417C-992A-419F0057A088} = {5EF2E0ED-1915-441C-BBCB-0EEFFADF6AAF}
+		{721FB16E-47DB-4096-A596-5D29178E031A} = {5EF2E0ED-1915-441C-BBCB-0EEFFADF6AAF}
+		{DBD2778B-F0D1-4198-BAF7-095E900AB385} = {92F6CA26-765D-417C-992A-419F0057A088}
+		{FFD11A3D-11F7-4A99-A8DC-C4CBD4689F3A} = {92F6CA26-765D-417C-992A-419F0057A088}
+		{F2CB9E53-4818-417E-8C84-35E79520D96E} = {92F6CA26-765D-417C-992A-419F0057A088}
+		{FEEA3B9F-260D-4C8B-9893-83D5A3E27D94} = {92F6CA26-765D-417C-992A-419F0057A088}
+		{603405B9-E24D-498A-9E26-7ACF7E0230A8} = {184CF5A7-5421-44DB-8E26-344E42E5D9FD}
+		{87ECDB59-C3CD-492F-A84B-49F366119FDD} = {184CF5A7-5421-44DB-8E26-344E42E5D9FD}
+		{EA867745-74FD-4882-943A-F29378DDEA4E} = {184CF5A7-5421-44DB-8E26-344E42E5D9FD}
+		{CDFFBF98-9493-4431-9CD6-C025944BE1B0} = {184CF5A7-5421-44DB-8E26-344E42E5D9FD}
+		{B7CD2843-1120-4423-8841-41A7F1492499} = {FEEA3B9F-260D-4C8B-9893-83D5A3E27D94}
+		{2FC603F2-70A3-49CD-8C0B-5D825AFA8F94} = {F2CB9E53-4818-417E-8C84-35E79520D96E}
+		{A6D5A49F-AB0E-432D-BE59-99E689C28495} = {F2CB9E53-4818-417E-8C84-35E79520D96E}
+		{2062CECD-F342-4C3F-AC0D-E2C54ADD24EB} = {FFD11A3D-11F7-4A99-A8DC-C4CBD4689F3A}
+		{5BE39AAA-536B-4EDA-ACE6-0EF5DC338DA0} = {FFD11A3D-11F7-4A99-A8DC-C4CBD4689F3A}
+		{DB2180F2-925F-481C-8010-572F0C774C95} = {721FB16E-47DB-4096-A596-5D29178E031A}
+		{9E191CE7-DF4A-4FD9-920C-8EE43A38E9D9} = {721FB16E-47DB-4096-A596-5D29178E031A}
+		{46AB58C0-3359-4998-A9D8-2DCF35078C9C} = {603405B9-E24D-498A-9E26-7ACF7E0230A8}
+		{CD35C350-B35B-470E-BDF7-A28A2DCA4A39} = {DBD2778B-F0D1-4198-BAF7-095E900AB385}
+		{77C5784E-1EAE-47E4-8C73-7C39A95AA948} = {87ECDB59-C3CD-492F-A84B-49F366119FDD}
+		{C36C1887-757B-412A-A9A8-1A5E97285211} = {87ECDB59-C3CD-492F-A84B-49F366119FDD}
+		{EBDDB0B4-9E68-4864-BC7E-99A54F0156AA} = {EA867745-74FD-4882-943A-F29378DDEA4E}
+		{2C8B0B70-754E-4C9C-BE8B-EFBF8CB50CF2} = {EA867745-74FD-4882-943A-F29378DDEA4E}
+		{D3C36294-1D13-4764-B69A-0AB7005EDC7F} = {CDFFBF98-9493-4431-9CD6-C025944BE1B0}
+		{F839B01A-7707-49BF-B6C1-9198B1F690D0} = {C9D0AFFF-0E6A-4BBA-A012-9DD0BAFB3325}
+		{40CBE8F8-41E3-4B31-8658-00359791119C} = {C9D0AFFF-0E6A-4BBA-A012-9DD0BAFB3325}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A2DEB4E0-3172-46AF-AA80-CE546605883F}
