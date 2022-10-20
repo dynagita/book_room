@@ -24,4 +24,9 @@
     <ProjectReference Include="..\..\3 - Domain\BookRoom.Domain\BookRoom.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+    <Folder Include="Rabbit\" />
+  </ItemGroup>
+
 </Project>

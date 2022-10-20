@@ -7,5 +7,7 @@
         public string Email { get; set; }
         public DateTime? BornDate { get; set; }
         public string Password { get; set; }
+
+        public IEnumerable<BookRooms> Books { get; set; }
     }
 }

@@ -27,6 +27,8 @@ namespace BookRoom.Infrastructure
         public static IServiceCollection AddRepositories(this IServiceCollection services)
         {
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IRoomRepository, RoomRepository>();
+            services.AddScoped<IBookRoomsRepository, BookRoomsRepository>();
             return services;
         }
     }

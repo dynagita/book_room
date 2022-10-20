@@ -9,7 +9,6 @@ namespace BookRoom.Infrastructure.Database.Context.DatabaseMapper
         public void Configure(EntityTypeBuilder<User> builder)
         {
             builder.ToTable("TB_User");
-
             builder.HasKey(x => x.Id);
 
             builder.Property(x => x.Name)
@@ -26,6 +25,11 @@ namespace BookRoom.Infrastructure.Database.Context.DatabaseMapper
                 .IsRequired();
             builder.Property(x => x.DatInc)
                 .IsRequired();
+            builder.Property(x => x.Active)
+                .IsRequired();
+
+            builder.HasMany(x => x.Books)
+                .WithOne(x => x.User);
         }
     }
 }
