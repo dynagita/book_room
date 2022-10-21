@@ -14,5 +14,10 @@
             public const string USER_NOTFOUND = "It wasn't found an user with provided e-mail";
             public const string PASSWORD_NOTMATCH = "Wrong password.";
         }
+
+        public class RoomMessages
+        {
+            public const string ROOM_EXISTS = "There is already a room using this number.";
+        }
     }
 }

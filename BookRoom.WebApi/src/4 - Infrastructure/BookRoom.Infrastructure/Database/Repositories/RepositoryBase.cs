@@ -43,6 +43,7 @@ namespace BookRoom.Infrastructure.Database.Repositories
         public virtual async Task<T> InsertAsync(T entity, CancellationToken cancellationToken)
         {
             entity.Active = true;
+            entity.DatInc = entity.DatAlt = DateTime.Now;
 
             NormalizeForeignKeys(entity);
 
@@ -58,6 +59,8 @@ namespace BookRoom.Infrastructure.Database.Repositories
             entity.Active = entityDb.Active;
 
             NormalizeForeignKeys(entity);
+
+            entity.DatAlt = DateTime.Now;
 
             _context.Entry(entityDb).Property(x => x.Id).IsModified = false;
             _context.Entry(entityDb).CurrentValues.SetValues(entity);

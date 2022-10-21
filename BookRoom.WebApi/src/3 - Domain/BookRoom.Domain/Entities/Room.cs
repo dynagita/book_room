@@ -6,6 +6,8 @@
 
         public string Title { get; set; }
 
+        public int Number { get; set; }
+
         public IEnumerable<BookRooms> Books { get; set; }
     }
 }

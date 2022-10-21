@@ -4,7 +4,7 @@ using BookRoom.Domain.Contract.Handlers.Commands.User;
 using BookRoom.Domain.Contract.Requests.Commands.UserCommands;
 using BookRoom.Domain.Contract.Responses;
 using BookRoom.Domain.Contract.Responses.UserResponses;
-using BookRoom.Domain.Contract.UseCases.User;
+using BookRoom.Domain.Contract.UseCases.Users;
 using FluentAssertions;
 using Moq;
 

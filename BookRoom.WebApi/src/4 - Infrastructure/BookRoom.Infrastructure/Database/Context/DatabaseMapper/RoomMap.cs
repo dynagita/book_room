@@ -21,6 +21,8 @@ namespace BookRoom.Infrastructure.Database.Context.DatabaseMapper
                 .IsRequired();
             builder.Property(x => x.Description)
                 .IsRequired();
+            builder.Property(x => x.Number)
+                .IsRequired();
 
             builder.HasMany(x => x.Books)
                 .WithOne(x => x.Room);

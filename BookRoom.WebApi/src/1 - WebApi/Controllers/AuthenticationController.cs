@@ -10,7 +10,7 @@ namespace BookRoom.WebApi.Controllers
     /// Controller used to manage authentications endpoints
     /// </summary>
     [ApiController]
-    [Route("/[controller]")]
+    [Route("/api/[controller]")]
     public class AuthenticationController : ControllerBase
     {
         private readonly IMediator _mediator;

@@ -3,7 +3,7 @@ using BookRoom.Application.Extensions;
 using BookRoom.Application.UseCases.UserUseCases;
 using BookRoom.Domain.Contract.Constants;
 using BookRoom.Domain.Contract.Requests.Commands.UserCommands;
-using BookRoom.Domain.Contract.UseCases.User;
+using BookRoom.Domain.Contract.UseCases.Users;
 using BookRoom.Domain.Repositories.EntityFramework;
 using BookRoom.Unit.Tests.Utils;
 using Castle.Core.Logging;

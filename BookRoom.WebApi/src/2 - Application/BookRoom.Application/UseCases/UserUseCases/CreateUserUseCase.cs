@@ -4,7 +4,7 @@ using BookRoom.Domain.Contract.Constants;
 using BookRoom.Domain.Contract.Requests.Commands.UserCommands;
 using BookRoom.Domain.Contract.Responses;
 using BookRoom.Domain.Contract.Responses.UserResponses;
-using BookRoom.Domain.Contract.UseCases.User;
+using BookRoom.Domain.Contract.UseCases.Users;
 using BookRoom.Domain.Entities;
 using BookRoom.Domain.Repositories.EntityFramework;
 using BookRoom.Domain.Validation.UserValidations;

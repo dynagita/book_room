@@ -11,6 +11,7 @@ namespace BookRoom.Unit.Tests.Validation.UserValidations
         public async Task UserShouldNotBeRegistered()
         {
             var user = new AutoFaker<User>().Generate();
+            user.Email = "fool@fool.com";
             var validUser = new AutoFaker<User>().Generate();
 
             var validation = new UserNotRegisteredValidation(user);

@@ -11,7 +11,7 @@ namespace BookRoom.WebApi.Controllers
     /// User controller, used to managed locked users endpoints
     /// </summary>
     [ApiController]
-    [Route("/[controller]")]
+    [Route("/api/[controller]")]
     public class UserController : ControllerBase
     {
         private readonly IMediator _mediator;
