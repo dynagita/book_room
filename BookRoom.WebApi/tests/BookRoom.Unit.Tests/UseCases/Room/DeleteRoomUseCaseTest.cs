@@ -8,7 +8,7 @@ using FluentAssertions;
 using Microsoft.Extensions.Logging;
 using Moq;
 
-namespace BookRoom.Unit.Tests.UseCases.Room
+namespace BookRoom.Unit.Tests.UseCases.Rooms
 {
     public class DeleteRoomUseCaseTest
     {
