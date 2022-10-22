@@ -6,9 +6,13 @@ using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 using BookRoom.Domain.Contract.Requests.Commands.BookRooms;
 using BookRoom.Domain.Contract.Responses.BookRoomsResponses;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BookRoom.WebApi.Controllers
 {
+    [ApiController]
+    [Route("/[controller]")]
+    [Authorize]
     public class BookRoomController : Controller
     {
         private readonly IMediator _mediator;
