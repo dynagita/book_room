@@ -3,7 +3,7 @@ using MediatR;
 
 namespace BookRoom.Service.Domain.Contract.Handlers.Notifications
 {
-    public interface IPropagateRoomNotificationHandler : INotificationHandler<PropagateRoomNotification>
+    public interface IPropagateRoomNotificationHandler : INotificationHandler<RoomNotification>
     {
     }
 }

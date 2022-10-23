@@ -51,7 +51,7 @@ namespace BookRoom.Service.Infrastructure.Rabbit.Consumers
         {
             try
             {
-                var queueName = typeof(TMessage).Name;
+                var queueName = GetQueueName();
 
                 var chanel = _connection.CreateModel();
                 chanel.QueueDeclare(queue: queueName,
@@ -80,6 +80,11 @@ namespace BookRoom.Service.Infrastructure.Rabbit.Consumers
         {
             _connection.Close();
             _connection.Dispose();
+        }
+
+        protected virtual string GetQueueName()
+        {
+            return $"{typeof(TMessage).Name}Notification";
         }
     }
 }

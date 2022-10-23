@@ -23,12 +23,11 @@ namespace BookRoom.Service.Application.UseCases.UserPropagation
             _logger = logger;
         }
 
-        public async Task HandleAsync(PropagateUserNotification request, CancellationToken cancellationToken)
-        {
+        public async Task HandleAsync(UserNotification request, CancellationToken cancellationToken)        {
             try
             {
                 var user = _mapper.Map<User>(request);
-                var books = await _repository.GetAllByUserAsync(user.Reference, cancellationToken);
+                var books = await _repository.GetAllByUserAsync(user.Id, cancellationToken);
                 if (books.Any())
                 {
                     foreach (var item in books)

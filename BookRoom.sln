@@ -79,19 +79,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookRoom.Service", "BookRoo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookRoom.Readness.WebApi", "BookRoom.Readness.WebApi\src\1 - WebApi\BookRoom.Readness.WebApi\BookRoom.Readness.WebApi.csproj", "{CD35C350-B35B-470E-BDF7-A28A2DCA4A39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookRoom.Service.Application", "BookRoom.Service\src\2 - Application\BookRoom.Service.Application\BookRoom.Service.Application.csproj", "{77C5784E-1EAE-47E4-8C73-7C39A95AA948}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookRoom.Service.Application", "BookRoom.Service\src\2 - Application\BookRoom.Service.Application\BookRoom.Service.Application.csproj", "{77C5784E-1EAE-47E4-8C73-7C39A95AA948}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookRoom.Service.Application.IoC", "BookRoom.Service\src\2 - Application\BookRoom.Service.Application.IoC\BookRoom.Service.Application.IoC.csproj", "{C36C1887-757B-412A-A9A8-1A5E97285211}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookRoom.Service.Application.IoC", "BookRoom.Service\src\2 - Application\BookRoom.Service.Application.IoC\BookRoom.Service.Application.IoC.csproj", "{C36C1887-757B-412A-A9A8-1A5E97285211}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookRoom.Service.Domain.Contract", "BookRoom.Service\src\3 - Domain\BookRoom.Service.Domain.Contract\BookRoom.Service.Domain.Contract.csproj", "{EBDDB0B4-9E68-4864-BC7E-99A54F0156AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookRoom.Service.Domain.Contract", "BookRoom.Service\src\3 - Domain\BookRoom.Service.Domain.Contract\BookRoom.Service.Domain.Contract.csproj", "{EBDDB0B4-9E68-4864-BC7E-99A54F0156AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookRoom.Service.Domain", "BookRoom.Service\src\3 - Domain\BookRoom.Service.Domain\BookRoom.Service.Domain.csproj", "{2C8B0B70-754E-4C9C-BE8B-EFBF8CB50CF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookRoom.Service.Domain", "BookRoom.Service\src\3 - Domain\BookRoom.Service.Domain\BookRoom.Service.Domain.csproj", "{2C8B0B70-754E-4C9C-BE8B-EFBF8CB50CF2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookRoom.Service.Infrastructure", "BookRoom.Service\src\4 - Infrastructure\BookRoom.Service.Infrastructure\BookRoom.Service.Infrastructure.csproj", "{D3C36294-1D13-4764-B69A-0AB7005EDC7F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookRoom.Service.Infrastructure", "BookRoom.Service\src\4 - Infrastructure\BookRoom.Service.Infrastructure\BookRoom.Service.Infrastructure.csproj", "{D3C36294-1D13-4764-B69A-0AB7005EDC7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookRoom.Service.Unit.Tests", "BookRoom.Service\tests\BookRoom.Service.Unit.Tests\BookRoom.Service.Unit.Tests.csproj", "{F839B01A-7707-49BF-B6C1-9198B1F690D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookRoom.Service.Unit.Tests", "BookRoom.Service\tests\BookRoom.Service.Unit.Tests\BookRoom.Service.Unit.Tests.csproj", "{F839B01A-7707-49BF-B6C1-9198B1F690D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookRoom.Service.Integration.Tests", "BookRoom.Service\tests\BookRoom.Service.Integration.Tests\BookRoom.Service.Integration.Tests.csproj", "{40CBE8F8-41E3-4B31-8658-00359791119C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookRoom.Service.Integration.Tests", "BookRoom.Service\tests\BookRoom.Service.Integration.Tests\BookRoom.Service.Integration.Tests.csproj", "{40CBE8F8-41E3-4B31-8658-00359791119C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

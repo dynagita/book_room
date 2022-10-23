@@ -17,23 +17,25 @@ namespace BookRoom.Service.Application.UseCases.UserPropagation
         public PropagateUserUseCase(
             IUserRepository repository,
             IMapper mapper,
-            ILogger<PropagateUserUseCase> logger)
+            ILogger<PropagateUserUseCase> logger,
+            IUpdateUserBookRoomUseCase propagateToBooks)
         {
             _repository = repository;
             _mapper = mapper;
             _logger = logger;
+            _propagateToBooks = propagateToBooks;
         }
 
-        public async Task HandleAsync(PropagateUserNotification request, CancellationToken cancellationToken)
+        public async Task HandleAsync(UserNotification request, CancellationToken cancellationToken)
         {
             try
             {
-                var userDb = await _repository.FindOneAsync(request.Reference, cancellationToken);
+                var userDb = await _repository.FindOneAsync(request.Id, cancellationToken);
 
                 var userEvent = _mapper.Map<User>(request);
                 if(userDb != null)
                 {
-                    userEvent.Id = userDb.Id;
+                    userEvent.Books = userDb.Books;
                     await _repository.UpdateAsync(userEvent, cancellationToken);
                 }
                 else
@@ -41,9 +43,9 @@ namespace BookRoom.Service.Application.UseCases.UserPropagation
                     await _repository.InsertAsync(userEvent, cancellationToken);
                 }
 
-                userDb = await _repository.FindOneAsync(request.Reference, cancellationToken);
+                userDb = await _repository.FindOneAsync(request.Id, cancellationToken);
 
-                var propagateToBooks = _mapper.Map<PropagateUserNotification>(userDb);
+                var propagateToBooks = _mapper.Map<UserNotification>(userDb);
 
                 await _propagateToBooks.HandleAsync(propagateToBooks, cancellationToken);
             }

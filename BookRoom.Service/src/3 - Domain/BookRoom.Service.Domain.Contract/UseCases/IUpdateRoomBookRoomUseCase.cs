@@ -2,7 +2,7 @@
 
 namespace BookRoom.Service.Domain.Contract.UseCases
 {
-    public interface IUpdateRoomBookRoomUseCase : IUseCaseBase<PropagateRoomNotification>
+    public interface IUpdateRoomBookRoomUseCase : IUseCaseBase<RoomNotification>
     {
     }
 }

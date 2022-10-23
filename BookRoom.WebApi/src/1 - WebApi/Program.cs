@@ -8,7 +8,7 @@ AppContext.SetSwitch("Npgsql.DisableDateTimeInfinityConversions", true);
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Host.ConfigureAppConfiguration((hostBuilder, configurationBuilder) => 
+builder.Host.ConfigureAppConfiguration((hostBuilder, configurationBuilder) =>
 {
     configurationBuilder
     .AddJsonFile($"appsettings.{hostBuilder.HostingEnvironment.EnvironmentName}.json");
@@ -24,19 +24,15 @@ builder.Services.AddSwagger();
 
 var provider = builder.Services.BuildServiceProvider();
 
-using(var context = provider.GetService<BookRoomDbContext>())
+using (var context = provider.GetService<BookRoomDbContext>())
 {
     context.Database.Migrate();
 }
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.AddSwagger();
-    app.UseSwaggerUI();
-}
+app.AddSwagger();
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 

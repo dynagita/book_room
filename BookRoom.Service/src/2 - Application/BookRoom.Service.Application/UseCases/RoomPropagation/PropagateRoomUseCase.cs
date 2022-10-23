@@ -10,20 +10,32 @@ namespace BookRoom.Service.Application.UseCases.RoomPropagation
 {
     public class PropagateRoomUseCase : IPropagateRoomUseCase
     {
-        private readonly IRoomRepository _repository;
+        private readonly IRoomRepository _repository;        
         private readonly IMapper _mapper;
         private readonly ILogger<PropagateUserUseCase> _logger;
         private readonly IUpdateRoomBookRoomUseCase _propagateToBooks;
-        public async Task HandleAsync(PropagateRoomNotification request, CancellationToken cancellationToken)
+
+        public PropagateRoomUseCase(
+            IRoomRepository repository, 
+            IMapper mapper, 
+            ILogger<PropagateUserUseCase> logger, 
+            IUpdateRoomBookRoomUseCase propagateToBooks)
+        {
+            _repository = repository;
+            _mapper = mapper;
+            _logger = logger;
+            _propagateToBooks = propagateToBooks;
+        }
+        public async Task HandleAsync(RoomNotification request, CancellationToken cancellationToken)
         {
             try
             {
-                var roomDb = await _repository.FindOneAsync(request.Reference, cancellationToken);
+                var roomDb = await _repository.FindOneAsync(request.Id, cancellationToken);
 
                 var roomEvent = _mapper.Map<Room>(request);
                 if (roomDb != null)
                 {
-                    roomEvent.Id = roomDb.Id;
+                    roomEvent.Books = roomDb.Books;
                     await _repository.UpdateAsync(roomEvent, cancellationToken);
                 }
                 else
@@ -31,9 +43,9 @@ namespace BookRoom.Service.Application.UseCases.RoomPropagation
                     await _repository.InsertAsync(roomEvent, cancellationToken);
                 }
 
-                roomDb = await _repository.FindOneAsync(request.Reference, cancellationToken);
+                roomDb = await _repository.FindOneAsync(request.Id, cancellationToken);
 
-                var propagateToBooks = _mapper.Map<PropagateRoomNotification>(roomDb);
+                var propagateToBooks = _mapper.Map<RoomNotification>(roomDb);
 
                 await _propagateToBooks.HandleAsync(propagateToBooks, cancellationToken);
             }

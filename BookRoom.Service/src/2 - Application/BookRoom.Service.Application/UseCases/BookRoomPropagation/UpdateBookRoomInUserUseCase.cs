@@ -24,26 +24,34 @@ namespace BookRoom.Service.Application.UseCases.BookRoomPropagation
             _mapper = mapper;
         }
 
-        public async Task HandleAsync(PropagateBookRoomNotification request, CancellationToken cancellationToken)
+        public async Task HandleAsync(BookRoomsNotification request, CancellationToken cancellationToken)
         {
             try
             {
                 var room = _mapper.Map<BookRooms>(request);
-                var userDb = await _repository.FindOneAsync(room.User.Reference, cancellationToken);
+                var userDb = await _repository.FindOneAsync(room.User.Id, cancellationToken);
                 if (userDb != null)
                 {
-                    var books = userDb.Books?.ToList();
-                    if (books != null && books.Any())
+                    var bookRoomEntity = _mapper.Map<BookRooms>(request);
+                    var books = userDb.Books?.ToList() ?? new List<BookRooms>();
+                    if (books.Any())
                     {
-                        var index = books.FindIndex(x => x.Reference == request.Reference);
+                        var index = books.FindIndex(x => x.Id == request.Id);
                         if (index >= 0)
+                        {                            
+                            books[index] = bookRoomEntity;                            
+                        }
+                        else
                         {
-                            var bookRoomEntity = _mapper.Map<BookRooms>(request);
-                            books[index] = bookRoomEntity;
-                            userDb.Books = books;
-                            await _repository.UpdateAsync(userDb, cancellationToken);
+                            books.Add(bookRoomEntity);
                         }
                     }
+                    else
+                    {
+                        books.Add(bookRoomEntity);
+                    }
+                    userDb.Books = books;
+                    await _repository.UpdateAsync(userDb, cancellationToken);
                 }
             }
             catch (Exception ex)

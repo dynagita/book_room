@@ -30,6 +30,7 @@ namespace BookRoom.Infrastructure.Database.Repositories
 
             var entityDb = _dbSet.Find(id);
             entityDb.Active = false;
+            entityDb.DatAlt = DateTime.Now;
 
             _context.Entry(entityDb).Property(x => x.Id).IsModified = false;
             _context.Entry(entityDb).CurrentValues.SetValues(entityDb);
@@ -45,8 +46,6 @@ namespace BookRoom.Infrastructure.Database.Repositories
             entity.Active = true;
             entity.DatInc = entity.DatAlt = DateTime.Now;
 
-            NormalizeForeignKeys(entity);
-
             await _dbSet.AddAsync(entity);
             await _retry.ExecuteAsync(async () => await _context.SaveChangesAsync());
             return entity;
@@ -58,19 +57,13 @@ namespace BookRoom.Infrastructure.Database.Repositories
             entity.Id = entityDb.Id;
             entity.Active = entityDb.Active;
 
-            NormalizeForeignKeys(entity);
-
             entity.DatAlt = DateTime.Now;
+            entity.DatInc = entityDb.DatInc;
 
             _context.Entry(entityDb).Property(x => x.Id).IsModified = false;
             _context.Entry(entityDb).CurrentValues.SetValues(entity);
             await _retry.ExecuteAsync(async () => await _context.SaveChangesAsync());
 
-            return entity;
-        }
-
-        protected virtual T NormalizeForeignKeys(T entity)
-        {
             return entity;
         }
     }

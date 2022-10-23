@@ -24,12 +24,12 @@ namespace BookRoom.Service.Application.UseCases.RoomPropagation
             _repository = repository;
         }
 
-        public async Task HandleAsync(PropagateRoomNotification request, CancellationToken cancellationToken)
+        public async Task HandleAsync(RoomNotification request, CancellationToken cancellationToken)
         {
             try
             {
                 var room = _mapper.Map<Room>(request);
-                var books = await _repository.GetAllByRoomAsync(room.Reference, cancellationToken);
+                var books = await _repository.GetAllByRoomAsync(room.Id, cancellationToken);
                 if (books.Any())
                 {
                     foreach (var item in books)

@@ -1,18 +1,16 @@
-﻿using BookRoom.Domain.Contract.Requests.Commands.RoomCommands;
-using BookRoom.Domain.Contract.Responses.UserResponses;
+﻿using BookRoom.Domain.Contract.Requests.Commands.BookRooms;
 using BookRoom.Domain.Contract.Responses;
+using BookRoom.Domain.Contract.Responses.BookRoomsResponses;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
-using BookRoom.Domain.Contract.Requests.Commands.BookRooms;
-using BookRoom.Domain.Contract.Responses.BookRoomsResponses;
-using Microsoft.AspNetCore.Authorization;
 
 namespace BookRoom.WebApi.Controllers
 {
     [ApiController]
-    [Route("/[controller]")]
-    //[Authorize]
+    [Route("/api/[controller]")]
+    [Authorize]
     public class BookRoomController : Controller
     {
         private readonly IMediator _mediator;

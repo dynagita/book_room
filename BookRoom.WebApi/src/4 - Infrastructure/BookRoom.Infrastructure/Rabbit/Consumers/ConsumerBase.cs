@@ -81,5 +81,10 @@ namespace BookRoom.Infrastructure.Rabbit.Consumers
             _connection.Close();
             _connection.Dispose();
         }
+
+        protected virtual string GetQueueName()
+        {
+            return $"{typeof(TMessage).Name}Notification";
+        }
     }
 }

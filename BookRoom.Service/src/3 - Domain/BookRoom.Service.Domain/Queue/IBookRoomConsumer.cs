@@ -1,8 +1,8 @@
-﻿using BookRoom.Services.Domain.Entities;
+﻿using BookRoom.Service.Domain.Contract.Notifications;
 
 namespace BookRoom.Service.Domain.Queue
 {
-    public interface IBookRoomConsumer : IConsumer<BookRooms>
+    public interface IBookRoomConsumer : IConsumer<BookRoomsNotification>
     {
     }
 }

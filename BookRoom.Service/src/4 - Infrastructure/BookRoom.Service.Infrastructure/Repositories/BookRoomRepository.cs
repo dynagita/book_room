@@ -14,14 +14,14 @@ namespace BookRoom.Service.Infrastructure.Repositories
 
         public async Task<IList<BookRooms>> GetAllByUserAsync(int userId, CancellationToken cancellationToken)
         {
-            var filter = Builders<BookRooms>.Filter.Eq(x => x.User.Reference, userId);
+            var filter = Builders<BookRooms>.Filter.Eq(x => x.User.Id, userId);
             var cursor = await _collection.FindAsync(filter);
             return await cursor.ToListAsync();
         }
 
         public async Task<IList<BookRooms>> GetAllByRoomAsync(int roomId, CancellationToken cancellationToken)
         {
-            var filter = Builders<BookRooms>.Filter.Eq(x => x.Room.Reference, roomId);
+            var filter = Builders<BookRooms>.Filter.Eq(x => x.Room.Id, roomId);
             var cursor = await _collection.FindAsync(filter);
             return await cursor.ToListAsync();
         }

@@ -30,16 +30,15 @@ namespace BookRoom.Service.Application.UseCases.BookRoomPropagation
             _propagateToUser = propagateToUser;
         }
 
-        public async Task HandleAsync(PropagateBookRoomNotification request, CancellationToken cancellationToken)
+        public async Task HandleAsync(BookRoomsNotification request, CancellationToken cancellationToken)
         {
             try
             {
-                var bookRoomDb = await _repository.FindOneAsync(request.Reference, cancellationToken);
+                var bookRoomDb = await _repository.FindOneAsync(request.Id, cancellationToken);
 
                 var bookRoomEvent = _mapper.Map<BookRooms>(request);
                 if (bookRoomDb != null)
                 {
-                    bookRoomEvent.Id = bookRoomDb.Id;
                     await _repository.UpdateAsync(bookRoomEvent, cancellationToken);
                 }
                 else
@@ -47,9 +46,9 @@ namespace BookRoom.Service.Application.UseCases.BookRoomPropagation
                     await _repository.InsertAsync(bookRoomEvent, cancellationToken);
                 }
 
-                bookRoomDb = await _repository.FindOneAsync(request.Reference, cancellationToken);
+                bookRoomDb = await _repository.FindOneAsync(request.Id, cancellationToken);
 
-                var propagateBookRoom = _mapper.Map<PropagateBookRoomNotification>(bookRoomDb);
+                var propagateBookRoom = _mapper.Map<BookRoomsNotification>(bookRoomDb);
 
                 await _propagateToRoom.HandleAsync(propagateBookRoom, cancellationToken);
                 await _propagateToUser.HandleAsync(propagateBookRoom, cancellationToken);

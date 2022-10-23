@@ -8,7 +8,6 @@ using BookRoom.Domain.Contract.UseCases.Rooms;
 using BookRoom.Domain.Entities;
 using BookRoom.Domain.Queue;
 using BookRoom.Domain.Repositories.EntityFramework;
-using BookRoom.Domain.Validation.RoomValidations;
 using Microsoft.Extensions.Logging;
 
 namespace BookRoom.Application.UseCases.RoomUseCases

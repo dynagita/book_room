@@ -25,17 +25,17 @@ services:
     networks:
       book_room:
         ipv4_address: 10.5.0.2
-  #mongo:
-  #  image: mongo
-  #  container_name: mongo    
-  #  environment:
-  #    MONGO_INITDB_ROOT_USERNAME: root
-  #    MONGO_INITDB_ROOT_PASSWORD: Root!123
-  #  ports:
-  #    - "27017:27017"
-  #  networks:
-  #    book_room:
-  #      ipv4_address: 10.5.0.3
+  mongo:
+    image: mongo
+    container_name: mongo-bookroom
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: bookRoomUser
+      MONGO_INITDB_ROOT_PASSWORD: bookRoomSpecialPassword
+    ports:
+      - "27017:27017"
+    networks:
+      book_room:
+        ipv4_address: 10.5.0.3
 networks:
   book_room:
     driver: bridge

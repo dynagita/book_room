@@ -13,7 +13,7 @@ namespace BookRoom.Service.Application.Handlers.Notifications
             _useCase = useCase;
         }
 
-        public async Task Handle(PropagateBookRoomNotification notification, CancellationToken cancellationToken)
+        public async Task Handle(BookRoomsNotification notification, CancellationToken cancellationToken)
         {
             await _useCase.HandleAsync(notification, cancellationToken);
         }

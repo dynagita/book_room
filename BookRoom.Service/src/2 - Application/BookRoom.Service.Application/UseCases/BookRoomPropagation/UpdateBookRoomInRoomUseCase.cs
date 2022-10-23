@@ -24,26 +24,35 @@ namespace BookRoom.Service.Application.UseCases.BookRoomPropagation
             _mapper = mapper;
         }
 
-        public async Task HandleAsync(PropagateBookRoomNotification request, CancellationToken cancellationToken)
+        public async Task HandleAsync(BookRoomsNotification request, CancellationToken cancellationToken)
         {
             try
             {
                 var room = _mapper.Map<BookRooms>(request);
-                var roomDb = await _repository.FindOneAsync(room.Room.Reference, cancellationToken);
+                var roomDb = await _repository.FindOneAsync(room.Room.Id, cancellationToken);
                 if (roomDb != null)
                 {
-                    var books = roomDb.Books?.ToList();
-                    if (books != null && books.Any())
+                    var bookRoomEntity = _mapper.Map<BookRooms>(request);
+
+                    var books = roomDb.Books?.ToList() ?? new List<BookRooms>();
+                    if (books.Any())
                     {
-                        var index = books.FindIndex(x => x.Reference == request.Reference);
+                        var index = books.FindIndex(x => x.Id == request.Id);
                         if (index >= 0)
-                        {
-                            var bookRoomEntity = _mapper.Map<BookRooms>(request);
+                        {                            
                             books[index] = bookRoomEntity;
-                            roomDb.Books = books;
-                            await _repository.UpdateAsync(roomDb, cancellationToken);
                         }
-                    }                   
+                        else
+                        {
+                            books.Add(bookRoomEntity);
+                        }
+                    }
+                    else
+                    {
+                        books.Add(bookRoomEntity);
+                    }
+                    roomDb.Books = books;
+                    await _repository.UpdateAsync(roomDb, cancellationToken);
                 }
             }
             catch (Exception ex)

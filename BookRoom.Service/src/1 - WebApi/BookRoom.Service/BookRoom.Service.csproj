@@ -18,4 +18,8 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\2 - Application\BookRoom.Service.Application.IoC\BookRoom.Service.Application.IoC.csproj" />
+  </ItemGroup>
+
 </Project>

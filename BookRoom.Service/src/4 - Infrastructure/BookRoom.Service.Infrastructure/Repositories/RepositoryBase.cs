@@ -38,7 +38,7 @@ namespace BookRoom.Service.Infrastructure.Repositories
 
         public async Task<T> FindOneAsync(long reference, CancellationToken cancellationToken)
         {
-            var filter = Builders<T>.Filter.Eq(x => x.Reference, reference);
+            var filter = Builders<T>.Filter.Eq(x => x.Id, reference);
             var data = await _retry.ExecuteAsync(async () => await _collection.FindAsync<T>(filter));
             return data.FirstOrDefault();
         }
@@ -55,7 +55,7 @@ namespace BookRoom.Service.Infrastructure.Repositories
 
         protected virtual FilterDefinition<T> GetEntityFilter(T entity)
         {
-            FilterDefinition<T> filter = Builders<T>.Filter.Eq(x => x.Reference, entity.Reference);
+            FilterDefinition<T> filter = Builders<T>.Filter.Eq(x => x.Id, entity.Id);
 
             return filter;
         }

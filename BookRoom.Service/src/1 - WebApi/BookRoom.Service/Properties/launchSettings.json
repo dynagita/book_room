@@ -23,7 +23,8 @@
       "launchBrowser": true,
       "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/swagger",
       "publishAllPorts": true,
-      "useSSL": true
+      "useSSL": true,
+      "DockerfileRunArguments": "--network book_room_book_room -e ASPNETCORE_ENVIRONMENT=Development -p 8081:80 -p 444:443"
     }
   },
   "$schema": "https://json.schemastore.org/launchsettings.json",

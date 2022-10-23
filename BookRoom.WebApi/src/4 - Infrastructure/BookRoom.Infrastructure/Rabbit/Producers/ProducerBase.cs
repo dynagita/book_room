@@ -10,7 +10,7 @@ using System.Text;
 
 namespace BookRoom.Infrastructure.Rabbit.Producers
 {
-    public class ProducerBase<T> : IProducer<T>
+    public abstract class ProducerBase<T> : IProducer<T>
     {
         private readonly RabbitConfiguration _rabbitConfiguration;
         private readonly ILogger<ProducerBase<T>> _logger;
@@ -37,7 +37,7 @@ namespace BookRoom.Infrastructure.Rabbit.Producers
             {
                 _retry.ExecuteAsync(async () =>
                 {
-                    var queueName = typeof(T).Name;
+                    var queueName = GetQueueName();
 
                     var channel = _connection.CreateModel();
                     channel.QueueDeclare(
@@ -48,7 +48,10 @@ namespace BookRoom.Infrastructure.Rabbit.Producers
                         arguments: null
                         );
 
-                    var jsonMessage = JsonConvert.SerializeObject(message);
+                    var jsonMessage = JsonConvert.SerializeObject(message, new JsonSerializerSettings()
+                    {
+                        ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
+                    });
 
                     var serializedMessage = Encoding.UTF8.GetBytes(jsonMessage);
 
@@ -69,5 +72,10 @@ namespace BookRoom.Infrastructure.Rabbit.Producers
 
             return Task.CompletedTask;
         }        
+
+        protected virtual string GetQueueName()
+        {
+            return $"{typeof(T).Name}Notification";
+        }
     }
 }
