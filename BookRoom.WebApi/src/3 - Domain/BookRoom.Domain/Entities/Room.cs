@@ -2,6 +2,10 @@
 {
     public class Room : EntityBase
     {
+        public Room() : base()
+        {
+
+        }
         public string Description { get; set; }
 
         public string Title { get; set; }

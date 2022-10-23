@@ -2,6 +2,11 @@
 {
     public class EntityBase
     {
+        public EntityBase()
+        {
+            DatInc = DatAlt = DateTime.Now;
+        }
+
         public int Id { get; set; }
 
         public DateTime DatInc { get; set; }

@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using BookRoom.Domain.Contract.Constants;
+using BookRoom.Domain.Contract.DataTransferObjects.BookRoomDtos;
 using BookRoom.Domain.Contract.Notification.BookRooms;
 using BookRoom.Domain.Contract.Requests.Commands.BookRooms;
 using BookRoom.Domain.Contract.Responses;
@@ -8,7 +9,6 @@ using BookRoom.Domain.Contract.UseCases.BookRooms;
 using BookRoom.Domain.Entities;
 using BookRoom.Domain.Queue;
 using BookRoom.Domain.Repositories.EntityFramework;
-using BookRoom.Domain.Validation.BookRoomValidations;
 using Microsoft.Extensions.Logging;
 
 namespace BookRoom.Application.UseCases.BookRoomUseCases
@@ -22,7 +22,7 @@ namespace BookRoom.Application.UseCases.BookRoomUseCases
         private readonly ILogger<CancelBookRoomUseCase> _logger;
         private readonly IBookRoomProducer _producer;
         private readonly IBookRoomRequestProducer _requestProducer;
-
+        private readonly IBookRoomValidationUseCase _bookRoomValidationUseCase;
         public CreateBookRoomUseCase(
             IBookRoomsRepository repository,
             IMapper mapper,
@@ -30,7 +30,8 @@ namespace BookRoom.Application.UseCases.BookRoomUseCases
             IRoomRepository roomRepository,
             IUserRepository userRepository,
             IBookRoomProducer producer,
-            IBookRoomRequestProducer requestProducer)
+            IBookRoomRequestProducer requestProducer,
+            IBookRoomValidationUseCase bookRoomValidationUseCase)
         {
             _repository = repository;
             _mapper = mapper;
@@ -39,42 +40,24 @@ namespace BookRoom.Application.UseCases.BookRoomUseCases
             _userRepository = userRepository;
             _producer = producer;
             _requestProducer = requestProducer;
+            _bookRoomValidationUseCase = bookRoomValidationUseCase;
         }
         public async Task<CommonResponse<BookRoomResponse>> HandleAsync(CreateBookRoomRequest request, CancellationToken cancellationToken)
         {
 			try
 			{
-                var book = _mapper.Map<BookRooms>(request);
-                book.User = await _userRepository.GetAsync(request.User.Reference, cancellationToken);
-                book.Room = await _roomRepository.GetAsync(request.Room.Reference, cancellationToken);
+                var bookRoom = _mapper.Map<BookRooms>(request);
+                bookRoom.User = await _userRepository.GetAsync(request.User.Reference, cancellationToken);
+                bookRoom.Room = await _roomRepository.GetAsync(request.Room.Reference, cancellationToken);
 
-                book.Status = Domain.Contract.Enums.BookStatusRoom.Requested;
+                bookRoom.Status = Domain.Contract.Enums.BookStatusRoom.Requested;
 
-                var cantStart30DaysAdvancedValidation = new BookRoomCantStart30DaysAdvanced();
-                var cantStart30DaysAdvancedResult = await cantStart30DaysAdvancedValidation.ValidateAsync(book, cancellationToken);
-                if(!cantStart30DaysAdvancedResult.IsValid)
-                    return CommonResponse<BookRoomResponse>.BadRequest(cantStart30DaysAdvancedResult
-                        .Errors
-                        .FirstOrDefault()
-                        .ErrorMessage);
+                var dtoValidation = _mapper.Map<BookRoomValidationDTO>(bookRoom);
+                var validationResult = await _bookRoomValidationUseCase.HandleAsync(dtoValidation, cancellationToken);
+                if(!validationResult.Valid)
+                    return CommonResponse<BookRoomResponse>.BadRequest(validationResult.Error);
 
-                var bookRoomGrater3DaysValidation = new BookRoomGreater3DaysValidation();
-                var bookRoomGrater3DaysResult = await bookRoomGrater3DaysValidation.ValidateAsync(book, cancellationToken);
-                if(!bookRoomGrater3DaysResult.IsValid)
-                    return CommonResponse<BookRoomResponse>.BadRequest(bookRoomGrater3DaysResult
-                        .Errors
-                        .FirstOrDefault()
-                        .ErrorMessage);
-
-                var startsAtLeast1DayAfterBookingValidation = new BookRoomStartsAtLeast1DayAfterBooking();
-                var startsAtLeast1DayAfterBookingResult = await startsAtLeast1DayAfterBookingValidation.ValidateAsync(book, cancellationToken);
-                if(!startsAtLeast1DayAfterBookingResult.IsValid)
-                    return CommonResponse<BookRoomResponse>.BadRequest(startsAtLeast1DayAfterBookingResult
-                        .Errors
-                        .FirstOrDefault()
-                        .ErrorMessage);
-
-                var created = await _repository.InsertAsync(book, cancellationToken);
+                var created = await _repository.InsertAsync(bookRoom, cancellationToken);
 
                 await _producer.SendAsync(created, cancellationToken);
 

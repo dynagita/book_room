@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using BookRoom.Domain.Contract.Constants;
+using BookRoom.Domain.Contract.DataTransferObjects.BookRoomDtos;
 using BookRoom.Domain.Contract.Notification.BookRooms;
 using BookRoom.Domain.Contract.Requests.Commands.BookRooms;
 using BookRoom.Domain.Contract.Responses;
@@ -19,19 +20,22 @@ namespace BookRoom.Application.UseCases.BookRoomUseCases
         private readonly ILogger<CancelBookRoomUseCase> _logger;
         private readonly IBookRoomProducer _producer;
         private readonly IBookRoomRequestProducer _requestProducer;
+        private readonly IBookRoomValidationUseCase _bookRoomValidationUseCase;
 
         public UpdateBookRoomUseCase(
             IBookRoomsRepository repository,
             IMapper mapper,
             ILogger<CancelBookRoomUseCase> logger,
             IBookRoomProducer producer,
-            IBookRoomRequestProducer requestProducer)
+            IBookRoomRequestProducer requestProducer,
+            IBookRoomValidationUseCase bookRoomValidationUseCase)
         {
             _repository = repository;
             _mapper = mapper;
             _logger = logger;
             _producer = producer;
             _requestProducer = requestProducer;
+            _bookRoomValidationUseCase = bookRoomValidationUseCase;
         }
 
         public async Task<CommonResponse<BookRoomResponse>> HandleAsync(UpdateBookRoomRequest request, CancellationToken cancellationToken)
@@ -39,6 +43,11 @@ namespace BookRoom.Application.UseCases.BookRoomUseCases
             try
             {
                 var bookRoom = _mapper.Map<BookRooms>(request);
+
+                var dtoValidation = _mapper.Map<BookRoomValidationDTO>(bookRoom);
+                var validationResult = await _bookRoomValidationUseCase.HandleAsync(dtoValidation, cancellationToken);
+                if (!validationResult.Valid)
+                    return CommonResponse<BookRoomResponse>.BadRequest(validationResult.Error);
 
                 var updated = await _repository.UpdateAsync(bookRoom.Id, bookRoom, cancellationToken);
 

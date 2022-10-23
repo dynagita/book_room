@@ -63,6 +63,7 @@ namespace BookRoom.Application
 
         public static IServiceCollection AddUseCases(this IServiceCollection services)
         {
+            services.AddTransient<IBookRoomValidationUseCase, BookRoomValidationUseCase>();
             services.AddTransient<IAuthenticateUseCase, AuthenticateUseCase>();
             services.AddTransient<ICreateUserUseCase, CreateUserUseCase>();
             services.AddTransient<ITokenCreateUseCase, TokenCreateUseCase>();

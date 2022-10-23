@@ -4,6 +4,9 @@ namespace BookRoom.Domain.Entities
 {
     public class BookRooms : EntityBase
     {
+        public BookRooms() : base() 
+        { 
+        }
         public DateTime StartDate { get; set; }
 
         public DateTime EndDate { get; set; }

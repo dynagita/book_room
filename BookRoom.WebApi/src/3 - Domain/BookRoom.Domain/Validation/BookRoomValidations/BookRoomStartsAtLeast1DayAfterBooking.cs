@@ -8,7 +8,7 @@ namespace BookRoom.Domain.Validation.BookRoomValidations
     {
         public BookRoomStartsAtLeast1DayAfterBooking()
         {
-            RuleFor(x => x.StartDate.Subtract(x.DatInc).Days)
+            RuleFor(x => x.StartDate.Subtract(x.DatAlt).Days)
                 .GreaterThanOrEqualTo(1)
                 .WithMessage(ErrorMessages.BookRoomMessages.BOOK_STARTS_AT_LEAST_1_DAY_BOOKING);
         }
