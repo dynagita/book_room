@@ -18,8 +18,9 @@ namespace BookRoom.Infrastructure.Migrations
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Description = table.Column<string>(type: "text", nullable: false),
                     Title = table.Column<string>(type: "text", nullable: false),
-                    DatInc = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    DatAlt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    Number = table.Column<int>(type: "integer", nullable: false),
+                    DatInc = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
+                    DatAlt = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
                     Active = table.Column<bool>(type: "boolean", nullable: false)
                 },
                 constraints: table =>
@@ -36,10 +37,10 @@ namespace BookRoom.Infrastructure.Migrations
                     Name = table.Column<string>(type: "text", nullable: false),
                     LastName = table.Column<string>(type: "text", nullable: false),
                     Email = table.Column<string>(type: "text", nullable: false),
-                    BornDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    BornDate = table.Column<DateTime>(type: "timestamp without time zone", nullable: true),
                     Password = table.Column<string>(type: "text", nullable: false),
-                    DatInc = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    DatAlt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    DatInc = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
+                    DatAlt = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
                     Active = table.Column<bool>(type: "boolean", nullable: false)
                 },
                 constraints: table =>
@@ -53,13 +54,13 @@ namespace BookRoom.Infrastructure.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    StartDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    EndDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    StartDate = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
+                    EndDate = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
                     Status = table.Column<int>(type: "integer", nullable: false),
                     UserId = table.Column<int>(type: "integer", nullable: false),
                     RoomId = table.Column<int>(type: "integer", nullable: false),
-                    DatInc = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    DatAlt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    DatInc = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
+                    DatAlt = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
                     Active = table.Column<bool>(type: "boolean", nullable: false)
                 },
                 constraints: table =>

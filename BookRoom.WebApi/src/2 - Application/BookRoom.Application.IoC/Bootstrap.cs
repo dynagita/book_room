@@ -10,6 +10,7 @@ namespace BookRoom.Application.IoC
         {
             services.AddInfrastructure(configuration);
             services.AddApplication(configuration);
+
             return services;
         }
     }

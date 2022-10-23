@@ -1,13 +1,11 @@
 ﻿using BookRoom.Domain.Contract.Enums;
-using BookRoom.Domain.Contract.Responses;
-using BookRoom.Domain.Contract.Responses.BookRoomsResponses;
 using BookRoom.Domain.Contract.Responses.RoomResponses;
 using BookRoom.Domain.Contract.Responses.UserResponses;
 using MediatR;
 
-namespace BookRoom.Domain.Contract.Requests.Commands.BookRooms
+namespace BookRoom.Domain.Contract.Notification.BookRooms
 {
-    public class UpdateBookRoomRequest : IRequest<CommonResponse<BookRoomResponse>>
+    public class BookRoomNotification : INotification
     {
         public int Reference { get; set; }
         public DateTime StartDate { get; set; }

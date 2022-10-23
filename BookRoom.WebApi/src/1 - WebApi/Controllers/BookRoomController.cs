@@ -12,7 +12,7 @@ namespace BookRoom.WebApi.Controllers
 {
     [ApiController]
     [Route("/[controller]")]
-    [Authorize]
+    //[Authorize]
     public class BookRoomController : Controller
     {
         private readonly IMediator _mediator;
@@ -31,7 +31,7 @@ namespace BookRoom.WebApi.Controllers
         [ProducesResponseType(statusCode: 200, Type = typeof(CommonResponse<BookRoomResponse>))]
         [ProducesResponseType(statusCode: 400, Type = typeof(CommonResponse<BookRoomResponse>))]
         [ProducesResponseType(statusCode: 401, Type = typeof(CommonResponse<BookRoomResponse>))]
-        public async Task<IActionResult> Create(CreateRoomRequest request)
+        public async Task<IActionResult> Create(CreateBookRoomRequest request)
         {
             var response = await _mediator.Send(request);
 
@@ -50,7 +50,7 @@ namespace BookRoom.WebApi.Controllers
         [ProducesResponseType(statusCode: 200, Type = typeof(CommonResponse<BookRoomResponse>))]
         [ProducesResponseType(statusCode: 400, Type = typeof(CommonResponse<BookRoomResponse>))]
         [ProducesResponseType(statusCode: 401, Type = typeof(CommonResponse<BookRoomResponse>))]
-        public async Task<IActionResult> Update([FromQuery][Required]int id, CreateRoomRequest request)
+        public async Task<IActionResult> Update([FromQuery][Required]int id, UpdateBookRoomRequest request)
         {
             request.Reference = id;
             var response = await _mediator.Send(request);

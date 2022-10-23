@@ -7,6 +7,7 @@ using BookRoom.Domain.Contract.Responses.RoomResponses;
 using BookRoom.Domain.Contract.Responses.UserResponses;
 using BookRoom.Domain.Contract.UseCases.Rooms;
 using BookRoom.Domain.Entities;
+using BookRoom.Domain.Queue;
 using BookRoom.Domain.Repositories.EntityFramework;
 using BookRoom.Domain.Validation.RoomValidations;
 using Microsoft.Extensions.Logging;
@@ -18,15 +19,18 @@ namespace BookRoom.Application.UseCases.RooUseCases
         private readonly IRoomRepository _repository;
         private readonly IMapper _mapper;
         private readonly ILogger<CreateRoomUseCase> _logger;
+        private readonly IRoomProducer _producer;
         public CreateRoomUseCase(
             IRoomRepository repository,
             IMapper mapper,
             ILogger<CreateRoomUseCase> logger
-        )
+,
+            IRoomProducer producer)
         {
             _repository = repository;
             _mapper = mapper;
             _logger = logger;
+            _producer = producer;
         }
 
         public async Task<CommonResponse<RoomResponse>> HandleAsync(CreateRoomRequest request, CancellationToken cancellationToken)
@@ -43,7 +47,9 @@ namespace BookRoom.Application.UseCases.RooUseCases
                 if (!roomExists.IsValid)
                     return CommonResponse<RoomResponse>.BadRequest(ErrorMessages.RoomMessages.ROOM_EXISTS);
 
-                room = await _repository.InsertAsync(room, cancellationToken);
+                room = await _repository.InsertAsync(newRoom, cancellationToken);
+
+                await _producer.SendAsync(room, cancellationToken);
 
                 var response = _mapper.Map<RoomResponse>(room);
 

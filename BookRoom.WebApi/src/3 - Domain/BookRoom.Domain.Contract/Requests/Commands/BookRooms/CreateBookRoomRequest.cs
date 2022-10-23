@@ -9,6 +9,7 @@ namespace BookRoom.Domain.Contract.Requests.Commands.BookRooms
 {
     public class CreateBookRoomRequest : IRequest<CommonResponse<BookRoomResponse>>
     {
+        public int Reference { get; set; }
         public DateTime StartDate { get; set; }
 
         public DateTime EndDate { get; set; }

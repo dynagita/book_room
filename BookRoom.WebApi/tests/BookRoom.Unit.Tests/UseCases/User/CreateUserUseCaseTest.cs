@@ -4,6 +4,7 @@ using BookRoom.Application.UseCases.UserUseCases;
 using BookRoom.Domain.Contract.Constants;
 using BookRoom.Domain.Contract.Requests.Commands.UserCommands;
 using BookRoom.Domain.Contract.UseCases.Users;
+using BookRoom.Domain.Queue;
 using BookRoom.Domain.Repositories.EntityFramework;
 using BookRoom.Unit.Tests.Utils;
 using Castle.Core.Logging;
@@ -18,12 +19,13 @@ namespace BookRoom.Unit.Tests.UseCases.User
         private readonly Mock<IUserRepository> _repository;
         private readonly ICreateUserUseCase _useCase;
         private readonly Mock<ILogger<CreateUserUseCase>> _logger;
-        
+        private readonly Mock<IUserProducer> _producer;
         public CreateUserUseCaseTest()
         {
             _repository = new Mock<IUserRepository>();
             _logger = new Mock<ILogger<CreateUserUseCase>>();
-            _useCase = new CreateUserUseCase(_repository.Object, MapperCreate.CreateMappers(), _logger.Object);
+            _producer = new Mock<IUserProducer>();
+            _useCase = new CreateUserUseCase(_repository.Object, MapperCreate.CreateMappers(), _logger.Object, _producer.Object);
         }
 
         [Fact(DisplayName = "ShouldCreateUser")]

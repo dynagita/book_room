@@ -3,6 +3,9 @@ using BookRoom.Infrastructure.Database.Context;
 using BookRoom.WebApi.Extensions;
 using Microsoft.EntityFrameworkCore;
 
+AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+AppContext.SetSwitch("Npgsql.DisableDateTimeInfinityConversions", true);
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Host.ConfigureAppConfiguration((hostBuilder, configurationBuilder) => 

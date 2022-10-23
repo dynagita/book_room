@@ -2,55 +2,58 @@
   "BookRoom.Application.dll": {
     "D:\\src\\book_room\\BookRoom.WebApi\\src\\2 - Application\\BookRoom.Application\\UseCases\\UserUseCases\\CreateUserUseCase.cs": {
       "BookRoom.Application.UseCases.UserUseCases.CreateUserUseCase": {
-        "System.Void BookRoom.Application.UseCases.UserUseCases.CreateUserUseCase::.ctor(BookRoom.Domain.Repositories.EntityFramework.IUserRepository,AutoMapper.IMapper,Microsoft.Extensions.Logging.ILogger`1<BookRoom.Application.UseCases.UserUseCases.CreateUserUseCase>)": {
+        "System.Void BookRoom.Application.UseCases.UserUseCases.CreateUserUseCase::.ctor(BookRoom.Domain.Repositories.EntityFramework.IUserRepository,AutoMapper.IMapper,Microsoft.Extensions.Logging.ILogger`1<BookRoom.Application.UseCases.UserUseCases.CreateUserUseCase>,BookRoom.Domain.Queue.IUserProducer)": {
           "Lines": {
-            "21": 3,
-            "22": 3,
             "23": 3,
             "24": 3,
             "25": 3,
             "26": 3,
             "27": 3,
             "28": 3,
-            "29": 3
+            "29": 3,
+            "30": 3,
+            "31": 3,
+            "32": 3,
+            "33": 3
           },
           "Branches": []
         }
       },
-      "BookRoom.Application.UseCases.UserUseCases.CreateUserUseCase/<HandleAsync>d__4": {
-        "System.Void BookRoom.Application.UseCases.UserUseCases.CreateUserUseCase/<HandleAsync>d__4::MoveNext()": {
+      "BookRoom.Application.UseCases.UserUseCases.CreateUserUseCase/<HandleAsync>d__5": {
+        "System.Void BookRoom.Application.UseCases.UserUseCases.CreateUserUseCase/<HandleAsync>d__5::MoveNext()": {
           "Lines": {
-            "32": 3,
-            "34": 3,
-            "35": 3,
-            "37": 3,
-            "39": 2,
-            "41": 2,
+            "36": 3,
+            "38": 3,
+            "39": 3,
+            "41": 3,
             "43": 2,
             "45": 2,
-            "46": 1,
-            "47": 1,
-            "49": 1,
-            "52": 1,
+            "47": 2,
+            "49": 2,
+            "50": 1,
+            "51": 1,
+            "53": 1,
             "55": 1,
-            "56": 1,
-            "57": 1,
             "58": 1,
-            "60": 3
+            "61": 1,
+            "62": 1,
+            "63": 1,
+            "64": 1,
+            "66": 3
           },
           "Branches": [
             {
-              "Line": 45,
-              "Offset": 425,
-              "EndOffset": 430,
+              "Line": 49,
+              "Offset": 437,
+              "EndOffset": 442,
               "Path": 0,
               "Ordinal": 0,
               "Hits": 1
             },
             {
-              "Line": 45,
-              "Offset": 425,
-              "EndOffset": 609,
+              "Line": 49,
+              "Offset": 437,
+              "EndOffset": 742,
               "Path": 1,
               "Ordinal": 1,
               "Hits": 1
@@ -61,29 +64,31 @@
     },
     "D:\\src\\book_room\\BookRoom.WebApi\\src\\2 - Application\\BookRoom.Application\\UseCases\\RoomUseCases\\DeleteRoomUseCase.cs": {
       "BookRoom.Application.UseCases.RoomUseCases.DeleteRoomUseCase": {
-        "System.Void BookRoom.Application.UseCases.RoomUseCases.DeleteRoomUseCase::.ctor(BookRoom.Domain.Repositories.EntityFramework.IRoomRepository,Microsoft.Extensions.Logging.ILogger`1<BookRoom.Application.UseCases.RooUseCases.CreateRoomUseCase>)": {
+        "System.Void BookRoom.Application.UseCases.RoomUseCases.DeleteRoomUseCase::.ctor(BookRoom.Domain.Repositories.EntityFramework.IRoomRepository,Microsoft.Extensions.Logging.ILogger`1<BookRoom.Application.UseCases.RooUseCases.CreateRoomUseCase>,BookRoom.Domain.Queue.IRoomProducer)": {
           "Lines": {
-            "16": 2,
-            "17": 2,
             "18": 2,
             "19": 2,
-            "20": 2
+            "20": 2,
+            "21": 2,
+            "22": 2,
+            "23": 2
           },
           "Branches": []
         }
       },
-      "BookRoom.Application.UseCases.RoomUseCases.DeleteRoomUseCase/<HandleAsync>d__3": {
-        "System.Void BookRoom.Application.UseCases.RoomUseCases.DeleteRoomUseCase/<HandleAsync>d__3::MoveNext()": {
+      "BookRoom.Application.UseCases.RoomUseCases.DeleteRoomUseCase/<HandleAsync>d__4": {
+        "System.Void BookRoom.Application.UseCases.RoomUseCases.DeleteRoomUseCase/<HandleAsync>d__4::MoveNext()": {
           "Lines": {
-            "23": 2,
-            "25": 2,
             "26": 2,
-            "27": 1,
-            "29": 1,
-            "30": 1,
+            "28": 2,
+            "29": 2,
             "31": 1,
-            "32": 1,
-            "34": 2
+            "33": 1,
+            "35": 1,
+            "36": 1,
+            "37": 1,
+            "38": 1,
+            "40": 2
           },
           "Branches": []
         }
@@ -91,9 +96,8 @@
     },
     "D:\\src\\book_room\\BookRoom.WebApi\\src\\2 - Application\\BookRoom.Application\\UseCases\\RoomUseCases\\UpdateRoomUseCase.cs": {
       "BookRoom.Application.UseCases.RoomUseCases.UpdateRoomUseCase": {
-        "System.Void BookRoom.Application.UseCases.RoomUseCases.UpdateRoomUseCase::.ctor(BookRoom.Domain.Repositories.EntityFramework.IRoomRepository,AutoMapper.IMapper,Microsoft.Extensions.Logging.ILogger`1<BookRoom.Application.UseCases.RooUseCases.CreateRoomUseCase>)": {
+        "System.Void BookRoom.Application.UseCases.RoomUseCases.UpdateRoomUseCase::.ctor(BookRoom.Domain.Repositories.EntityFramework.IRoomRepository,AutoMapper.IMapper,Microsoft.Extensions.Logging.ILogger`1<BookRoom.Application.UseCases.RooUseCases.CreateRoomUseCase>,BookRoom.Domain.Queue.IRoomProducer)": {
           "Lines": {
-            "21": 2,
             "22": 2,
             "23": 2,
             "24": 2,
@@ -101,25 +105,29 @@
             "26": 2,
             "27": 2,
             "28": 2,
-            "29": 2
+            "29": 2,
+            "30": 2,
+            "31": 2,
+            "32": 2
           },
           "Branches": []
         }
       },
-      "BookRoom.Application.UseCases.RoomUseCases.UpdateRoomUseCase/<HandleAsync>d__4": {
-        "System.Void BookRoom.Application.UseCases.RoomUseCases.UpdateRoomUseCase/<HandleAsync>d__4::MoveNext()": {
+      "BookRoom.Application.UseCases.RoomUseCases.UpdateRoomUseCase/<HandleAsync>d__5": {
+        "System.Void BookRoom.Application.UseCases.RoomUseCases.UpdateRoomUseCase/<HandleAsync>d__5::MoveNext()": {
           "Lines": {
-            "32": 2,
-            "34": 2,
             "35": 2,
             "37": 2,
-            "39": 1,
-            "41": 1,
+            "38": 2,
+            "40": 2,
+            "42": 1,
             "44": 1,
-            "45": 1,
             "46": 1,
-            "47": 1,
-            "49": 2
+            "49": 1,
+            "50": 1,
+            "51": 1,
+            "52": 1,
+            "54": 2
           },
           "Branches": []
         }
@@ -127,10 +135,8 @@
     },
     "D:\\src\\book_room\\BookRoom.WebApi\\src\\2 - Application\\BookRoom.Application\\UseCases\\RoomUseCases\\CreateRoomUseCase.cs": {
       "BookRoom.Application.UseCases.RooUseCases.CreateRoomUseCase": {
-        "System.Void BookRoom.Application.UseCases.RooUseCases.CreateRoomUseCase::.ctor(BookRoom.Domain.Repositories.EntityFramework.IRoomRepository,AutoMapper.IMapper,Microsoft.Extensions.Logging.ILogger`1<BookRoom.Application.UseCases.RooUseCases.CreateRoomUseCase>)": {
+        "System.Void BookRoom.Application.UseCases.RooUseCases.CreateRoomUseCase::.ctor(BookRoom.Domain.Repositories.EntityFramework.IRoomRepository,AutoMapper.IMapper,Microsoft.Extensions.Logging.ILogger`1<BookRoom.Application.UseCases.RooUseCases.CreateRoomUseCase>,BookRoom.Domain.Queue.IRoomProducer)": {
           "Lines": {
-            "21": 3,
-            "22": 3,
             "23": 3,
             "24": 3,
             "25": 3,
@@ -138,49 +144,333 @@
             "27": 3,
             "28": 3,
             "29": 3,
-            "30": 3
+            "30": 3,
+            "31": 3,
+            "32": 3,
+            "33": 3,
+            "34": 3
           },
           "Branches": []
         }
       },
-      "BookRoom.Application.UseCases.RooUseCases.CreateRoomUseCase/<HandleAsync>d__4": {
-        "System.Void BookRoom.Application.UseCases.RooUseCases.CreateRoomUseCase/<HandleAsync>d__4::MoveNext()": {
+      "BookRoom.Application.UseCases.RooUseCases.CreateRoomUseCase/<HandleAsync>d__5": {
+        "System.Void BookRoom.Application.UseCases.RooUseCases.CreateRoomUseCase/<HandleAsync>d__5::MoveNext()": {
           "Lines": {
-            "33": 3,
-            "35": 3,
-            "36": 3,
-            "38": 2,
-            "40": 2,
+            "37": 3,
+            "39": 3,
+            "40": 3,
             "42": 2,
-            "43": 2,
-            "44": 1,
-            "46": 1,
+            "44": 2,
+            "46": 2,
+            "47": 2,
             "48": 1,
             "50": 1,
             "52": 1,
-            "53": 1,
             "54": 1,
-            "55": 1,
-            "57": 3
+            "56": 1,
+            "58": 1,
+            "59": 1,
+            "60": 1,
+            "61": 1,
+            "63": 3
           },
           "Branches": [
             {
-              "Line": 43,
-              "Offset": 400,
-              "EndOffset": 402,
+              "Line": 47,
+              "Offset": 409,
+              "EndOffset": 411,
               "Path": 0,
               "Ordinal": 0,
               "Hits": 1
             },
             {
-              "Line": 43,
-              "Offset": 400,
-              "EndOffset": 418,
+              "Line": 47,
+              "Offset": 409,
+              "EndOffset": 427,
               "Path": 1,
               "Ordinal": 1,
               "Hits": 1
             }
           ]
+        }
+      }
+    },
+    "D:\\src\\book_room\\BookRoom.WebApi\\src\\2 - Application\\BookRoom.Application\\UseCases\\BookRoomUseCases\\BookRoomProcessUseCase.cs": {
+      "BookRoom.Application.UseCases.BookRoomUseCases.BookRoomProcessUseCase": {
+        "System.Void BookRoom.Application.UseCases.BookRoomUseCases.BookRoomProcessUseCase::.ctor(BookRoom.Domain.Repositories.EntityFramework.IBookRoomsRepository,Microsoft.Extensions.Logging.ILogger`1<BookRoom.Application.UseCases.BookRoomUseCases.BookRoomProcessUseCase>,AutoMapper.IMapper)": {
+          "Lines": {
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0
+          },
+          "Branches": []
+        }
+      },
+      "BookRoom.Application.UseCases.BookRoomUseCases.BookRoomProcessUseCase/<HandleAsync>d__4": {
+        "System.Void BookRoom.Application.UseCases.BookRoomUseCases.BookRoomProcessUseCase/<HandleAsync>d__4::MoveNext()": {
+          "Lines": {
+            "27": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "48": 0,
+            "49": 0
+          },
+          "Branches": [
+            {
+              "Line": 33,
+              "Offset": 244,
+              "EndOffset": 246,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 33,
+              "Offset": 244,
+              "EndOffset": 275,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 33,
+              "Offset": 278,
+              "EndOffset": 280,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 33,
+              "Offset": 278,
+              "EndOffset": 297,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "D:\\src\\book_room\\BookRoom.WebApi\\src\\2 - Application\\BookRoom.Application\\UseCases\\BookRoomUseCases\\CancelBookRoomUseCase.cs": {
+      "BookRoom.Application.UseCases.BookRoomUseCases.CancelBookRoomUseCase": {
+        "System.Void BookRoom.Application.UseCases.BookRoomUseCases.CancelBookRoomUseCase::.ctor(BookRoom.Domain.Repositories.EntityFramework.IBookRoomsRepository,AutoMapper.IMapper,Microsoft.Extensions.Logging.ILogger`1<BookRoom.Application.UseCases.BookRoomUseCases.CancelBookRoomUseCase>,BookRoom.Domain.Queue.IBookRoomProducer)": {
+          "Lines": {
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0
+          },
+          "Branches": []
+        }
+      },
+      "BookRoom.Application.UseCases.BookRoomUseCases.CancelBookRoomUseCase/<HandleAsync>d__5": {
+        "System.Void BookRoom.Application.UseCases.BookRoomUseCases.CancelBookRoomUseCase/<HandleAsync>d__5::MoveNext()": {
+          "Lines": {
+            "32": 0,
+            "34": 0,
+            "35": 0,
+            "37": 0,
+            "39": 0,
+            "41": 0,
+            "43": 0,
+            "45": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "52": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\src\\book_room\\BookRoom.WebApi\\src\\2 - Application\\BookRoom.Application\\UseCases\\BookRoomUseCases\\CreateBookRoomUseCase.cs": {
+      "BookRoom.Application.UseCases.BookRoomUseCases.CreateBookRoomUseCase": {
+        "System.Void BookRoom.Application.UseCases.BookRoomUseCases.CreateBookRoomUseCase::.ctor(BookRoom.Domain.Repositories.EntityFramework.IBookRoomsRepository,AutoMapper.IMapper,Microsoft.Extensions.Logging.ILogger`1<BookRoom.Application.UseCases.BookRoomUseCases.CancelBookRoomUseCase>,BookRoom.Domain.Repositories.EntityFramework.IRoomRepository,BookRoom.Domain.Repositories.EntityFramework.IUserRepository,BookRoom.Domain.Queue.IBookRoomProducer,BookRoom.Domain.Queue.IBookRoomRequestProducer)": {
+          "Lines": {
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0
+          },
+          "Branches": []
+        }
+      },
+      "BookRoom.Application.UseCases.BookRoomUseCases.CreateBookRoomUseCase/<HandleAsync>d__8": {
+        "System.Void BookRoom.Application.UseCases.BookRoomUseCases.CreateBookRoomUseCase/<HandleAsync>d__8::MoveNext()": {
+          "Lines": {
+            "44": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "51": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "77": 0,
+            "79": 0,
+            "81": 0,
+            "83": 0,
+            "85": 0,
+            "87": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "94": 0
+          },
+          "Branches": [
+            {
+              "Line": 55,
+              "Offset": 665,
+              "EndOffset": 667,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 55,
+              "Offset": 665,
+              "EndOffset": 699,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 63,
+              "Offset": 868,
+              "EndOffset": 870,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 63,
+              "Offset": 868,
+              "EndOffset": 902,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 71,
+              "Offset": 1071,
+              "EndOffset": 1073,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 71,
+              "Offset": 1071,
+              "EndOffset": 1105,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "D:\\src\\book_room\\BookRoom.WebApi\\src\\2 - Application\\BookRoom.Application\\UseCases\\BookRoomUseCases\\UpdateBookRoomUseCase.cs": {
+      "BookRoom.Application.UseCases.BookRoomUseCases.UpdateBookRoomUseCase": {
+        "System.Void BookRoom.Application.UseCases.BookRoomUseCases.UpdateBookRoomUseCase::.ctor(BookRoom.Domain.Repositories.EntityFramework.IBookRoomsRepository,AutoMapper.IMapper,Microsoft.Extensions.Logging.ILogger`1<BookRoom.Application.UseCases.BookRoomUseCases.CancelBookRoomUseCase>,BookRoom.Domain.Queue.IBookRoomProducer,BookRoom.Domain.Queue.IBookRoomRequestProducer)": {
+          "Lines": {
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0
+          },
+          "Branches": []
+        }
+      },
+      "BookRoom.Application.UseCases.BookRoomUseCases.UpdateBookRoomUseCase/<HandleAsync>d__6": {
+        "System.Void BookRoom.Application.UseCases.BookRoomUseCases.UpdateBookRoomUseCase/<HandleAsync>d__6::MoveNext()": {
+          "Lines": {
+            "38": 0,
+            "40": 0,
+            "41": 0,
+            "43": 0,
+            "45": 0,
+            "47": 0,
+            "49": 0,
+            "51": 0,
+            "53": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "60": 0
+          },
+          "Branches": []
         }
       }
     },
@@ -298,6 +588,50 @@
         }
       }
     },
+    "D:\\src\\book_room\\BookRoom.WebApi\\src\\2 - Application\\BookRoom.Application\\Mappers\\BookRoomProfile.cs": {
+      "BookRoom.Application.Mappers.BookRoomProfile": {
+        "System.Void BookRoom.Application.Mappers.BookRoomProfile::.ctor()": {
+          "Lines": {
+            "11": 4,
+            "12": 4,
+            "13": 4,
+            "14": 4,
+            "15": 4,
+            "16": 4,
+            "17": 4,
+            "18": 4,
+            "19": 4,
+            "20": 4,
+            "21": 4,
+            "22": 4,
+            "23": 4,
+            "24": 4,
+            "25": 4,
+            "26": 4,
+            "27": 4,
+            "28": 4,
+            "29": 4,
+            "30": 4,
+            "31": 4,
+            "32": 4,
+            "33": 4,
+            "34": 4,
+            "35": 4,
+            "36": 4,
+            "37": 4,
+            "38": 4,
+            "39": 4,
+            "40": 4,
+            "41": 4,
+            "42": 4,
+            "43": 4,
+            "44": 4,
+            "45": 4
+          },
+          "Branches": []
+        }
+      }
+    },
     "D:\\src\\book_room\\BookRoom.WebApi\\src\\2 - Application\\BookRoom.Application\\Mappers\\RoomProfile.cs": {
       "BookRoom.Application.Mappers.RoomProfile": {
         "System.Void BookRoom.Application.Mappers.RoomProfile::.ctor()": {
@@ -316,7 +650,13 @@
             "21": 4,
             "22": 4,
             "23": 4,
-            "24": 4
+            "24": 4,
+            "25": 4,
+            "26": 4,
+            "27": 4,
+            "28": 4,
+            "29": 4,
+            "30": 4
           },
           "Branches": []
         }
@@ -349,6 +689,41 @@
         }
       }
     },
+    "D:\\src\\book_room\\BookRoom.WebApi\\src\\2 - Application\\BookRoom.Application\\HostedServices\\BookRoomRequest\\BookRoomRequestService.cs": {
+      "BookRoom.Application.HostedServices.BookRoomRequest.BookRoomRequestService": {
+        "System.Void BookRoom.Application.HostedServices.BookRoomRequest.BookRoomRequestService::.ctor(Microsoft.Extensions.DependencyInjection.IServiceScopeFactory)": {
+          "Lines": {
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0
+          },
+          "Branches": []
+        }
+      },
+      "BookRoom.Application.HostedServices.BookRoomRequest.BookRoomRequestService/<StartAsync>d__3": {
+        "System.Void BookRoom.Application.HostedServices.BookRoomRequest.BookRoomRequestService/<StartAsync>d__3::MoveNext()": {
+          "Lines": {
+            "19": 0,
+            "20": 0,
+            "21": 0
+          },
+          "Branches": []
+        }
+      },
+      "BookRoom.Application.HostedServices.BookRoomRequest.BookRoomRequestService/<StopAsync>d__4": {
+        "System.Void BookRoom.Application.HostedServices.BookRoomRequest.BookRoomRequestService/<StopAsync>d__4::MoveNext()": {
+          "Lines": {
+            "24": 0,
+            "25": 0,
+            "26": 0
+          },
+          "Branches": []
+        }
+      }
+    },
     "D:\\src\\book_room\\BookRoom.WebApi\\src\\2 - Application\\BookRoom.Application\\Handlers\\Queries\\AuthQueries\\AuthHandler.cs": {
       "BookRoom.Application.Handlers.Queries.AuthQueries.AuthHandler": {
         "System.Void BookRoom.Application.Handlers.Queries.AuthQueries.AuthHandler::.ctor(BookRoom.Domain.Contract.UseCases.Auth.IAuthenticateUseCase)": {
@@ -372,6 +747,29 @@
         }
       }
     },
+    "D:\\src\\book_room\\BookRoom.WebApi\\src\\2 - Application\\BookRoom.Application\\Handlers\\Notifications\\BookRoomNotificationHandler.cs": {
+      "BookRoom.Application.Handlers.Notifications.BookRoomNotificationHandler": {
+        "System.Void BookRoom.Application.Handlers.Notifications.BookRoomNotificationHandler::.ctor(BookRoom.Domain.Contract.UseCases.BookRooms.IBookRoomProcessUseCase)": {
+          "Lines": {
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0
+          },
+          "Branches": []
+        }
+      },
+      "BookRoom.Application.Handlers.Notifications.BookRoomNotificationHandler/<Handle>d__2": {
+        "System.Void BookRoom.Application.Handlers.Notifications.BookRoomNotificationHandler/<Handle>d__2::MoveNext()": {
+          "Lines": {
+            "19": 0,
+            "20": 0,
+            "21": 0
+          },
+          "Branches": []
+        }
+      }
+    },
     "D:\\src\\book_room\\BookRoom.WebApi\\src\\2 - Application\\BookRoom.Application\\Handlers\\Commands\\UserHandlers\\UserCreateHandler.cs": {
       "BookRoom.Application.Handlers.Commands.UserHandlers.UserCreateHandler": {
         "System.Void BookRoom.Application.Handlers.Commands.UserHandlers.UserCreateHandler::.ctor(BookRoom.Domain.Contract.UseCases.Users.ICreateUserUseCase)": {
@@ -390,6 +788,142 @@
             "20": 2,
             "21": 2,
             "22": 2
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\src\\book_room\\BookRoom.WebApi\\src\\2 - Application\\BookRoom.Application\\Handlers\\Commands\\RoomHandlers\\CreateRoomHandler.cs": {
+      "BookRoom.Application.Handlers.Commands.RoomHandlers.CreateRoomHandler": {
+        "System.Void BookRoom.Application.Handlers.Commands.RoomHandlers.CreateRoomHandler::.ctor(BookRoom.Domain.Contract.UseCases.Rooms.ICreateRoomUseCase)": {
+          "Lines": {
+            "13": 2,
+            "14": 2,
+            "15": 2,
+            "16": 2
+          },
+          "Branches": []
+        }
+      },
+      "BookRoom.Application.Handlers.Commands.RoomHandlers.CreateRoomHandler/<Handle>d__2": {
+        "System.Void BookRoom.Application.Handlers.Commands.RoomHandlers.CreateRoomHandler/<Handle>d__2::MoveNext()": {
+          "Lines": {
+            "19": 2,
+            "20": 2,
+            "21": 2
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\src\\book_room\\BookRoom.WebApi\\src\\2 - Application\\BookRoom.Application\\Handlers\\Commands\\RoomHandlers\\DeleteRoomHandler.cs": {
+      "BookRoom.Application.Handlers.Commands.RoomHandlers.DeleteRoomHandler": {
+        "System.Void BookRoom.Application.Handlers.Commands.RoomHandlers.DeleteRoomHandler::.ctor(BookRoom.Domain.Contract.UseCases.Rooms.IDeleteRoomUseCase)": {
+          "Lines": {
+            "12": 2,
+            "13": 2,
+            "14": 2,
+            "15": 2
+          },
+          "Branches": []
+        }
+      },
+      "BookRoom.Application.Handlers.Commands.RoomHandlers.DeleteRoomHandler/<Handle>d__2": {
+        "System.Void BookRoom.Application.Handlers.Commands.RoomHandlers.DeleteRoomHandler/<Handle>d__2::MoveNext()": {
+          "Lines": {
+            "18": 2,
+            "19": 2,
+            "20": 2
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\src\\book_room\\BookRoom.WebApi\\src\\2 - Application\\BookRoom.Application\\Handlers\\Commands\\RoomHandlers\\UpdateRoomHandler.cs": {
+      "BookRoom.Application.Handlers.Commands.RoomHandlers.UpdateRoomHandler": {
+        "System.Threading.Tasks.Task`1<BookRoom.Domain.Contract.Responses.CommonResponse`1<BookRoom.Domain.Contract.Responses.RoomResponses.RoomResponse>> BookRoom.Application.Handlers.Commands.RoomHandlers.UpdateRoomHandler::Handle(BookRoom.Domain.Contract.Requests.Commands.RoomCommands.UpdateRoomRequest,System.Threading.CancellationToken)": {
+          "Lines": {
+            "19": 2,
+            "20": 2,
+            "21": 2
+          },
+          "Branches": []
+        },
+        "System.Void BookRoom.Application.Handlers.Commands.RoomHandlers.UpdateRoomHandler::.ctor(BookRoom.Domain.Contract.UseCases.Rooms.IUpdateRoomUseCase)": {
+          "Lines": {
+            "13": 2,
+            "14": 2,
+            "15": 2,
+            "16": 2
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\src\\book_room\\BookRoom.WebApi\\src\\2 - Application\\BookRoom.Application\\Handlers\\Commands\\BookRoomHandlers\\CancelBookRoomHandler.cs": {
+      "BookRoom.Application.Handlers.Commands.BookRoomHandlers.CancelBookRoomHandler": {
+        "System.Void BookRoom.Application.Handlers.Commands.BookRoomHandlers.CancelBookRoomHandler::.ctor(BookRoom.Domain.Contract.UseCases.BookRooms.ICancelBookRoomUseCase)": {
+          "Lines": {
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0
+          },
+          "Branches": []
+        }
+      },
+      "BookRoom.Application.Handlers.Commands.BookRoomHandlers.CancelBookRoomHandler/<Handle>d__2": {
+        "System.Void BookRoom.Application.Handlers.Commands.BookRoomHandlers.CancelBookRoomHandler/<Handle>d__2::MoveNext()": {
+          "Lines": {
+            "19": 0,
+            "20": 0,
+            "21": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\src\\book_room\\BookRoom.WebApi\\src\\2 - Application\\BookRoom.Application\\Handlers\\Commands\\BookRoomHandlers\\CreateBookRoomHandler.cs": {
+      "BookRoom.Application.Handlers.Commands.BookRoomHandlers.CreateBookRoomHandler": {
+        "System.Void BookRoom.Application.Handlers.Commands.BookRoomHandlers.CreateBookRoomHandler::.ctor(BookRoom.Domain.Contract.UseCases.BookRooms.ICreateBookRoomUseCase)": {
+          "Lines": {
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0
+          },
+          "Branches": []
+        }
+      },
+      "BookRoom.Application.Handlers.Commands.BookRoomHandlers.CreateBookRoomHandler/<Handle>d__2": {
+        "System.Void BookRoom.Application.Handlers.Commands.BookRoomHandlers.CreateBookRoomHandler/<Handle>d__2::MoveNext()": {
+          "Lines": {
+            "19": 0,
+            "20": 0,
+            "21": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\src\\book_room\\BookRoom.WebApi\\src\\2 - Application\\BookRoom.Application\\Handlers\\Commands\\BookRoomHandlers\\UpdateBookRoomHandler.cs": {
+      "BookRoom.Application.Handlers.Commands.BookRoomHandlers.UpdateBookRoomHandler": {
+        "System.Void BookRoom.Application.Handlers.Commands.BookRoomHandlers.UpdateBookRoomHandler::.ctor(BookRoom.Domain.Contract.UseCases.BookRooms.IUpdateBookRoomUseCase)": {
+          "Lines": {
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0
+          },
+          "Branches": []
+        }
+      },
+      "BookRoom.Application.Handlers.Commands.BookRoomHandlers.UpdateBookRoomHandler/<Handle>d__2": {
+        "System.Void BookRoom.Application.Handlers.Commands.BookRoomHandlers.UpdateBookRoomHandler/<Handle>d__2::MoveNext()": {
+          "Lines": {
+            "19": 0,
+            "20": 0,
+            "21": 0
           },
           "Branches": []
         }
@@ -420,52 +954,52 @@
       "BookRoom.Domain.Contract.Responses.CommonResponse`1": {
         "System.Int32 BookRoom.Domain.Contract.Responses.CommonResponse`1::get_Status()": {
           "Lines": {
-            "5": 33
+            "5": 45
           },
           "Branches": []
         },
         "T BookRoom.Domain.Contract.Responses.CommonResponse`1::get_Data()": {
           "Lines": {
-            "7": 27
+            "7": 42
           },
           "Branches": []
         },
         "System.String BookRoom.Domain.Contract.Responses.CommonResponse`1::get_Error()": {
           "Lines": {
-            "9": 30
+            "9": 42
           },
           "Branches": []
         },
         "BookRoom.Domain.Contract.Responses.CommonResponse`1<T> BookRoom.Domain.Contract.Responses.CommonResponse`1::Ok(T)": {
           "Lines": {
-            "24": 7
+            "24": 10
           },
           "Branches": []
         },
         "BookRoom.Domain.Contract.Responses.CommonResponse`1<T> BookRoom.Domain.Contract.Responses.CommonResponse`1::BadRequest(System.String)": {
           "Lines": {
-            "26": 10
+            "26": 13
           },
           "Branches": []
         },
         "System.Void BookRoom.Domain.Contract.Responses.CommonResponse`1::.ctor(System.Int32,T,System.String)": {
           "Lines": {
-            "11": 7,
-            "12": 7,
-            "13": 7,
-            "14": 7,
-            "15": 7,
-            "16": 7
+            "11": 10,
+            "12": 10,
+            "13": 10,
+            "14": 10,
+            "15": 10,
+            "16": 10
           },
           "Branches": []
         },
         "System.Void BookRoom.Domain.Contract.Responses.CommonResponse`1::.ctor(System.Int32,System.String)": {
           "Lines": {
-            "18": 10,
-            "19": 10,
-            "20": 10,
-            "21": 10,
-            "22": 10
+            "18": 13,
+            "19": 13,
+            "20": 13,
+            "21": 13,
+            "22": 13
           },
           "Branches": []
         }
@@ -475,53 +1009,261 @@
       "BookRoom.Domain.Contract.Responses.RoomResponses.RoomResponse": {
         "System.Int32 BookRoom.Domain.Contract.Responses.RoomResponses.RoomResponse::get_Reference()": {
           "Lines": {
-            "5": 1
+            "5": 3
           },
           "Branches": []
         },
         "System.String BookRoom.Domain.Contract.Responses.RoomResponses.RoomResponse::get_Title()": {
           "Lines": {
-            "7": 1
+            "7": 7
           },
           "Branches": []
         },
         "System.String BookRoom.Domain.Contract.Responses.RoomResponses.RoomResponse::get_Description()": {
           "Lines": {
-            "9": 1
+            "9": 7
           },
           "Branches": []
         },
         "System.Int32 BookRoom.Domain.Contract.Responses.RoomResponses.RoomResponse::get_Number()": {
           "Lines": {
-            "11": 2
+            "11": 4
           },
           "Branches": []
         }
       }
     },
-    "D:\\src\\book_room\\BookRoom.WebApi\\src\\3 - Domain\\BookRoom.Domain.Contract\\Requests\\Commands\\RoomCommands\\CreateUpdateRoomRequest.cs": {
-      "BookRoom.Domain.Contract.Requests.Commands.RoomCommands.CreateUpdateRoomRequest": {
-        "System.Int32 BookRoom.Domain.Contract.Requests.Commands.RoomCommands.CreateUpdateRoomRequest::get_Reference()": {
+    "D:\\src\\book_room\\BookRoom.WebApi\\src\\3 - Domain\\BookRoom.Domain.Contract\\Responses\\BookRoomsResponses\\BookRoomResponse.cs": {
+      "BookRoom.Domain.Contract.Responses.BookRoomsResponses.BookRoomResponse": {
+        "System.Int32 BookRoom.Domain.Contract.Responses.BookRoomsResponses.BookRoomResponse::get_Reference()": {
           "Lines": {
-            "8": 14
+            "9": 0
           },
           "Branches": []
         },
-        "System.String BookRoom.Domain.Contract.Requests.Commands.RoomCommands.CreateUpdateRoomRequest::get_Title()": {
+        "System.DateTime BookRoom.Domain.Contract.Responses.BookRoomsResponses.BookRoomResponse::get_StartDate()": {
           "Lines": {
-            "10": 11
+            "10": 0
           },
           "Branches": []
         },
-        "System.String BookRoom.Domain.Contract.Requests.Commands.RoomCommands.CreateUpdateRoomRequest::get_Description()": {
+        "System.DateTime BookRoom.Domain.Contract.Responses.BookRoomsResponses.BookRoomResponse::get_EndDate()": {
           "Lines": {
-            "12": 11
+            "12": 0
           },
           "Branches": []
         },
-        "System.Int32 BookRoom.Domain.Contract.Requests.Commands.RoomCommands.CreateUpdateRoomRequest::get_Number()": {
+        "BookRoom.Domain.Contract.Enums.BookStatusRoom BookRoom.Domain.Contract.Responses.BookRoomsResponses.BookRoomResponse::get_Status()": {
           "Lines": {
-            "14": 14
+            "14": 0
+          },
+          "Branches": []
+        },
+        "BookRoom.Domain.Contract.Responses.UserResponses.UserResponse BookRoom.Domain.Contract.Responses.BookRoomsResponses.BookRoomResponse::get_User()": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        },
+        "BookRoom.Domain.Contract.Responses.RoomResponses.RoomResponse BookRoom.Domain.Contract.Responses.BookRoomsResponses.BookRoomResponse::get_Room()": {
+          "Lines": {
+            "18": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\src\\book_room\\BookRoom.WebApi\\src\\3 - Domain\\BookRoom.Domain.Contract\\Requests\\Commands\\RoomCommands\\CreateRoomRequest.cs": {
+      "BookRoom.Domain.Contract.Requests.Commands.RoomCommands.CreateRoomRequest": {
+        "System.Int32 BookRoom.Domain.Contract.Requests.Commands.RoomCommands.CreateRoomRequest::get_Reference()": {
+          "Lines": {
+            "9": 9
+          },
+          "Branches": []
+        },
+        "System.String BookRoom.Domain.Contract.Requests.Commands.RoomCommands.CreateRoomRequest::get_Title()": {
+          "Lines": {
+            "11": 8
+          },
+          "Branches": []
+        },
+        "System.String BookRoom.Domain.Contract.Requests.Commands.RoomCommands.CreateRoomRequest::get_Description()": {
+          "Lines": {
+            "13": 8
+          },
+          "Branches": []
+        },
+        "System.Int32 BookRoom.Domain.Contract.Requests.Commands.RoomCommands.CreateRoomRequest::get_Number()": {
+          "Lines": {
+            "15": 11
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\src\\book_room\\BookRoom.WebApi\\src\\3 - Domain\\BookRoom.Domain.Contract\\Requests\\Commands\\RoomCommands\\DeleteRoomRequest.cs": {
+      "BookRoom.Domain.Contract.Requests.Commands.RoomCommands.DeleteRoomRequest": {
+        "System.Int32 BookRoom.Domain.Contract.Requests.Commands.RoomCommands.DeleteRoomRequest::get_Id()": {
+          "Lines": {
+            "8": 4
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\src\\book_room\\BookRoom.WebApi\\src\\3 - Domain\\BookRoom.Domain.Contract\\Requests\\Commands\\RoomCommands\\UpdateRoomRequest.cs": {
+      "BookRoom.Domain.Contract.Requests.Commands.RoomCommands.UpdateRoomRequest": {
+        "System.Int32 BookRoom.Domain.Contract.Requests.Commands.RoomCommands.UpdateRoomRequest::get_Reference()": {
+          "Lines": {
+            "9": 11
+          },
+          "Branches": []
+        },
+        "System.String BookRoom.Domain.Contract.Requests.Commands.RoomCommands.UpdateRoomRequest::get_Title()": {
+          "Lines": {
+            "11": 7
+          },
+          "Branches": []
+        },
+        "System.String BookRoom.Domain.Contract.Requests.Commands.RoomCommands.UpdateRoomRequest::get_Description()": {
+          "Lines": {
+            "13": 7
+          },
+          "Branches": []
+        },
+        "System.Int32 BookRoom.Domain.Contract.Requests.Commands.RoomCommands.UpdateRoomRequest::get_Number()": {
+          "Lines": {
+            "15": 7
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\src\\book_room\\BookRoom.WebApi\\src\\3 - Domain\\BookRoom.Domain.Contract\\Requests\\Commands\\BookRooms\\CancelBookRoomRequest.cs": {
+      "BookRoom.Domain.Contract.Requests.Commands.BookRooms.CancelBookRoomRequest": {
+        "System.Int32 BookRoom.Domain.Contract.Requests.Commands.BookRooms.CancelBookRoomRequest::get_Reference()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\src\\book_room\\BookRoom.WebApi\\src\\3 - Domain\\BookRoom.Domain.Contract\\Requests\\Commands\\BookRooms\\CreateBookRoomRequest.cs": {
+      "BookRoom.Domain.Contract.Requests.Commands.BookRooms.CreateBookRoomRequest": {
+        "System.Int32 BookRoom.Domain.Contract.Requests.Commands.BookRooms.CreateBookRoomRequest::get_Reference()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.DateTime BookRoom.Domain.Contract.Requests.Commands.BookRooms.CreateBookRoomRequest::get_StartDate()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.DateTime BookRoom.Domain.Contract.Requests.Commands.BookRooms.CreateBookRoomRequest::get_EndDate()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        },
+        "BookRoom.Domain.Contract.Enums.BookStatusRoom BookRoom.Domain.Contract.Requests.Commands.BookRooms.CreateBookRoomRequest::get_Status()": {
+          "Lines": {
+            "17": 0
+          },
+          "Branches": []
+        },
+        "BookRoom.Domain.Contract.Responses.UserResponses.UserResponse BookRoom.Domain.Contract.Requests.Commands.BookRooms.CreateBookRoomRequest::get_User()": {
+          "Lines": {
+            "19": 0
+          },
+          "Branches": []
+        },
+        "BookRoom.Domain.Contract.Responses.RoomResponses.RoomResponse BookRoom.Domain.Contract.Requests.Commands.BookRooms.CreateBookRoomRequest::get_Room()": {
+          "Lines": {
+            "21": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\src\\book_room\\BookRoom.WebApi\\src\\3 - Domain\\BookRoom.Domain.Contract\\Requests\\Commands\\BookRooms\\UpdateBookRoomRequest.cs": {
+      "BookRoom.Domain.Contract.Requests.Commands.BookRooms.UpdateBookRoomRequest": {
+        "System.Int32 BookRoom.Domain.Contract.Requests.Commands.BookRooms.UpdateBookRoomRequest::get_Reference()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.DateTime BookRoom.Domain.Contract.Requests.Commands.BookRooms.UpdateBookRoomRequest::get_StartDate()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.DateTime BookRoom.Domain.Contract.Requests.Commands.BookRooms.UpdateBookRoomRequest::get_EndDate()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        },
+        "BookRoom.Domain.Contract.Enums.BookStatusRoom BookRoom.Domain.Contract.Requests.Commands.BookRooms.UpdateBookRoomRequest::get_Status()": {
+          "Lines": {
+            "17": 0
+          },
+          "Branches": []
+        },
+        "BookRoom.Domain.Contract.Responses.UserResponses.UserResponse BookRoom.Domain.Contract.Requests.Commands.BookRooms.UpdateBookRoomRequest::get_User()": {
+          "Lines": {
+            "19": 0
+          },
+          "Branches": []
+        },
+        "BookRoom.Domain.Contract.Responses.RoomResponses.RoomResponse BookRoom.Domain.Contract.Requests.Commands.BookRooms.UpdateBookRoomRequest::get_Room()": {
+          "Lines": {
+            "21": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\src\\book_room\\BookRoom.WebApi\\src\\3 - Domain\\BookRoom.Domain.Contract\\Notification\\BookRooms\\BookRoomNotification.cs": {
+      "BookRoom.Domain.Contract.Notification.BookRooms.BookRoomNotification": {
+        "System.Int32 BookRoom.Domain.Contract.Notification.BookRooms.BookRoomNotification::get_Reference()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.DateTime BookRoom.Domain.Contract.Notification.BookRooms.BookRoomNotification::get_StartDate()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.DateTime BookRoom.Domain.Contract.Notification.BookRooms.BookRoomNotification::get_EndDate()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "BookRoom.Domain.Contract.Enums.BookStatusRoom BookRoom.Domain.Contract.Notification.BookRooms.BookRoomNotification::get_Status()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        },
+        "BookRoom.Domain.Contract.Responses.UserResponses.UserResponse BookRoom.Domain.Contract.Notification.BookRooms.BookRoomNotification::get_User()": {
+          "Lines": {
+            "17": 0
+          },
+          "Branches": []
+        },
+        "BookRoom.Domain.Contract.Responses.RoomResponses.RoomResponse BookRoom.Domain.Contract.Notification.BookRooms.BookRoomNotification::get_Room()": {
+          "Lines": {
+            "19": 0
           },
           "Branches": []
         }
@@ -532,6 +1274,34 @@
         "System.String BookRoom.Domain.Contract.Configurations.AuthenticationConfiguration::get_AuthSecret()": {
           "Lines": {
             "5": 6
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\src\\book_room\\BookRoom.WebApi\\src\\3 - Domain\\BookRoom.Domain.Contract\\Configurations\\RabbitConfiguration.cs": {
+      "BookRoom.Domain.Contract.Configurations.RabbitConfiguration": {
+        "System.String BookRoom.Domain.Contract.Configurations.RabbitConfiguration::get_Connection()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean BookRoom.Domain.Contract.Configurations.RabbitConfiguration::get_Durable()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean BookRoom.Domain.Contract.Configurations.RabbitConfiguration::get_Exclusive()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean BookRoom.Domain.Contract.Configurations.RabbitConfiguration::get_AutoDelete()": {
+          "Lines": {
+            "11": 0
           },
           "Branches": []
         }
@@ -637,6 +1407,51 @@
             "12": 4,
             "18": 4,
             "20": 4
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\src\\book_room\\BookRoom.WebApi\\src\\3 - Domain\\BookRoom.Domain\\Validation\\BookRoomValidations\\BookRoomCantStart30DaysAdvanced.cs": {
+      "BookRoom.Domain.Validation.BookRoomValidations.BookRoomCantStart30DaysAdvanced": {
+        "System.Void BookRoom.Domain.Validation.BookRoomValidations.BookRoomCantStart30DaysAdvanced::.ctor()": {
+          "Lines": {
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\src\\book_room\\BookRoom.WebApi\\src\\3 - Domain\\BookRoom.Domain\\Validation\\BookRoomValidations\\BookRoomGreater3DaysValidation.cs": {
+      "BookRoom.Domain.Validation.BookRoomValidations.BookRoomGreater3DaysValidation": {
+        "System.Void BookRoom.Domain.Validation.BookRoomValidations.BookRoomGreater3DaysValidation::.ctor()": {
+          "Lines": {
+            "9": 0,
+            "10": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "16": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\src\\book_room\\BookRoom.WebApi\\src\\3 - Domain\\BookRoom.Domain\\Validation\\BookRoomValidations\\BookRoomStartsAtLeast1DayAfterBooking.cs": {
+      "BookRoom.Domain.Validation.BookRoomValidations.BookRoomStartsAtLeast1DayAfterBooking": {
+        "System.Void BookRoom.Domain.Validation.BookRoomValidations.BookRoomStartsAtLeast1DayAfterBooking::.ctor()": {
+          "Lines": {
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0
           },
           "Branches": []
         }

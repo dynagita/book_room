@@ -16,7 +16,8 @@ namespace BookRoom.Infrastructure.Database.Repositories
             return await _dbSet.Where(x => (((startDate >= x.StartDate && startDate <= x.EndDate) ||
                                        (endDate >= x.StartDate && endDate <= x.EndDate) ||
                                        (startDate <= x.StartDate && endDate >= x.StartDate && endDate <= x.EndDate) ||
-                                       (startDate <= x.EndDate && endDate >= x.EndDate)
+                                       (startDate <= x.EndDate && endDate >= x.EndDate) ||
+                                       (startDate>= x.StartDate && endDate <= x.EndDate)
                               ) && x.Active == true && x.Room.Id == roomId && x.Status == Domain.Contract.Enums.BookStatusRoom.Confirmed)
                          ).FirstOrDefaultAsync();
         }

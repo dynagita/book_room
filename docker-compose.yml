@@ -1,23 +1,23 @@
 version: '3.9'
 services:
-  #rabbitmq:
-  #  image: rabbitmq:3-management-alpine
-  #  container_name: rabbitmq
-  #  ports:
-  #      - 5672:5672
-  #      - 15672:15672
-  #  environment:
-  #      - RABBITMQ_DEFAULT_USER=queryUpdate
-  #      - RABBITMQ_DEFAULT_PASS=queryUpdate
-  #  networks:
-  #    book_room:
-  #      ipv4_address: 10.5.0.4
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: rabbitmq-bookroom
+    ports:
+        - 5672:5672
+        - 15672:15672
+    environment:
+        - RABBITMQ_DEFAULT_USER=bookRoomUser
+        - RABBITMQ_DEFAULT_PASS=bookRoomSpecialPassword
+    networks:
+      book_room:
+        ipv4_address: 10.5.0.4
   postgres:
-    container_name: postgres_container
+    container_name: postgre-bookroom
     image: postgres
     environment:
       POSTGRES_USER: bookRoomUser
-      POSTGRES_PASSWORD: bookRoomSpecialPasswordk
+      POSTGRES_PASSWORD: bookRoomSpecialPassword
       PGDATA: /data/postgres
     ports:
       - "5432:5432"

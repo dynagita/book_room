@@ -11,4 +11,9 @@ namespace BookRoom.Domain.Contract.UseCases
     {
         Task<TResponse> HandleAsync(TKey key, TRequest request, CancellationToken cancellationToken);
     }
+
+    public interface IUseCaseBase<TRequest>
+    {
+        Task HandleAsync(TRequest request, CancellationToken cancellationToken);
+    }
 }

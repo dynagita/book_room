@@ -2,25 +2,22 @@
 using BookRoom.Application.Handlers.Commands.RoomHandlers;
 using BookRoom.Application.Handlers.Commands.UserHandlers;
 using BookRoom.Application.Handlers.Queries.AuthQueries;
+using BookRoom.Application.HostedServices.BookRoomRequest;
 using BookRoom.Application.Mappers;
 using BookRoom.Application.UseCases.Auth;
 using BookRoom.Application.UseCases.BookRoomUseCases;
 using BookRoom.Application.UseCases.RoomUseCases;
 using BookRoom.Application.UseCases.RooUseCases;
 using BookRoom.Application.UseCases.UserUseCases;
-using BookRoom.Domain.Contract.Configurations;
 using BookRoom.Domain.Contract.UseCases.Auth;
 using BookRoom.Domain.Contract.UseCases.BookRooms;
 using BookRoom.Domain.Contract.UseCases.Rooms;
 using BookRoom.Domain.Contract.UseCases.Users;
 using MediatR;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.IdentityModel.Tokens;
 using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
-using System.Text;
 
 namespace BookRoom.Application
 {
@@ -31,10 +28,10 @@ namespace BookRoom.Application
         public static IServiceCollection AddApplication(this IServiceCollection services, IConfiguration configuration)
         {
             return services
-                .AddConfigurations(configuration)                
                 .AddProfiles()
                 .AddUseCases()
-                .AddHandlers();
+                .AddHandlers()
+                .AddServiceHosted();
         }
 
         public static IServiceCollection AddProfiles(this IServiceCollection services)
@@ -66,24 +63,22 @@ namespace BookRoom.Application
 
         public static IServiceCollection AddUseCases(this IServiceCollection services)
         {
-            services.AddScoped<IAuthenticateUseCase, AuthenticateUseCase>();
-            services.AddScoped<ICreateUserUseCase, CreateUserUseCase>();
-            services.AddScoped<ITokenCreateUseCase, TokenCreateUseCase>();
-            services.AddScoped<ICreateRoomUseCase, CreateRoomUseCase>();
-            services.AddScoped<IDeleteRoomUseCase, DeleteRoomUseCase>();
-            services.AddScoped<IUpdateRoomUseCase, UpdateRoomUseCase>();
-            services.AddScoped<ICancelBookRoomUseCase, CancelBookRoomUseCase>();
-            services.AddScoped<ICreateBookRoomUseCase, CreateBookRoomUseCase>();
-            services.AddScoped<IUpdateBookRoomUseCase, UpdateBookRoomUseCase>();
+            services.AddTransient<IAuthenticateUseCase, AuthenticateUseCase>();
+            services.AddTransient<ICreateUserUseCase, CreateUserUseCase>();
+            services.AddTransient<ITokenCreateUseCase, TokenCreateUseCase>();
+            services.AddTransient<ICreateRoomUseCase, CreateRoomUseCase>();
+            services.AddTransient<IDeleteRoomUseCase, DeleteRoomUseCase>();
+            services.AddTransient<IUpdateRoomUseCase, UpdateRoomUseCase>();
+            services.AddTransient<ICancelBookRoomUseCase, CancelBookRoomUseCase>();
+            services.AddTransient<ICreateBookRoomUseCase, CreateBookRoomUseCase>();
+            services.AddTransient<IUpdateBookRoomUseCase, UpdateBookRoomUseCase>();
+            services.AddTransient<IBookRoomProcessUseCase, BookRoomProcessUseCase>();
             return services;
         }
 
-        public static IServiceCollection AddConfigurations(this IServiceCollection services, IConfiguration configuration)
-        {  
-            services.Configure<AuthenticationConfiguration>((authConfig) =>
-            {
-                configuration.Bind(nameof(AuthenticationConfiguration), authConfig);
-            });
+        public static IServiceCollection AddServiceHosted(this IServiceCollection services)
+        {
+            services.AddHostedService<BookRoomRequestService>();
             return services;
         }
     }
