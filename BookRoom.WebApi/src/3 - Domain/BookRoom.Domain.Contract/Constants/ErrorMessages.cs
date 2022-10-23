@@ -23,7 +23,7 @@
         public class BookRoomMessages
         {
             public const string BOOK_GREATER_3_DAYS = "Reservations can't be greater than 3 days.";
-            public const string BOOK_CANT_START_30_DAYS_ADVANCED = "Reservations can't be done with mode than 30 days advanced.";
+            public const string BOOK_CANT_START_30_DAYS_ADVANCED = "Reservations can't be done with more than 30 days advanced.";
             public const string BOOK_STARTS_AT_LEAST_1_DAY_BOOKING = "Reservation must start at least one day after booking!";
         }
     }
