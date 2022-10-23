@@ -31,24 +31,24 @@ namespace BookRoom.Service.Infrastructure.Repositories
                 .WaitAndRetryAsync(3, retryAttempt => TimeSpan.FromSeconds(Math.Pow(3, retryAttempt)));
         }
 
-        public async Task DeleteAsync(T entity)
+        public async Task DeleteAsync(T entity, CancellationToken cancellationToken)
         {
             await _retry.ExecuteAsync(async () => await _collection.DeleteOneAsync(GetEntityFilter(entity)));
         }
 
-        public async Task<T> FindOneAsync(long reference)
+        public async Task<T> FindOneAsync(long reference, CancellationToken cancellationToken)
         {
             var filter = Builders<T>.Filter.Eq(x => x.Reference, reference);
             var data = await _retry.ExecuteAsync(async () => await _collection.FindAsync<T>(filter));
             return data.FirstOrDefault();
         }
 
-        public async Task InsertAsync(T entity)
+        public async Task InsertAsync(T entity, CancellationToken cancellationToken)
         {
             await _retry.ExecuteAsync(async () => await _collection.InsertOneAsync(entity));
         }
 
-        public async Task UpdateAsync(T entity)
+        public async Task UpdateAsync(T entity, CancellationToken cancellationToken)
         {
             await _retry.ExecuteAsync(async () => await _collection.UpdateOneAsync(GetEntityFilter(entity), GetUpdateDefinition(entity)));
         }
