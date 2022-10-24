@@ -51,7 +51,7 @@ namespace BookRoom.Infrastructure.Rabbit.Consumers
         {
             try
             {
-                var queueName = typeof(TMessage).Name;
+                var queueName = GetQueueName();
 
                 var chanel = _connection.CreateModel();
                 chanel.QueueDeclare(queue: queueName,

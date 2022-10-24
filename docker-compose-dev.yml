@@ -45,20 +45,20 @@ services:
     networks:
       book_room:
         ipv4_address: 10.5.0.4
-  #readness:
-  #  container_name: bookroom-readness
-  #  build:
-  #    dockerfile: ./dockerfile.rds
-  #  ports: 
-  #    - 5001:80
-  #  depends_on:
-  #    rabbitmq:
-  #      condition: service_healthy
-  #  environment:
-  #    ASPNETCORE_ENVIRONMENT: 'Staging'
-  #  networks:
-  #    book_room:
-  #      ipv4_address: 10.5.0.5
+  readness:
+    container_name: bookroom-readness
+    build:
+      dockerfile: ./dockerfile.rds
+    ports: 
+      - 5001:80
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+    environment:
+      ASPNETCORE_ENVIRONMENT: 'Staging'
+    networks:
+      book_room:
+        ipv4_address: 10.5.0.5
   service:
     container_name: bookroom-service
     build:
@@ -73,20 +73,20 @@ services:
     networks:
       book_room:
         ipv4_address: 10.5.0.6
-  writable:
-    container_name: bookroom-writable
-    build:
-      dockerfile: ./dockerfile.wrt
-    ports: 
-      - 5000:80
-    depends_on:
-      rabbitmq:
-        condition: service_healthy
-    environment:
-      ASPNETCORE_ENVIRONMENT: 'Staging'
-    networks:
-      book_room:
-        ipv4_address: 10.5.0.7
+  #writable:
+  #  container_name: bookroom-writable
+  #  build:
+  #    dockerfile: ./dockerfile.wrt
+  #  ports: 
+  #    - 5000:80
+  #  depends_on:
+  #    rabbitmq:
+  #      condition: service_healthy
+  #  environment:
+  #    ASPNETCORE_ENVIRONMENT: 'Staging'
+  #  networks:
+  #    book_room:
+  #      ipv4_address: 10.5.0.7
 networks:
   book_room:
     driver: bridge

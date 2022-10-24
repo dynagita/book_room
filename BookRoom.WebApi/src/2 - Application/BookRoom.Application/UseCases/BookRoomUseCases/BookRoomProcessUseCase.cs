@@ -2,6 +2,7 @@
 using BookRoom.Domain.Contract.Notification.BookRooms;
 using BookRoom.Domain.Contract.UseCases.BookRooms;
 using BookRoom.Domain.Entities;
+using BookRoom.Domain.Queue;
 using BookRoom.Domain.Repositories.EntityFramework;
 using Microsoft.Extensions.Logging;
 
@@ -12,15 +13,18 @@ namespace BookRoom.Application.UseCases.BookRoomUseCases
         private readonly IBookRoomsRepository _repository;
         private readonly ILogger<BookRoomProcessUseCase> _logger;
         private readonly IMapper _mapper;
+        private readonly IBookRoomProducer _producer;
 
         public BookRoomProcessUseCase(
             IBookRoomsRepository repository,
             ILogger<BookRoomProcessUseCase> logger,
-            IMapper mapper)
+            IMapper mapper,
+            IBookRoomProducer producer)
         {
             _repository = repository;
             _logger = logger;
             _mapper = mapper;
+            _producer = producer;
         }
 
         public async Task HandleAsync(BookRoomNotification request, CancellationToken cancellationToken)
@@ -40,6 +44,8 @@ namespace BookRoom.Application.UseCases.BookRoomUseCases
                 }
 
                 book = await _repository.UpdateAsync(book.Id, book, cancellationToken);
+
+                await _producer.SendAsync(book, cancellationToken);
             }
             catch (Exception ex)
             {
