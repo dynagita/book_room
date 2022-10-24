@@ -1,0 +1,96 @@
+version: '3.9'
+services:
+  postgres:
+    container_name: postgre-bookroom
+    image: postgres
+    environment:
+      POSTGRES_USER: bookRoomUser
+      POSTGRES_PASSWORD: bookRoomSpecialPassword
+      PGDATA: /data/postgres
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+    networks:
+      book_room:
+        ipv4_address: 10.5.0.2
+  mongo:
+    image: mongo
+    container_name: mongo-bookroom
+    depends_on:
+      - postgres
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: bookRoomUser
+      MONGO_INITDB_ROOT_PASSWORD: bookRoomSpecialPassword
+    ports:
+      - "27017:27017"
+    networks:
+      book_room:
+        ipv4_address: 10.5.0.3
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: rabbitmq-bookroom
+    depends_on:
+      - mongo
+    ports:
+        - 5672:5672
+        - 15672:15672
+    environment:
+        - RABBITMQ_DEFAULT_USER=bookRoomUser
+        - RABBITMQ_DEFAULT_PASS=bookRoomSpecialPassword
+    healthcheck:
+        test: rabbitmq-diagnostics -q ping
+        interval: 5s
+        timeout: 5s
+        retries: 5
+    networks:
+      book_room:
+        ipv4_address: 10.5.0.4
+  #readness:
+  #  container_name: bookroom-readness
+  #  build:
+  #    dockerfile: ./dockerfile.rds
+  #  ports: 
+  #    - 5001:80
+  #  depends_on:
+  #    rabbitmq:
+  #      condition: service_healthy
+  #  environment:
+  #    ASPNETCORE_ENVIRONMENT: 'Staging'
+  #  networks:
+  #    book_room:
+  #      ipv4_address: 10.5.0.5
+  service:
+    container_name: bookroom-service
+    build:
+      dockerfile: ./dockerfile.srv
+    ports: 
+      - 5002:80
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+    environment:
+      ASPNETCORE_ENVIRONMENT: 'Staging'
+    networks:
+      book_room:
+        ipv4_address: 10.5.0.6
+  writable:
+    container_name: bookroom-writable
+    build:
+      dockerfile: ./dockerfile.wrt
+    ports: 
+      - 5000:80
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+    environment:
+      ASPNETCORE_ENVIRONMENT: 'Staging'
+    networks:
+      book_room:
+        ipv4_address: 10.5.0.7
+networks:
+  book_room:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.5.0.0/16
+          gateway: 10.5.0.1

@@ -3,6 +3,12 @@ using BookRoom.Service.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Host.ConfigureAppConfiguration((hostBuilder, configurationBuilder) =>
+{
+    configurationBuilder
+    .AddJsonFile($"appsettings.{hostBuilder.HostingEnvironment.EnvironmentName}.json");
+});
+
 builder.Services.AddBootstrap(builder.Configuration);
 
 builder.Services.AddControllers();

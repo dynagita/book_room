@@ -6,4 +6,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.2.2" />
+    <PackageReference Include="MongoDB.Bson" Version="2.18.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BookRoom.Readness.Domain.Contract\BookRoom.Readness.Domain.Contract.csproj" />
+  </ItemGroup>
+
 </Project>
