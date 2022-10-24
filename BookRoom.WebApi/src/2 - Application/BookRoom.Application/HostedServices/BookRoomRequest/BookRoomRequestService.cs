@@ -1,10 +1,11 @@
 ﻿using BookRoom.Domain.Queue;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using static System.Formats.Asn1.AsnWriter;
+using System.Diagnostics.CodeAnalysis;
 
 namespace BookRoom.Application.HostedServices.BookRoomRequest
 {
+    [ExcludeFromCodeCoverage]
     public class BookRoomRequestService : IHostedService
     {
         private readonly IServiceScopeFactory _serviceScopeFactory;

@@ -199,17 +199,17 @@
       "BookRoom.Application.UseCases.BookRoomUseCases.BookRoomProcessUseCase": {
         "System.Void BookRoom.Application.UseCases.BookRoomUseCases.BookRoomProcessUseCase::.ctor(BookRoom.Domain.Repositories.EntityFramework.IBookRoomsRepository,Microsoft.Extensions.Logging.ILogger`1<BookRoom.Application.UseCases.BookRoomUseCases.BookRoomProcessUseCase>,AutoMapper.IMapper,BookRoom.Domain.Queue.IBookRoomProducer)": {
           "Lines": {
-            "18": 0,
-            "19": 0,
-            "20": 0,
-            "21": 0,
-            "22": 0,
-            "23": 0,
-            "24": 0,
-            "25": 0,
-            "26": 0,
-            "27": 0,
-            "28": 0
+            "18": 4,
+            "19": 4,
+            "20": 4,
+            "21": 4,
+            "22": 4,
+            "23": 4,
+            "24": 4,
+            "25": 4,
+            "26": 4,
+            "27": 4,
+            "28": 4
           },
           "Branches": []
         }
@@ -217,25 +217,25 @@
       "BookRoom.Application.UseCases.BookRoomUseCases.BookRoomProcessUseCase/<HandleAsync>d__5": {
         "System.Void BookRoom.Application.UseCases.BookRoomUseCases.BookRoomProcessUseCase/<HandleAsync>d__5::MoveNext()": {
           "Lines": {
-            "31": 0,
-            "33": 0,
-            "34": 0,
-            "35": 0,
-            "37": 0,
-            "38": 0,
-            "39": 0,
-            "40": 0,
-            "42": 0,
-            "43": 0,
-            "44": 0,
-            "46": 0,
-            "48": 0,
-            "49": 0,
-            "50": 0,
-            "51": 0,
-            "52": 0,
-            "54": 0,
-            "55": 0
+            "31": 4,
+            "33": 4,
+            "34": 4,
+            "35": 3,
+            "37": 3,
+            "38": 1,
+            "39": 1,
+            "40": 1,
+            "42": 2,
+            "43": 2,
+            "44": 2,
+            "46": 3,
+            "48": 3,
+            "49": 3,
+            "50": 1,
+            "51": 1,
+            "52": 1,
+            "54": 1,
+            "55": 4
           },
           "Branches": [
             {
@@ -244,7 +244,7 @@
               "EndOffset": 260,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 0
+              "Hits": 2
             },
             {
               "Line": 37,
@@ -252,7 +252,7 @@
               "EndOffset": 289,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 37,
@@ -260,7 +260,7 @@
               "EndOffset": 294,
               "Path": 0,
               "Ordinal": 2,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 37,
@@ -268,7 +268,7 @@
               "EndOffset": 311,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 0
+              "Hits": 2
             }
           ]
         }
@@ -278,10 +278,10 @@
       "BookRoom.Application.UseCases.BookRoomUseCases.BookRoomValidationUseCase": {
         "System.Void BookRoom.Application.UseCases.BookRoomUseCases.BookRoomValidationUseCase::.ctor(AutoMapper.IMapper)": {
           "Lines": {
-            "14": 0,
-            "15": 0,
-            "16": 0,
-            "17": 0
+            "14": 4,
+            "15": 4,
+            "16": 4,
+            "17": 4
           },
           "Branches": []
         }
@@ -289,46 +289,46 @@
       "BookRoom.Application.UseCases.BookRoomUseCases.BookRoomValidationUseCase/<HandleAsync>d__2": {
         "System.Void BookRoom.Application.UseCases.BookRoomUseCases.BookRoomValidationUseCase/<HandleAsync>d__2::MoveNext()": {
           "Lines": {
-            "20": 0,
-            "21": 0,
-            "23": 0,
-            "24": 0,
-            "25": 0,
-            "26": 0,
-            "27": 0,
-            "28": 0,
-            "29": 0,
-            "30": 0,
-            "31": 0,
-            "32": 0,
-            "33": 0,
-            "35": 0,
-            "36": 0,
-            "37": 0,
-            "38": 0,
-            "39": 0,
-            "40": 0,
-            "41": 0,
-            "42": 0,
-            "43": 0,
-            "44": 0,
-            "45": 0,
-            "47": 0,
-            "48": 0,
-            "49": 0,
-            "50": 0,
-            "51": 0,
-            "52": 0,
-            "53": 0,
-            "54": 0,
-            "55": 0,
-            "56": 0,
-            "57": 0,
-            "59": 0,
-            "60": 0,
-            "61": 0,
-            "62": 0,
-            "63": 0
+            "20": 4,
+            "21": 4,
+            "23": 4,
+            "24": 4,
+            "25": 4,
+            "26": 1,
+            "27": 1,
+            "28": 1,
+            "29": 1,
+            "30": 1,
+            "31": 1,
+            "32": 1,
+            "33": 1,
+            "35": 3,
+            "36": 3,
+            "37": 3,
+            "38": 1,
+            "39": 1,
+            "40": 1,
+            "41": 1,
+            "42": 1,
+            "43": 1,
+            "44": 1,
+            "45": 1,
+            "47": 2,
+            "48": 2,
+            "49": 2,
+            "50": 1,
+            "51": 1,
+            "52": 1,
+            "53": 1,
+            "54": 1,
+            "55": 1,
+            "56": 1,
+            "57": 1,
+            "59": 1,
+            "60": 1,
+            "61": 1,
+            "62": 1,
+            "63": 4
           },
           "Branches": [
             {
@@ -337,7 +337,7 @@
               "EndOffset": 236,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 25,
@@ -345,7 +345,7 @@
               "EndOffset": 283,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 0
+              "Hits": 3
             },
             {
               "Line": 37,
@@ -353,7 +353,7 @@
               "EndOffset": 454,
               "Path": 0,
               "Ordinal": 2,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 37,
@@ -361,7 +361,7 @@
               "EndOffset": 501,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 0
+              "Hits": 2
             },
             {
               "Line": 49,
@@ -369,7 +369,7 @@
               "EndOffset": 672,
               "Path": 0,
               "Ordinal": 4,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 49,
@@ -377,7 +377,7 @@
               "EndOffset": 716,
               "Path": 1,
               "Ordinal": 5,
-              "Hits": 0
+              "Hits": 1
             }
           ]
         }
@@ -498,23 +498,23 @@
     },
     "D:\\src\\book_room\\BookRoom.WebApi\\src\\2 - Application\\BookRoom.Application\\UseCases\\BookRoomUseCases\\UpdateBookRoomUseCase.cs": {
       "BookRoom.Application.UseCases.BookRoomUseCases.UpdateBookRoomUseCase": {
-        "System.Void BookRoom.Application.UseCases.BookRoomUseCases.UpdateBookRoomUseCase::.ctor(BookRoom.Domain.Repositories.EntityFramework.IBookRoomsRepository,AutoMapper.IMapper,Microsoft.Extensions.Logging.ILogger`1<BookRoom.Application.UseCases.BookRoomUseCases.CancelBookRoomUseCase>,BookRoom.Domain.Queue.IBookRoomProducer,BookRoom.Domain.Queue.IBookRoomRequestProducer,BookRoom.Domain.Contract.UseCases.BookRooms.IBookRoomValidationUseCase)": {
+        "System.Void BookRoom.Application.UseCases.BookRoomUseCases.UpdateBookRoomUseCase::.ctor(BookRoom.Domain.Repositories.EntityFramework.IBookRoomsRepository,AutoMapper.IMapper,Microsoft.Extensions.Logging.ILogger`1<BookRoom.Application.UseCases.BookRoomUseCases.UpdateBookRoomUseCase>,BookRoom.Domain.Queue.IBookRoomProducer,BookRoom.Domain.Queue.IBookRoomRequestProducer,BookRoom.Domain.Contract.UseCases.BookRooms.IBookRoomValidationUseCase)": {
           "Lines": {
-            "25": 0,
-            "26": 0,
-            "27": 0,
-            "28": 0,
-            "29": 0,
-            "30": 0,
-            "31": 0,
-            "32": 0,
-            "33": 0,
-            "34": 0,
-            "35": 0,
-            "36": 0,
-            "37": 0,
-            "38": 0,
-            "39": 0
+            "25": 3,
+            "26": 3,
+            "27": 3,
+            "28": 3,
+            "29": 3,
+            "30": 3,
+            "31": 3,
+            "32": 3,
+            "33": 3,
+            "34": 3,
+            "35": 3,
+            "36": 3,
+            "37": 3,
+            "38": 3,
+            "39": 3
           },
           "Branches": []
         }
@@ -522,24 +522,24 @@
       "BookRoom.Application.UseCases.BookRoomUseCases.UpdateBookRoomUseCase/<HandleAsync>d__7": {
         "System.Void BookRoom.Application.UseCases.BookRoomUseCases.UpdateBookRoomUseCase/<HandleAsync>d__7::MoveNext()": {
           "Lines": {
-            "42": 0,
-            "44": 0,
-            "45": 0,
-            "47": 0,
-            "48": 0,
-            "49": 0,
-            "50": 0,
-            "52": 0,
-            "54": 0,
-            "56": 0,
-            "58": 0,
-            "60": 0,
-            "62": 0,
-            "64": 0,
-            "65": 0,
-            "66": 0,
-            "67": 0,
-            "69": 0
+            "42": 3,
+            "44": 3,
+            "45": 3,
+            "47": 3,
+            "48": 3,
+            "49": 3,
+            "50": 1,
+            "52": 2,
+            "54": 1,
+            "56": 1,
+            "58": 1,
+            "60": 1,
+            "62": 1,
+            "64": 1,
+            "65": 1,
+            "66": 1,
+            "67": 1,
+            "69": 3
           },
           "Branches": [
             {
@@ -548,7 +548,7 @@
               "EndOffset": 280,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 49,
@@ -556,152 +556,9 @@
               "EndOffset": 302,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 0
+              "Hits": 2
             }
           ]
-        }
-      }
-    },
-    "D:\\src\\book_room\\BookRoom.WebApi\\src\\2 - Application\\BookRoom.Application\\Mappers\\BookRoomProfile.cs": {
-      "BookRoom.Application.Mappers.BookRoomProfile": {
-        "System.Void BookRoom.Application.Mappers.BookRoomProfile::.ctor()": {
-          "Lines": {
-            "12": 8,
-            "13": 8,
-            "14": 8,
-            "15": 8,
-            "16": 8,
-            "17": 8,
-            "18": 8,
-            "19": 8,
-            "20": 8,
-            "21": 8,
-            "22": 8,
-            "23": 8,
-            "24": 8,
-            "25": 8,
-            "26": 8,
-            "27": 8,
-            "28": 8,
-            "29": 8,
-            "30": 8,
-            "31": 8,
-            "32": 8,
-            "33": 8,
-            "34": 8,
-            "35": 8,
-            "36": 8,
-            "37": 8,
-            "38": 8,
-            "39": 8,
-            "40": 8,
-            "41": 8,
-            "42": 8,
-            "43": 8,
-            "44": 8,
-            "45": 8,
-            "47": 8,
-            "48": 8,
-            "49": 8,
-            "50": 8,
-            "51": 8,
-            "52": 8,
-            "53": 8,
-            "54": 8
-          },
-          "Branches": []
-        }
-      }
-    },
-    "D:\\src\\book_room\\BookRoom.WebApi\\src\\2 - Application\\BookRoom.Application\\Mappers\\RoomProfile.cs": {
-      "BookRoom.Application.Mappers.RoomProfile": {
-        "System.Void BookRoom.Application.Mappers.RoomProfile::.ctor()": {
-          "Lines": {
-            "10": 8,
-            "11": 8,
-            "12": 8,
-            "13": 8,
-            "14": 8,
-            "15": 8,
-            "16": 8,
-            "17": 8,
-            "18": 8,
-            "19": 8,
-            "20": 8,
-            "21": 8,
-            "22": 8,
-            "23": 8,
-            "24": 8,
-            "25": 8,
-            "26": 8,
-            "27": 8,
-            "28": 8,
-            "29": 8,
-            "30": 8
-          },
-          "Branches": []
-        }
-      }
-    },
-    "D:\\src\\book_room\\BookRoom.WebApi\\src\\2 - Application\\BookRoom.Application\\Mappers\\UserProfile.cs": {
-      "BookRoom.Application.Mappers.UserProfile": {
-        "System.Void BookRoom.Application.Mappers.UserProfile::.ctor()": {
-          "Lines": {
-            "10": 8,
-            "11": 8,
-            "12": 8,
-            "13": 8,
-            "14": 8,
-            "15": 8,
-            "16": 8,
-            "17": 8,
-            "18": 8,
-            "19": 8,
-            "20": 8,
-            "21": 8,
-            "22": 8,
-            "23": 8,
-            "24": 8,
-            "25": 8,
-            "26": 8,
-            "27": 8
-          },
-          "Branches": []
-        }
-      }
-    },
-    "D:\\src\\book_room\\BookRoom.WebApi\\src\\2 - Application\\BookRoom.Application\\HostedServices\\BookRoomRequest\\BookRoomRequestService.cs": {
-      "BookRoom.Application.HostedServices.BookRoomRequest.BookRoomRequestService": {
-        "System.Void BookRoom.Application.HostedServices.BookRoomRequest.BookRoomRequestService::.ctor(Microsoft.Extensions.DependencyInjection.IServiceScopeFactory)": {
-          "Lines": {
-            "12": 0,
-            "13": 0,
-            "14": 0,
-            "15": 0,
-            "16": 0,
-            "17": 0
-          },
-          "Branches": []
-        }
-      },
-      "BookRoom.Application.HostedServices.BookRoomRequest.BookRoomRequestService/<StartAsync>d__3": {
-        "System.Void BookRoom.Application.HostedServices.BookRoomRequest.BookRoomRequestService/<StartAsync>d__3::MoveNext()": {
-          "Lines": {
-            "19": 0,
-            "20": 0,
-            "21": 0
-          },
-          "Branches": []
-        }
-      },
-      "BookRoom.Application.HostedServices.BookRoomRequest.BookRoomRequestService/<StopAsync>d__4": {
-        "System.Void BookRoom.Application.HostedServices.BookRoomRequest.BookRoomRequestService/<StopAsync>d__4::MoveNext()": {
-          "Lines": {
-            "24": 0,
-            "25": 0,
-            "26": 0
-          },
-          "Branches": []
         }
       }
     },
@@ -709,10 +566,10 @@
       "BookRoom.Application.Handlers.Notifications.BookRoomNotificationHandler": {
         "System.Void BookRoom.Application.Handlers.Notifications.BookRoomNotificationHandler::.ctor(BookRoom.Domain.Contract.UseCases.BookRooms.IBookRoomProcessUseCase)": {
           "Lines": {
-            "13": 0,
-            "14": 0,
-            "15": 0,
-            "16": 0
+            "13": 1,
+            "14": 1,
+            "15": 1,
+            "16": 1
           },
           "Branches": []
         }
@@ -720,9 +577,9 @@
       "BookRoom.Application.Handlers.Notifications.BookRoomNotificationHandler/<Handle>d__2": {
         "System.Void BookRoom.Application.Handlers.Notifications.BookRoomNotificationHandler/<Handle>d__2::MoveNext()": {
           "Lines": {
-            "19": 0,
-            "20": 0,
-            "21": 0
+            "19": 1,
+            "20": 1,
+            "21": 1
           },
           "Branches": []
         }
@@ -822,10 +679,10 @@
       "BookRoom.Application.Handlers.Commands.BookRoomHandlers.CancelBookRoomHandler": {
         "System.Void BookRoom.Application.Handlers.Commands.BookRoomHandlers.CancelBookRoomHandler::.ctor(BookRoom.Domain.Contract.UseCases.BookRooms.ICancelBookRoomUseCase)": {
           "Lines": {
-            "13": 0,
-            "14": 0,
-            "15": 0,
-            "16": 0
+            "13": 3,
+            "14": 3,
+            "15": 3,
+            "16": 3
           },
           "Branches": []
         }
@@ -833,9 +690,9 @@
       "BookRoom.Application.Handlers.Commands.BookRoomHandlers.CancelBookRoomHandler/<Handle>d__2": {
         "System.Void BookRoom.Application.Handlers.Commands.BookRoomHandlers.CancelBookRoomHandler/<Handle>d__2::MoveNext()": {
           "Lines": {
-            "19": 0,
-            "20": 0,
-            "21": 0
+            "19": 3,
+            "20": 3,
+            "21": 3
           },
           "Branches": []
         }
@@ -845,10 +702,10 @@
       "BookRoom.Application.Handlers.Commands.BookRoomHandlers.CreateBookRoomHandler": {
         "System.Void BookRoom.Application.Handlers.Commands.BookRoomHandlers.CreateBookRoomHandler::.ctor(BookRoom.Domain.Contract.UseCases.BookRooms.ICreateBookRoomUseCase)": {
           "Lines": {
-            "13": 0,
-            "14": 0,
-            "15": 0,
-            "16": 0
+            "13": 3,
+            "14": 3,
+            "15": 3,
+            "16": 3
           },
           "Branches": []
         }
@@ -856,9 +713,9 @@
       "BookRoom.Application.Handlers.Commands.BookRoomHandlers.CreateBookRoomHandler/<Handle>d__2": {
         "System.Void BookRoom.Application.Handlers.Commands.BookRoomHandlers.CreateBookRoomHandler/<Handle>d__2::MoveNext()": {
           "Lines": {
-            "19": 0,
-            "20": 0,
-            "21": 0
+            "19": 3,
+            "20": 3,
+            "21": 3
           },
           "Branches": []
         }
@@ -868,10 +725,10 @@
       "BookRoom.Application.Handlers.Commands.BookRoomHandlers.UpdateBookRoomHandler": {
         "System.Void BookRoom.Application.Handlers.Commands.BookRoomHandlers.UpdateBookRoomHandler::.ctor(BookRoom.Domain.Contract.UseCases.BookRooms.IUpdateBookRoomUseCase)": {
           "Lines": {
-            "13": 0,
-            "14": 0,
-            "15": 0,
-            "16": 0
+            "13": 3,
+            "14": 3,
+            "15": 3,
+            "16": 3
           },
           "Branches": []
         }
@@ -879,9 +736,9 @@
       "BookRoom.Application.Handlers.Commands.BookRoomHandlers.UpdateBookRoomHandler/<Handle>d__2": {
         "System.Void BookRoom.Application.Handlers.Commands.BookRoomHandlers.UpdateBookRoomHandler/<Handle>d__2::MoveNext()": {
           "Lines": {
-            "19": 0,
-            "20": 0,
-            "21": 0
+            "19": 3,
+            "20": 3,
+            "21": 3
           },
           "Branches": []
         }
@@ -891,16 +748,16 @@
       "BookRoom.Application.Extensions.StringExtension": {
         "System.String BookRoom.Application.Extensions.StringExtension::ComputeHash(System.String)": {
           "Lines": {
-            "9": 4,
-            "10": 4,
-            "12": 4,
-            "13": 4,
-            "14": 4,
-            "15": 4,
-            "16": 4,
-            "18": 4,
-            "20": 4,
-            "21": 4
+            "9": 5,
+            "10": 5,
+            "12": 5,
+            "13": 5,
+            "14": 5,
+            "15": 5,
+            "16": 5,
+            "18": 5,
+            "20": 5,
+            "21": 5
           },
           "Branches": []
         }
@@ -912,52 +769,52 @@
       "BookRoom.Domain.Contract.Responses.CommonResponse`1": {
         "System.Int32 BookRoom.Domain.Contract.Responses.CommonResponse`1::get_Status()": {
           "Lines": {
-            "5": 46
+            "5": 70
           },
           "Branches": []
         },
         "T BookRoom.Domain.Contract.Responses.CommonResponse`1::get_Data()": {
           "Lines": {
-            "7": 37
+            "7": 53
           },
           "Branches": []
         },
         "System.String BookRoom.Domain.Contract.Responses.CommonResponse`1::get_Error()": {
           "Lines": {
-            "9": 40
+            "9": 63
           },
           "Branches": []
         },
         "BookRoom.Domain.Contract.Responses.CommonResponse`1<T> BookRoom.Domain.Contract.Responses.CommonResponse`1::Ok(T)": {
           "Lines": {
-            "24": 10
+            "24": 14
           },
           "Branches": []
         },
         "BookRoom.Domain.Contract.Responses.CommonResponse`1<T> BookRoom.Domain.Contract.Responses.CommonResponse`1::BadRequest(System.String)": {
           "Lines": {
-            "26": 13
+            "26": 21
           },
           "Branches": []
         },
         "System.Void BookRoom.Domain.Contract.Responses.CommonResponse`1::.ctor(System.Int32,T,System.String)": {
           "Lines": {
-            "11": 10,
-            "12": 10,
-            "13": 10,
-            "14": 10,
-            "15": 10,
-            "16": 10
+            "11": 14,
+            "12": 14,
+            "13": 14,
+            "14": 14,
+            "15": 14,
+            "16": 14
           },
           "Branches": []
         },
         "System.Void BookRoom.Domain.Contract.Responses.CommonResponse`1::.ctor(System.Int32,System.String)": {
           "Lines": {
-            "18": 13,
-            "19": 13,
-            "20": 13,
-            "21": 13,
-            "22": 13
+            "18": 21,
+            "19": 21,
+            "20": 21,
+            "21": 21,
+            "22": 21
           },
           "Branches": []
         }
@@ -967,25 +824,25 @@
       "BookRoom.Domain.Contract.Responses.RoomResponses.RoomResponse": {
         "System.Int32 BookRoom.Domain.Contract.Responses.RoomResponses.RoomResponse::get_Reference()": {
           "Lines": {
-            "5": 15
+            "5": 50
           },
           "Branches": []
         },
         "System.String BookRoom.Domain.Contract.Responses.RoomResponses.RoomResponse::get_Title()": {
           "Lines": {
-            "7": 16
+            "7": 51
           },
           "Branches": []
         },
         "System.String BookRoom.Domain.Contract.Responses.RoomResponses.RoomResponse::get_Description()": {
           "Lines": {
-            "9": 16
+            "9": 51
           },
           "Branches": []
         },
         "System.Int32 BookRoom.Domain.Contract.Responses.RoomResponses.RoomResponse::get_Number()": {
           "Lines": {
-            "11": 13
+            "11": 52
           },
           "Branches": []
         }
@@ -995,37 +852,37 @@
       "BookRoom.Domain.Contract.Responses.BookRoomsResponses.BookRoomResponse": {
         "System.Int32 BookRoom.Domain.Contract.Responses.BookRoomsResponses.BookRoomResponse::get_Reference()": {
           "Lines": {
-            "9": 2
+            "9": 18
           },
           "Branches": []
         },
         "System.DateTime BookRoom.Domain.Contract.Responses.BookRoomsResponses.BookRoomResponse::get_StartDate()": {
           "Lines": {
-            "10": 2
+            "10": 12
           },
           "Branches": []
         },
         "System.DateTime BookRoom.Domain.Contract.Responses.BookRoomsResponses.BookRoomResponse::get_EndDate()": {
           "Lines": {
-            "12": 2
+            "12": 12
           },
           "Branches": []
         },
         "BookRoom.Domain.Contract.Enums.BookStatusRoom BookRoom.Domain.Contract.Responses.BookRoomsResponses.BookRoomResponse::get_Status()": {
           "Lines": {
-            "14": 4
+            "14": 15
           },
           "Branches": []
         },
         "BookRoom.Domain.Contract.Responses.UserResponses.UserResponse BookRoom.Domain.Contract.Responses.BookRoomsResponses.BookRoomResponse::get_User()": {
           "Lines": {
-            "16": 2
+            "16": 12
           },
           "Branches": []
         },
         "BookRoom.Domain.Contract.Responses.RoomResponses.RoomResponse BookRoom.Domain.Contract.Responses.BookRoomsResponses.BookRoomResponse::get_Room()": {
           "Lines": {
-            "18": 2
+            "18": 12
           },
           "Branches": []
         }
@@ -1035,13 +892,13 @@
       "BookRoom.Domain.Contract.Responses.BookRoomsResponses.BookRoomValidationResponse": {
         "System.Boolean BookRoom.Domain.Contract.Responses.BookRoomsResponses.BookRoomValidationResponse::get_Valid()": {
           "Lines": {
-            "5": 6
+            "5": 20
           },
           "Branches": []
         },
         "System.String BookRoom.Domain.Contract.Responses.BookRoomsResponses.BookRoomValidationResponse::get_Error()": {
           "Lines": {
-            "7": 2
+            "7": 11
           },
           "Branches": []
         }
@@ -1117,7 +974,7 @@
       "BookRoom.Domain.Contract.Requests.Commands.BookRooms.CancelBookRoomRequest": {
         "System.Int32 BookRoom.Domain.Contract.Requests.Commands.BookRooms.CancelBookRoomRequest::get_Reference()": {
           "Lines": {
-            "9": 0
+            "9": 6
           },
           "Branches": []
         }
@@ -1127,37 +984,37 @@
       "BookRoom.Domain.Contract.Requests.Commands.BookRooms.CreateBookRoomRequest": {
         "System.Int32 BookRoom.Domain.Contract.Requests.Commands.BookRooms.CreateBookRoomRequest::get_Reference()": {
           "Lines": {
-            "12": 6
+            "12": 9
           },
           "Branches": []
         },
         "System.DateTime BookRoom.Domain.Contract.Requests.Commands.BookRooms.CreateBookRoomRequest::get_StartDate()": {
           "Lines": {
-            "13": 6
+            "13": 9
           },
           "Branches": []
         },
         "System.DateTime BookRoom.Domain.Contract.Requests.Commands.BookRooms.CreateBookRoomRequest::get_EndDate()": {
           "Lines": {
-            "15": 6
+            "15": 9
           },
           "Branches": []
         },
         "BookRoom.Domain.Contract.Enums.BookStatusRoom BookRoom.Domain.Contract.Requests.Commands.BookRooms.CreateBookRoomRequest::get_Status()": {
           "Lines": {
-            "17": 6
+            "17": 9
           },
           "Branches": []
         },
         "BookRoom.Domain.Contract.Responses.UserResponses.UserResponse BookRoom.Domain.Contract.Requests.Commands.BookRooms.CreateBookRoomRequest::get_User()": {
           "Lines": {
-            "19": 9
+            "19": 12
           },
           "Branches": []
         },
         "BookRoom.Domain.Contract.Responses.RoomResponses.RoomResponse BookRoom.Domain.Contract.Requests.Commands.BookRooms.CreateBookRoomRequest::get_Room()": {
           "Lines": {
-            "21": 9
+            "21": 12
           },
           "Branches": []
         }
@@ -1167,37 +1024,37 @@
       "BookRoom.Domain.Contract.Requests.Commands.BookRooms.UpdateBookRoomRequest": {
         "System.Int32 BookRoom.Domain.Contract.Requests.Commands.BookRooms.UpdateBookRoomRequest::get_Reference()": {
           "Lines": {
-            "12": 0
+            "12": 9
           },
           "Branches": []
         },
         "System.DateTime BookRoom.Domain.Contract.Requests.Commands.BookRooms.UpdateBookRoomRequest::get_StartDate()": {
           "Lines": {
-            "13": 0
+            "13": 9
           },
           "Branches": []
         },
         "System.DateTime BookRoom.Domain.Contract.Requests.Commands.BookRooms.UpdateBookRoomRequest::get_EndDate()": {
           "Lines": {
-            "15": 0
+            "15": 9
           },
           "Branches": []
         },
         "BookRoom.Domain.Contract.Enums.BookStatusRoom BookRoom.Domain.Contract.Requests.Commands.BookRooms.UpdateBookRoomRequest::get_Status()": {
           "Lines": {
-            "17": 0
+            "17": 9
           },
           "Branches": []
         },
         "BookRoom.Domain.Contract.Responses.UserResponses.UserResponse BookRoom.Domain.Contract.Requests.Commands.BookRooms.UpdateBookRoomRequest::get_User()": {
           "Lines": {
-            "19": 0
+            "19": 9
           },
           "Branches": []
         },
         "BookRoom.Domain.Contract.Responses.RoomResponses.RoomResponse BookRoom.Domain.Contract.Requests.Commands.BookRooms.UpdateBookRoomRequest::get_Room()": {
           "Lines": {
-            "21": 0
+            "21": 9
           },
           "Branches": []
         }
@@ -1207,37 +1064,37 @@
       "BookRoom.Domain.Contract.Notification.BookRooms.BookRoomNotification": {
         "System.Int32 BookRoom.Domain.Contract.Notification.BookRooms.BookRoomNotification::get_Reference()": {
           "Lines": {
-            "10": 1
+            "10": 18
           },
           "Branches": []
         },
         "System.DateTime BookRoom.Domain.Contract.Notification.BookRooms.BookRoomNotification::get_StartDate()": {
           "Lines": {
-            "11": 1
+            "11": 18
           },
           "Branches": []
         },
         "System.DateTime BookRoom.Domain.Contract.Notification.BookRooms.BookRoomNotification::get_EndDate()": {
           "Lines": {
-            "13": 1
+            "13": 18
           },
           "Branches": []
         },
         "BookRoom.Domain.Contract.Enums.BookStatusRoom BookRoom.Domain.Contract.Notification.BookRooms.BookRoomNotification::get_Status()": {
           "Lines": {
-            "15": 1
+            "15": 14
           },
           "Branches": []
         },
         "BookRoom.Domain.Contract.Responses.UserResponses.UserResponse BookRoom.Domain.Contract.Notification.BookRooms.BookRoomNotification::get_User()": {
           "Lines": {
-            "17": 1
+            "17": 14
           },
           "Branches": []
         },
         "BookRoom.Domain.Contract.Responses.RoomResponses.RoomResponse BookRoom.Domain.Contract.Notification.BookRooms.BookRoomNotification::get_Room()": {
           "Lines": {
-            "19": 1
+            "19": 18
           },
           "Branches": []
         }
@@ -1247,31 +1104,31 @@
       "BookRoom.Domain.Contract.DataTransferObjects.BookRoomDtos.BookRoomValidationDTO": {
         "System.Int32 BookRoom.Domain.Contract.DataTransferObjects.BookRoomDtos.BookRoomValidationDTO::get_Id()": {
           "Lines": {
-            "9": 3
+            "9": 10
           },
           "Branches": []
         },
         "System.DateTime BookRoom.Domain.Contract.DataTransferObjects.BookRoomDtos.BookRoomValidationDTO::get_StartDate()": {
           "Lines": {
-            "10": 3
+            "10": 14
           },
           "Branches": []
         },
         "System.DateTime BookRoom.Domain.Contract.DataTransferObjects.BookRoomDtos.BookRoomValidationDTO::get_EndDate()": {
           "Lines": {
-            "12": 3
+            "12": 14
           },
           "Branches": []
         },
         "BookRoom.Domain.Contract.Enums.BookStatusRoom BookRoom.Domain.Contract.DataTransferObjects.BookRoomDtos.BookRoomValidationDTO::get_Status()": {
           "Lines": {
-            "14": 3
+            "14": 10
           },
           "Branches": []
         },
         "System.DateTime BookRoom.Domain.Contract.DataTransferObjects.BookRoomDtos.BookRoomValidationDTO::get_DatAlt()": {
           "Lines": {
-            "16": 3
+            "16": 14
           },
           "Branches": []
         }
@@ -1424,12 +1281,12 @@
       "BookRoom.Domain.Validation.BookRoomValidations.BookRoomCantStart30DaysAdvanced": {
         "System.Void BookRoom.Domain.Validation.BookRoomValidations.BookRoomCantStart30DaysAdvanced::.ctor()": {
           "Lines": {
-            "9": 0,
-            "10": 0,
-            "11": 0,
-            "12": 0,
-            "13": 0,
-            "14": 0
+            "9": 6,
+            "10": 6,
+            "11": 6,
+            "12": 6,
+            "13": 6,
+            "14": 6
           },
           "Branches": []
         }
@@ -1439,12 +1296,12 @@
       "BookRoom.Domain.Validation.BookRoomValidations.BookRoomGreater3DaysValidation": {
         "System.Void BookRoom.Domain.Validation.BookRoomValidations.BookRoomGreater3DaysValidation::.ctor()": {
           "Lines": {
-            "9": 0,
-            "10": 0,
-            "12": 0,
-            "13": 0,
-            "14": 0,
-            "16": 0
+            "9": 5,
+            "10": 5,
+            "12": 5,
+            "13": 5,
+            "14": 5,
+            "16": 5
           },
           "Branches": []
         }
@@ -1454,12 +1311,12 @@
       "BookRoom.Domain.Validation.BookRoomValidations.BookRoomStartsAtLeast1DayAfterBooking": {
         "System.Void BookRoom.Domain.Validation.BookRoomValidations.BookRoomStartsAtLeast1DayAfterBooking::.ctor()": {
           "Lines": {
-            "9": 0,
-            "10": 0,
-            "11": 0,
-            "12": 0,
-            "13": 0,
-            "14": 0
+            "9": 4,
+            "10": 4,
+            "11": 4,
+            "12": 4,
+            "13": 4,
+            "14": 4
           },
           "Branches": []
         }
@@ -1469,39 +1326,39 @@
       "BookRoom.Domain.Entities.BookRooms": {
         "System.DateTime BookRoom.Domain.Entities.BookRooms::get_StartDate()": {
           "Lines": {
-            "10": 332
+            "10": 504
           },
           "Branches": []
         },
         "System.DateTime BookRoom.Domain.Entities.BookRooms::get_EndDate()": {
           "Lines": {
-            "12": 332
+            "12": 492
           },
           "Branches": []
         },
         "BookRoom.Domain.Contract.Enums.BookStatusRoom BookRoom.Domain.Entities.BookRooms::get_Status()": {
           "Lines": {
-            "14": 342
+            "14": 502
           },
           "Branches": []
         },
         "BookRoom.Domain.Entities.User BookRoom.Domain.Entities.BookRooms::get_User()": {
           "Lines": {
-            "16": 290
+            "16": 407
           },
           "Branches": []
         },
         "BookRoom.Domain.Entities.Room BookRoom.Domain.Entities.BookRooms::get_Room()": {
           "Lines": {
-            "18": 290
+            "18": 407
           },
           "Branches": []
         },
         "System.Void BookRoom.Domain.Entities.BookRooms::.ctor()": {
           "Lines": {
-            "7": 323,
-            "8": 323,
-            "9": 323
+            "7": 472,
+            "8": 472,
+            "9": 472
           },
           "Branches": []
         }
@@ -1511,34 +1368,34 @@
       "BookRoom.Domain.Entities.EntityBase": {
         "System.Int32 BookRoom.Domain.Entities.EntityBase::get_Id()": {
           "Lines": {
-            "10": 925
+            "10": 1319
           },
           "Branches": []
         },
         "System.DateTime BookRoom.Domain.Entities.EntityBase::get_DatInc()": {
           "Lines": {
-            "12": 1770
+            "12": 2476
           },
           "Branches": []
         },
         "System.DateTime BookRoom.Domain.Entities.EntityBase::get_DatAlt()": {
           "Lines": {
-            "14": 1773
+            "14": 2492
           },
           "Branches": []
         },
         "System.Boolean BookRoom.Domain.Entities.EntityBase::get_Active()": {
           "Lines": {
-            "16": 875
+            "16": 1208
           },
           "Branches": []
         },
         "System.Void BookRoom.Domain.Entities.EntityBase::.ctor()": {
           "Lines": {
-            "5": 895,
-            "6": 895,
-            "7": 895,
-            "8": 895
+            "5": 1268,
+            "6": 1268,
+            "7": 1268,
+            "8": 1268
           },
           "Branches": []
         }
@@ -1548,33 +1405,33 @@
       "BookRoom.Domain.Entities.Room": {
         "System.String BookRoom.Domain.Entities.Room::get_Description()": {
           "Lines": {
-            "9": 293
+            "9": 410
           },
           "Branches": []
         },
         "System.String BookRoom.Domain.Entities.Room::get_Title()": {
           "Lines": {
-            "11": 293
+            "11": 410
           },
           "Branches": []
         },
         "System.Int32 BookRoom.Domain.Entities.Room::get_Number()": {
           "Lines": {
-            "13": 294
+            "13": 411
           },
           "Branches": []
         },
         "System.Collections.Generic.IEnumerable`1<BookRoom.Domain.Entities.BookRooms> BookRoom.Domain.Entities.Room::get_Books()": {
           "Lines": {
-            "15": 52
+            "15": 73
           },
           "Branches": []
         },
         "System.Void BookRoom.Domain.Entities.Room::.ctor()": {
           "Lines": {
-            "5": 286,
-            "6": 286,
-            "8": 286
+            "5": 398,
+            "6": 398,
+            "8": 398
           },
           "Branches": []
         }
@@ -1584,45 +1441,45 @@
       "BookRoom.Domain.Entities.User": {
         "System.String BookRoom.Domain.Entities.User::get_Name()": {
           "Lines": {
-            "8": 293
+            "8": 410
           },
           "Branches": []
         },
         "System.String BookRoom.Domain.Entities.User::get_LastName()": {
           "Lines": {
-            "9": 293
+            "9": 410
           },
           "Branches": []
         },
         "System.String BookRoom.Domain.Entities.User::get_Email()": {
           "Lines": {
-            "10": 300
+            "10": 417
           },
           "Branches": []
         },
         "System.Nullable`1<System.DateTime> BookRoom.Domain.Entities.User::get_BornDate()": {
           "Lines": {
-            "11": 293
+            "11": 410
           },
           "Branches": []
         },
         "System.String BookRoom.Domain.Entities.User::get_Password()": {
           "Lines": {
-            "12": 285
+            "12": 387
           },
           "Branches": []
         },
         "System.Collections.Generic.IEnumerable`1<BookRoom.Domain.Entities.BookRooms> BookRoom.Domain.Entities.User::get_Books()": {
           "Lines": {
-            "14": 53
+            "14": 74
           },
           "Branches": []
         },
         "System.Void BookRoom.Domain.Entities.User::.ctor()": {
           "Lines": {
-            "5": 286,
-            "6": 286,
-            "7": 286
+            "5": 398,
+            "6": 398,
+            "7": 398
           },
           "Branches": []
         }

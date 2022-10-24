@@ -17,7 +17,7 @@ namespace BookRoom.Application.UseCases.BookRoomUseCases
     {
         private readonly IBookRoomsRepository _repository;
         private readonly IMapper _mapper;
-        private readonly ILogger<CancelBookRoomUseCase> _logger;
+        private readonly ILogger<UpdateBookRoomUseCase> _logger;
         private readonly IBookRoomProducer _producer;
         private readonly IBookRoomRequestProducer _requestProducer;
         private readonly IBookRoomValidationUseCase _bookRoomValidationUseCase;
@@ -25,7 +25,7 @@ namespace BookRoom.Application.UseCases.BookRoomUseCases
         public UpdateBookRoomUseCase(
             IBookRoomsRepository repository,
             IMapper mapper,
-            ILogger<CancelBookRoomUseCase> logger,
+            ILogger<UpdateBookRoomUseCase> logger,
             IBookRoomProducer producer,
             IBookRoomRequestProducer requestProducer,
             IBookRoomValidationUseCase bookRoomValidationUseCase)

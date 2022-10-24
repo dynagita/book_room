@@ -2,9 +2,11 @@
 using BookRoom.Domain.Contract.Requests.Commands.RoomCommands;
 using BookRoom.Domain.Contract.Responses.RoomResponses;
 using BookRoom.Domain.Entities;
+using System.Diagnostics.CodeAnalysis;
 
 namespace BookRoom.Application.Mappers
 {
+    [ExcludeFromCodeCoverage]
     public class RoomProfile : Profile
     {
         public RoomProfile()

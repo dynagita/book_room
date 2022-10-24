@@ -4,9 +4,11 @@ using BookRoom.Domain.Contract.Notification.BookRooms;
 using BookRoom.Domain.Contract.Requests.Commands.BookRooms;
 using BookRoom.Domain.Contract.Responses.BookRoomsResponses;
 using BookRoom.Domain.Entities;
+using System.Diagnostics.CodeAnalysis;
 
 namespace BookRoom.Application.Mappers
 {
+    [ExcludeFromCodeCoverage]
     public class BookRoomProfile : Profile
     {
         public BookRoomProfile()

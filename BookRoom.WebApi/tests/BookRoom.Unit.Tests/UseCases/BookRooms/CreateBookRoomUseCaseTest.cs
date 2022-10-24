@@ -51,7 +51,7 @@ namespace BookRoom.Application.UseCases.BookRoomUseCases
         }
 
         [Fact(DisplayName = "ShouldCreateBook")]
-        public async Task ShouldCancelBook()
+        public async Task ShouldCreateBook()
         {
             var bookRoom = new AutoFaker<BookRooms>().Generate();
             bookRoom.Status = Domain.Contract.Enums.BookStatusRoom.Requested;
@@ -92,7 +92,7 @@ namespace BookRoom.Application.UseCases.BookRoomUseCases
         }
 
         [Fact(DisplayName = "ShouldNotCreateBook")]
-        public async Task ShouldNotCancelBook()
+        public async Task ShouldNotCreateBook()
         {
             var bookRoom = new AutoFaker<BookRooms>().Generate();
             bookRoom.Status = Domain.Contract.Enums.BookStatusRoom.Requested;
