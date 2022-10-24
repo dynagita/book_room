@@ -1,9 +1,11 @@
 ﻿using BookRoom.Service.Domain.Queue;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System.Diagnostics.CodeAnalysis;
 
 namespace BookRoom.Service.Application.HostedServices
 {
+    [ExcludeFromCodeCoverage]
     public class ProcessRoomService : IHostedService
     {
         private readonly IRoomConsumer _consumer;

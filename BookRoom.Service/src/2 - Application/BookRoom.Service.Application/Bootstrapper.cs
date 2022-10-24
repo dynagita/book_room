@@ -6,16 +6,18 @@ using BookRoom.Service.Application.UseCases.UserPropagation;
 using BookRoom.Service.Domain.Contract.UseCases;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
+using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
 
 namespace BookRoom.Service.Application
 {
+    [ExcludeFromCodeCoverage]
     public static class Bootstrapper
     {
         public static IServiceCollection AddApplication(this IServiceCollection services)
         {
             return services
-                .AddMappers()
+                .AddProfiles()
                 .AddUseCases()
                 .AddHandlers()
                 .AddHostedServices();
@@ -53,7 +55,7 @@ namespace BookRoom.Service.Application
             return services;
         }
 
-        public static IServiceCollection AddMappers(this IServiceCollection services)
+        public static IServiceCollection AddProfiles(this IServiceCollection services)
         {
             services.AddAutoMapper(
                 typeof(BookRoomProfile),

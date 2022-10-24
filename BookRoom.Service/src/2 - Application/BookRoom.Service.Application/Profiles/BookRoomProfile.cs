@@ -1,9 +1,11 @@
 ﻿using AutoMapper;
 using BookRoom.Service.Domain.Contract.Notifications;
 using BookRoom.Services.Domain.Entities;
+using System.Diagnostics.CodeAnalysis;
 
 namespace BookRoom.Service.Application.Profiles
 {
+    [ExcludeFromCodeCoverage]
     public class BookRoomProfile : Profile
     {
         public BookRoomProfile()

@@ -12,10 +12,10 @@ namespace BookRoom.Service.Application.UseCases.BookRoomPropagation
     {
         private readonly IMapper _mapper;
         private readonly IRoomRepository _repository;
-        private readonly ILogger<UpdateRoomBookRoomUseCase> _logger;
+        private readonly ILogger<UpdateBookRoomInRoomUseCase> _logger;
 
         public UpdateBookRoomInRoomUseCase(
-            ILogger<UpdateRoomBookRoomUseCase> logger,
+            ILogger<UpdateBookRoomInRoomUseCase> logger,
             IRoomRepository repository,
             IMapper mapper)
         {
@@ -57,7 +57,7 @@ namespace BookRoom.Service.Application.UseCases.BookRoomPropagation
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "{UseCase} - {Method} - Exception Thrown", nameof(UpdateRoomBookRoomUseCase), nameof(HandleAsync));
+                _logger.LogError(ex, "{UseCase} - {Method} - Exception Thrown", nameof(UpdateBookRoomInRoomUseCase), nameof(HandleAsync));
                 //Implement super resilience process here
             }
         }
