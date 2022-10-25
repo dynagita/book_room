@@ -1,0 +1,833 @@
+{
+  "BookRoom.Readness.Application.dll": {
+    "D:\\src\\book_room\\BookRoom.Readness.WebApi\\src\\2 - Application\\BookRoom.Readness.Application\\UseCases\\RoomUseCases\\ListRoomUseCase.cs": {
+      "BookRoom.Readness.Application.UseCases.RoomUseCases.ListRoomUseCase": {
+        "System.Void BookRoom.Readness.Application.UseCases.RoomUseCases.ListRoomUseCase::.ctor(Microsoft.Extensions.Logging.ILogger`1<BookRoom.Readness.Application.UseCases.RoomUseCases.ListRoomUseCase>,AutoMapper.IMapper,BookRoom.Readness.Domain.Repositories.IRoomRepository)": {
+          "Lines": {
+            "18": 2,
+            "19": 2,
+            "20": 2,
+            "21": 2,
+            "22": 2,
+            "23": 2
+          },
+          "Branches": []
+        }
+      },
+      "BookRoom.Readness.Application.UseCases.RoomUseCases.ListRoomUseCase/<HandleAsync>d__4": {
+        "System.Void BookRoom.Readness.Application.UseCases.RoomUseCases.ListRoomUseCase/<HandleAsync>d__4::MoveNext()": {
+          "Lines": {
+            "26": 2,
+            "28": 2,
+            "29": 2,
+            "31": 1,
+            "33": 1,
+            "34": 1,
+            "35": 1,
+            "36": 1,
+            "38": 2
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\src\\book_room\\BookRoom.Readness.WebApi\\src\\2 - Application\\BookRoom.Readness.Application\\UseCases\\BookRoomsUseCases\\CheckAvailabilityUseCase.cs": {
+      "BookRoom.Readness.Application.UseCases.BookRoomsUseCases.CheckAvailabilityUseCase": {
+        "System.Void BookRoom.Readness.Application.UseCases.BookRoomsUseCases.CheckAvailabilityUseCase::.ctor(Microsoft.Extensions.Logging.ILogger`1<BookRoom.Readness.Application.UseCases.BookRoomsUseCases.ListBooksByUserUseCase>,AutoMapper.IMapper,BookRoom.Readness.Domain.Repositories.IBookRoomRepository,BookRoom.Readness.Domain.Repositories.IRoomRepository)": {
+          "Lines": {
+            "22": 3,
+            "23": 3,
+            "24": 3,
+            "25": 3,
+            "26": 3,
+            "27": 3,
+            "28": 3
+          },
+          "Branches": []
+        }
+      },
+      "BookRoom.Readness.Application.UseCases.BookRoomsUseCases.CheckAvailabilityUseCase/<>c__DisplayClass5_0": {
+        "System.Boolean BookRoom.Readness.Application.UseCases.BookRoomsUseCases.CheckAvailabilityUseCase/<>c__DisplayClass5_0::<HandleAsync>b__0(BookRoom.Readness.Domain.Entities.BookRooms)": {
+          "Lines": {
+            "40": 4,
+            "41": 4
+          },
+          "Branches": [
+            {
+              "Line": 40,
+              "Offset": 24,
+              "EndOffset": 26,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 2
+            },
+            {
+              "Line": 40,
+              "Offset": 24,
+              "EndOffset": 59,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      },
+      "BookRoom.Readness.Application.UseCases.BookRoomsUseCases.CheckAvailabilityUseCase/<HandleAsync>d__5": {
+        "System.Void BookRoom.Readness.Application.UseCases.BookRoomsUseCases.CheckAvailabilityUseCase/<HandleAsync>d__5::MoveNext()": {
+          "Lines": {
+            "30": 3,
+            "32": 3,
+            "33": 3,
+            "34": 3,
+            "36": 2,
+            "37": 1,
+            "38": 1,
+            "43": 1,
+            "45": 1,
+            "46": 1,
+            "48": 2,
+            "50": 1,
+            "51": 1,
+            "52": 1,
+            "53": 1,
+            "55": 3
+          },
+          "Branches": [
+            {
+              "Line": 36,
+              "Offset": 298,
+              "EndOffset": 303,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 36,
+              "Offset": 298,
+              "EndOffset": 563,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            }
+          ]
+        }
+      }
+    },
+    "D:\\src\\book_room\\BookRoom.Readness.WebApi\\src\\2 - Application\\BookRoom.Readness.Application\\UseCases\\BookRoomsUseCases\\ListBooksByUserUseCase.cs": {
+      "BookRoom.Readness.Application.UseCases.BookRoomsUseCases.ListBooksByUserUseCase": {
+        "System.Void BookRoom.Readness.Application.UseCases.BookRoomsUseCases.ListBooksByUserUseCase::.ctor(Microsoft.Extensions.Logging.ILogger`1<BookRoom.Readness.Application.UseCases.BookRoomsUseCases.ListBooksByUserUseCase>,AutoMapper.IMapper,BookRoom.Readness.Domain.Repositories.IBookRoomRepository)": {
+          "Lines": {
+            "19": 2,
+            "20": 2,
+            "21": 2,
+            "22": 2,
+            "23": 2,
+            "24": 2
+          },
+          "Branches": []
+        }
+      },
+      "BookRoom.Readness.Application.UseCases.BookRoomsUseCases.ListBooksByUserUseCase/<HandleAsync>d__4": {
+        "System.Void BookRoom.Readness.Application.UseCases.BookRoomsUseCases.ListBooksByUserUseCase/<HandleAsync>d__4::MoveNext()": {
+          "Lines": {
+            "26": 2,
+            "28": 2,
+            "29": 2,
+            "31": 1,
+            "33": 1,
+            "34": 1,
+            "35": 1,
+            "36": 1,
+            "38": 2
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\src\\book_room\\BookRoom.Readness.WebApi\\src\\2 - Application\\BookRoom.Readness.Application\\UseCases\\Auth\\AuthenticateUseCase.cs": {
+      "BookRoom.Readness.Application.UseCases.Auth.AuthenticateUseCase": {
+        "System.Void BookRoom.Readness.Application.UseCases.Auth.AuthenticateUseCase::.ctor(BookRoom.Readness.Domain.Repositories.IUserRepository,AutoMapper.IMapper,Microsoft.Extensions.Logging.ILogger`1<BookRoom.Readness.Application.UseCases.Auth.AuthenticateUseCase>,BookRoom.Readness.Domain.Contract.UseCases.Auth.ITokenCreateUseCase)": {
+          "Lines": {
+            "22": 3,
+            "23": 3,
+            "24": 3,
+            "25": 3,
+            "26": 3,
+            "27": 3,
+            "28": 3,
+            "29": 3,
+            "30": 3,
+            "31": 3,
+            "32": 3,
+            "33": 3
+          },
+          "Branches": []
+        }
+      },
+      "BookRoom.Readness.Application.UseCases.Auth.AuthenticateUseCase/<HandleAsync>d__5": {
+        "System.Void BookRoom.Readness.Application.UseCases.Auth.AuthenticateUseCase/<HandleAsync>d__5::MoveNext()": {
+          "Lines": {
+            "36": 3,
+            "37": 3,
+            "39": 3,
+            "40": 1,
+            "42": 2,
+            "44": 2,
+            "45": 2,
+            "47": 2,
+            "48": 1,
+            "50": 1,
+            "51": 1,
+            "52": 1,
+            "53": 1,
+            "54": 1,
+            "55": 1,
+            "57": 1,
+            "58": 3
+          },
+          "Branches": [
+            {
+              "Line": 39,
+              "Offset": 200,
+              "EndOffset": 202,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 39,
+              "Offset": 200,
+              "EndOffset": 218,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            },
+            {
+              "Line": 47,
+              "Offset": 430,
+              "EndOffset": 432,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 47,
+              "Offset": 430,
+              "EndOffset": 464,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    },
+    "D:\\src\\book_room\\BookRoom.Readness.WebApi\\src\\2 - Application\\BookRoom.Readness.Application\\UseCases\\Auth\\TokenCreateUseCase.cs": {
+      "BookRoom.Readness.Application.UseCases.Auth.TokenCreateUseCase": {
+        "System.Void BookRoom.Readness.Application.UseCases.Auth.TokenCreateUseCase::.ctor(Microsoft.Extensions.Options.IOptions`1<BookRoom.Readness.Domain.Contract.Configurations.AuthenticationConfiguration>)": {
+          "Lines": {
+            "16": 4,
+            "17": 4,
+            "18": 4,
+            "19": 4
+          },
+          "Branches": []
+        }
+      },
+      "BookRoom.Readness.Application.UseCases.Auth.TokenCreateUseCase/<HandleAsync>d__2": {
+        "System.Void BookRoom.Readness.Application.UseCases.Auth.TokenCreateUseCase/<HandleAsync>d__2::MoveNext()": {
+          "Lines": {
+            "22": 2,
+            "23": 2,
+            "24": 2,
+            "25": 2,
+            "26": 2,
+            "27": 2,
+            "28": 2,
+            "29": 2,
+            "30": 2,
+            "31": 2,
+            "32": 2,
+            "33": 2,
+            "34": 2,
+            "36": 2,
+            "38": 2,
+            "39": 2
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\src\\book_room\\BookRoom.Readness.WebApi\\src\\2 - Application\\BookRoom.Readness.Application\\Profiles\\BookRoomProfile.cs": {
+      "BookRoom.Readness.Application.Profiles.BookRoomProfile": {
+        "System.Void BookRoom.Readness.Application.Profiles.BookRoomProfile::.ctor()": {
+          "Lines": {
+            "9": 3,
+            "10": 3,
+            "11": 3,
+            "12": 3,
+            "13": 3,
+            "14": 3,
+            "15": 3,
+            "16": 3,
+            "17": 3,
+            "18": 3,
+            "19": 3
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\src\\book_room\\BookRoom.Readness.WebApi\\src\\2 - Application\\BookRoom.Readness.Application\\Profiles\\RoomProfile.cs": {
+      "BookRoom.Readness.Application.Profiles.RoomProfile": {
+        "System.Void BookRoom.Readness.Application.Profiles.RoomProfile::.ctor()": {
+          "Lines": {
+            "9": 3,
+            "10": 3,
+            "11": 3,
+            "12": 3,
+            "13": 3,
+            "14": 3,
+            "15": 3,
+            "16": 3,
+            "17": 3,
+            "18": 3
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\src\\book_room\\BookRoom.Readness.WebApi\\src\\2 - Application\\BookRoom.Readness.Application\\Profiles\\UserProfile.cs": {
+      "BookRoom.Readness.Application.Profiles.UserProfile": {
+        "System.Void BookRoom.Readness.Application.Profiles.UserProfile::.ctor()": {
+          "Lines": {
+            "9": 3,
+            "10": 3,
+            "11": 3,
+            "12": 3,
+            "13": 3,
+            "14": 3,
+            "15": 3,
+            "16": 3,
+            "17": 3,
+            "18": 3,
+            "19": 3
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\src\\book_room\\BookRoom.Readness.WebApi\\src\\2 - Application\\BookRoom.Readness.Application\\Handlers\\Queries\\RoomHandlers\\ListRoomRequestHandler.cs": {
+      "BookRoom.Readness.Application.Handlers.Queries.RoomHandlers.ListRoomRequestHandler": {
+        "System.Void BookRoom.Readness.Application.Handlers.Queries.RoomHandlers.ListRoomRequestHandler::.ctor(BookRoom.Readness.Domain.Contract.UseCases.RomUseCases.IListRoomUseCase)": {
+          "Lines": {
+            "13": 1,
+            "14": 1,
+            "15": 1,
+            "16": 1
+          },
+          "Branches": []
+        }
+      },
+      "BookRoom.Readness.Application.Handlers.Queries.RoomHandlers.ListRoomRequestHandler/<Handle>d__2": {
+        "System.Void BookRoom.Readness.Application.Handlers.Queries.RoomHandlers.ListRoomRequestHandler/<Handle>d__2::MoveNext()": {
+          "Lines": {
+            "19": 1,
+            "20": 1,
+            "21": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\src\\book_room\\BookRoom.Readness.WebApi\\src\\2 - Application\\BookRoom.Readness.Application\\Handlers\\Queries\\BookRoomsHandlers\\CheckAvailabilityRequestHandler.cs": {
+      "BookRoom.Readness.Application.Handlers.Queries.BookRoomsHandlers.CheckAvailabilityRequestHandler": {
+        "System.Void BookRoom.Readness.Application.Handlers.Queries.BookRoomsHandlers.CheckAvailabilityRequestHandler::.ctor(BookRoom.Readness.Domain.Contract.UseCases.BookRoomsUseCases.ICheckAvailabilityUseCase)": {
+          "Lines": {
+            "13": 1,
+            "14": 1,
+            "15": 1,
+            "16": 1
+          },
+          "Branches": []
+        }
+      },
+      "BookRoom.Readness.Application.Handlers.Queries.BookRoomsHandlers.CheckAvailabilityRequestHandler/<Handle>d__2": {
+        "System.Void BookRoom.Readness.Application.Handlers.Queries.BookRoomsHandlers.CheckAvailabilityRequestHandler/<Handle>d__2::MoveNext()": {
+          "Lines": {
+            "19": 1,
+            "20": 1,
+            "21": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\src\\book_room\\BookRoom.Readness.WebApi\\src\\2 - Application\\BookRoom.Readness.Application\\Handlers\\Queries\\BookRoomsHandlers\\ListBooksByUserRequestHandler.cs": {
+      "BookRoom.Readness.Application.Handlers.Queries.BookRoomsHandlers.ListBooksByUserRequestHandler": {
+        "System.Void BookRoom.Readness.Application.Handlers.Queries.BookRoomsHandlers.ListBooksByUserRequestHandler::.ctor(BookRoom.Readness.Domain.Contract.UseCases.BookRoomsUseCases.IListBooksByUserUseCase)": {
+          "Lines": {
+            "13": 1,
+            "14": 1,
+            "15": 1,
+            "16": 1
+          },
+          "Branches": []
+        }
+      },
+      "BookRoom.Readness.Application.Handlers.Queries.BookRoomsHandlers.ListBooksByUserRequestHandler/<Handle>d__2": {
+        "System.Void BookRoom.Readness.Application.Handlers.Queries.BookRoomsHandlers.ListBooksByUserRequestHandler/<Handle>d__2::MoveNext()": {
+          "Lines": {
+            "19": 1,
+            "20": 1,
+            "21": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\src\\book_room\\BookRoom.Readness.WebApi\\src\\2 - Application\\BookRoom.Readness.Application\\Handlers\\Queries\\AuthQueries\\AuthHandler.cs": {
+      "BookRoom.Readness.Application.Handlers.Queries.AuthQueries.AuthHandler": {
+        "System.Void BookRoom.Readness.Application.Handlers.Queries.AuthQueries.AuthHandler::.ctor(BookRoom.Readness.Domain.Contract.UseCases.Auth.IAuthenticateUseCase)": {
+          "Lines": {
+            "12": 2,
+            "13": 2,
+            "14": 2,
+            "15": 2
+          },
+          "Branches": []
+        }
+      },
+      "BookRoom.Readness.Application.Handlers.Queries.AuthQueries.AuthHandler/<Handle>d__2": {
+        "System.Void BookRoom.Readness.Application.Handlers.Queries.AuthQueries.AuthHandler/<Handle>d__2::MoveNext()": {
+          "Lines": {
+            "18": 2,
+            "19": 2,
+            "20": 2
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\src\\book_room\\BookRoom.Readness.WebApi\\src\\2 - Application\\BookRoom.Readness.Application\\Extensions\\StringExtension.cs": {
+      "BookRoom.Readness.Application.Extensions.StringExtension": {
+        "System.String BookRoom.Readness.Application.Extensions.StringExtension::ComputeHash(System.String)": {
+          "Lines": {
+            "9": 3,
+            "10": 3,
+            "12": 3,
+            "13": 3,
+            "14": 3,
+            "15": 3,
+            "16": 3,
+            "18": 3,
+            "20": 3,
+            "21": 3
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "BookRoom.Readness.Domain.Contract.dll": {
+    "D:\\src\\book_room\\BookRoom.Readness.WebApi\\src\\3 - Domain\\BookRoom.Readness.Domain.Contract\\Responses\\CommonResponse.cs": {
+      "BookRoom.Readness.Domain.Contract.Responses.CommonResponse`1": {
+        "System.Int32 BookRoom.Readness.Domain.Contract.Responses.CommonResponse`1::get_Status()": {
+          "Lines": {
+            "5": 28
+          },
+          "Branches": []
+        },
+        "T BookRoom.Readness.Domain.Contract.Responses.CommonResponse`1::get_Data()": {
+          "Lines": {
+            "7": 28
+          },
+          "Branches": []
+        },
+        "System.String BookRoom.Readness.Domain.Contract.Responses.CommonResponse`1::get_Error()": {
+          "Lines": {
+            "9": 22
+          },
+          "Branches": []
+        },
+        "BookRoom.Readness.Domain.Contract.Responses.CommonResponse`1<T> BookRoom.Readness.Domain.Contract.Responses.CommonResponse`1::Ok(T)": {
+          "Lines": {
+            "24": 9
+          },
+          "Branches": []
+        },
+        "BookRoom.Readness.Domain.Contract.Responses.CommonResponse`1<T> BookRoom.Readness.Domain.Contract.Responses.CommonResponse`1::BadRequest(System.String)": {
+          "Lines": {
+            "26": 6
+          },
+          "Branches": []
+        },
+        "System.Void BookRoom.Readness.Domain.Contract.Responses.CommonResponse`1::.ctor(System.Int32,T,System.String)": {
+          "Lines": {
+            "11": 9,
+            "12": 9,
+            "13": 9,
+            "14": 9,
+            "15": 9,
+            "16": 9
+          },
+          "Branches": []
+        },
+        "System.Void BookRoom.Readness.Domain.Contract.Responses.CommonResponse`1::.ctor(System.Int32,System.String)": {
+          "Lines": {
+            "18": 6,
+            "19": 6,
+            "20": 6,
+            "21": 6,
+            "22": 6
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\src\\book_room\\BookRoom.Readness.WebApi\\src\\3 - Domain\\BookRoom.Readness.Domain.Contract\\Responses\\RoomResponses\\RoomResponse.cs": {
+      "BookRoom.Readness.Domain.Contract.Responses.RoomResponses.RoomResponse": {
+        "System.Int32 BookRoom.Readness.Domain.Contract.Responses.RoomResponses.RoomResponse::get_Id()": {
+          "Lines": {
+            "7": 1265
+          },
+          "Branches": []
+        },
+        "System.String BookRoom.Readness.Domain.Contract.Responses.RoomResponses.RoomResponse::get_Title()": {
+          "Lines": {
+            "9": 1265
+          },
+          "Branches": []
+        },
+        "System.String BookRoom.Readness.Domain.Contract.Responses.RoomResponses.RoomResponse::get_Description()": {
+          "Lines": {
+            "11": 1265
+          },
+          "Branches": []
+        },
+        "System.Int32 BookRoom.Readness.Domain.Contract.Responses.RoomResponses.RoomResponse::get_Number()": {
+          "Lines": {
+            "13": 1265
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<BookRoom.Readness.Domain.Contract.Responses.BookRoomsResponses.BookRoomResponse> BookRoom.Readness.Domain.Contract.Responses.RoomResponses.RoomResponse::get_Books()": {
+          "Lines": {
+            "15": 995
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\src\\book_room\\BookRoom.Readness.WebApi\\src\\3 - Domain\\BookRoom.Readness.Domain.Contract\\Responses\\BookRoomsResponses\\BookRoomResponse.cs": {
+      "BookRoom.Readness.Domain.Contract.Responses.BookRoomsResponses.BookRoomResponse": {
+        "System.Int32 BookRoom.Readness.Domain.Contract.Responses.BookRoomsResponses.BookRoomResponse::get_Id()": {
+          "Lines": {
+            "9": 1450
+          },
+          "Branches": []
+        },
+        "System.DateTime BookRoom.Readness.Domain.Contract.Responses.BookRoomsResponses.BookRoomResponse::get_StartDate()": {
+          "Lines": {
+            "10": 1450
+          },
+          "Branches": []
+        },
+        "System.DateTime BookRoom.Readness.Domain.Contract.Responses.BookRoomsResponses.BookRoomResponse::get_EndDate()": {
+          "Lines": {
+            "12": 1450
+          },
+          "Branches": []
+        },
+        "BookRoom.Readness.Domain.Contract.Enums.BookStatusRoom BookRoom.Readness.Domain.Contract.Responses.BookRoomsResponses.BookRoomResponse::get_Status()": {
+          "Lines": {
+            "14": 1450
+          },
+          "Branches": []
+        },
+        "BookRoom.Readness.Domain.Contract.Responses.UserResponses.UserResponse BookRoom.Readness.Domain.Contract.Responses.BookRoomsResponses.BookRoomResponse::get_User()": {
+          "Lines": {
+            "16": 1396
+          },
+          "Branches": []
+        },
+        "BookRoom.Readness.Domain.Contract.Responses.RoomResponses.RoomResponse BookRoom.Readness.Domain.Contract.Responses.BookRoomsResponses.BookRoomResponse::get_Room()": {
+          "Lines": {
+            "18": 1396
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\src\\book_room\\BookRoom.Readness.WebApi\\src\\3 - Domain\\BookRoom.Readness.Domain.Contract\\Responses\\BookRoomsResponses\\BookRoomValidationResponse.cs": {
+      "BookRoom.Readness.Domain.Contract.Responses.BookRoomsResponses.BookRoomValidationResponse": {
+        "System.Boolean BookRoom.Readness.Domain.Contract.Responses.BookRoomsResponses.BookRoomValidationResponse::get_Valid()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.String BookRoom.Readness.Domain.Contract.Responses.BookRoomsResponses.BookRoomValidationResponse::get_Error()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\src\\book_room\\BookRoom.Readness.WebApi\\src\\3 - Domain\\BookRoom.Readness.Domain.Contract\\Responses\\BookRoomsResponses\\CheckAvailabilityResponse.cs": {
+      "BookRoom.Readness.Domain.Contract.Responses.BookRoomsResponses.CheckAvailabilityResponse": {
+        "System.Boolean BookRoom.Readness.Domain.Contract.Responses.BookRoomsResponses.CheckAvailabilityResponse::get_Available()": {
+          "Lines": {
+            "7": 7
+          },
+          "Branches": []
+        },
+        "System.String BookRoom.Readness.Domain.Contract.Responses.BookRoomsResponses.CheckAvailabilityResponse::get_UnavailableMessage()": {
+          "Lines": {
+            "9": 3
+          },
+          "Branches": []
+        },
+        "BookRoom.Readness.Domain.Contract.Responses.RoomResponses.RoomResponse BookRoom.Readness.Domain.Contract.Responses.BookRoomsResponses.CheckAvailabilityResponse::get_Room()": {
+          "Lines": {
+            "11": 2
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\src\\book_room\\BookRoom.Readness.WebApi\\src\\3 - Domain\\BookRoom.Readness.Domain.Contract\\Requests\\Queries\\BookRoomsQueries\\CheckAvailabilityRequest.cs": {
+      "BookRoom.Readness.Domain.Contract.Requests.Queries.BookRoomsQueries.CheckAvailabilityRequest": {
+        "System.DateTime BookRoom.Readness.Domain.Contract.Requests.Queries.BookRoomsQueries.CheckAvailabilityRequest::get_StartDate()": {
+          "Lines": {
+            "9": 9
+          },
+          "Branches": []
+        },
+        "System.DateTime BookRoom.Readness.Domain.Contract.Requests.Queries.BookRoomsQueries.CheckAvailabilityRequest::get_EndDate()": {
+          "Lines": {
+            "11": 7
+          },
+          "Branches": []
+        },
+        "System.Int32 BookRoom.Readness.Domain.Contract.Requests.Queries.BookRoomsQueries.CheckAvailabilityRequest::get_RoomNumber()": {
+          "Lines": {
+            "13": 8
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\src\\book_room\\BookRoom.Readness.WebApi\\src\\3 - Domain\\BookRoom.Readness.Domain.Contract\\Requests\\Queries\\BookRoomsQueries\\ListBooksByUserRequest.cs": {
+      "BookRoom.Readness.Domain.Contract.Requests.Queries.BookRoomsQueries.ListBooksByUserRequest": {
+        "System.String BookRoom.Readness.Domain.Contract.Requests.Queries.BookRoomsQueries.ListBooksByUserRequest::get_Email()": {
+          "Lines": {
+            "9": 6
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\src\\book_room\\BookRoom.Readness.WebApi\\src\\3 - Domain\\BookRoom.Readness.Domain.Contract\\Configurations\\AuthenticationConfiguration.cs": {
+      "BookRoom.Readness.Domain.Contract.Configurations.AuthenticationConfiguration": {
+        "System.String BookRoom.Readness.Domain.Contract.Configurations.AuthenticationConfiguration::get_AuthSecret()": {
+          "Lines": {
+            "5": 6
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\src\\book_room\\BookRoom.Readness.WebApi\\src\\3 - Domain\\BookRoom.Readness.Domain.Contract\\Configurations\\MongoConfiguration.cs": {
+      "BookRoom.Readness.Domain.Contract.Configurations.MongoConfiguration": {
+        "System.String BookRoom.Readness.Domain.Contract.Configurations.MongoConfiguration::get_ConnectionString()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.String BookRoom.Readness.Domain.Contract.Configurations.MongoConfiguration::get_DatabaseName()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "BookRoom.Readness.Domain.dll": {
+    "D:\\src\\book_room\\BookRoom.Readness.WebApi\\src\\3 - Domain\\BookRoom.Readness.Domain\\Validation\\AuthValidations\\MatchPasswordValidation.cs": {
+      "BookRoom.Readness.Domain.Validation.AuthValidations.MatchPasswordValidation": {
+        "System.Void BookRoom.Readness.Domain.Validation.AuthValidations.MatchPasswordValidation::<.ctor>b__1_1(BookRoom.Readness.Domain.Entities.User,FluentValidation.ValidationContext`1<BookRoom.Readness.Domain.Entities.User>)": {
+          "Lines": {
+            "15": 4,
+            "16": 4,
+            "17": 2,
+            "18": 2,
+            "19": 2,
+            "20": 8
+          },
+          "Branches": [
+            {
+              "Line": 16,
+              "Offset": 23,
+              "EndOffset": 25,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 2
+            },
+            {
+              "Line": 16,
+              "Offset": 23,
+              "EndOffset": 39,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 4
+            }
+          ]
+        },
+        "System.Void BookRoom.Readness.Domain.Validation.AuthValidations.MatchPasswordValidation::.ctor(System.String)": {
+          "Lines": {
+            "10": 4,
+            "11": 4,
+            "12": 4,
+            "14": 4,
+            "21": 4
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\src\\book_room\\BookRoom.Readness.WebApi\\src\\3 - Domain\\BookRoom.Readness.Domain\\Entities\\BookRooms.cs": {
+      "BookRoom.Readness.Domain.Entities.BookRooms": {
+        "System.DateTime BookRoom.Readness.Domain.Entities.BookRooms::get_StartDate()": {
+          "Lines": {
+            "9": 3556
+          },
+          "Branches": []
+        },
+        "System.DateTime BookRoom.Readness.Domain.Entities.BookRooms::get_EndDate()": {
+          "Lines": {
+            "12": 3551
+          },
+          "Branches": []
+        },
+        "BookRoom.Readness.Domain.Contract.Enums.BookStatusRoom BookRoom.Readness.Domain.Entities.BookRooms::get_Status()": {
+          "Lines": {
+            "15": 3551
+          },
+          "Branches": []
+        },
+        "BookRoom.Readness.Domain.Entities.User BookRoom.Readness.Domain.Entities.BookRooms::get_User()": {
+          "Lines": {
+            "18": 3119
+          },
+          "Branches": []
+        },
+        "BookRoom.Readness.Domain.Entities.Room BookRoom.Readness.Domain.Entities.BookRooms::get_Room()": {
+          "Lines": {
+            "21": 3119
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\src\\book_room\\BookRoom.Readness.WebApi\\src\\3 - Domain\\BookRoom.Readness.Domain\\Entities\\EntityBase.cs": {
+      "BookRoom.Readness.Domain.Entities.EntityBase": {
+        "System.DateTime BookRoom.Readness.Domain.Entities.EntityBase::get_DatInc()": {
+          "Lines": {
+            "9": 6608
+          },
+          "Branches": []
+        },
+        "System.DateTime BookRoom.Readness.Domain.Entities.EntityBase::get_DatAlt()": {
+          "Lines": {
+            "12": 6608
+          },
+          "Branches": []
+        },
+        "System.Boolean BookRoom.Readness.Domain.Entities.EntityBase::get_Active()": {
+          "Lines": {
+            "15": 6608
+          },
+          "Branches": []
+        },
+        "System.Int32 BookRoom.Readness.Domain.Entities.EntityBase::get_Id()": {
+          "Lines": {
+            "19": 9521
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\src\\book_room\\BookRoom.Readness.WebApi\\src\\3 - Domain\\BookRoom.Readness.Domain\\Entities\\Room.cs": {
+      "BookRoom.Readness.Domain.Entities.Room": {
+        "System.String BookRoom.Readness.Domain.Entities.Room::get_Description()": {
+          "Lines": {
+            "8": 2998
+          },
+          "Branches": []
+        },
+        "System.String BookRoom.Readness.Domain.Entities.Room::get_Title()": {
+          "Lines": {
+            "11": 2998
+          },
+          "Branches": []
+        },
+        "System.Int32 BookRoom.Readness.Domain.Entities.Room::get_Number()": {
+          "Lines": {
+            "14": 2998
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IEnumerable`1<BookRoom.Readness.Domain.Entities.BookRooms> BookRoom.Readness.Domain.Entities.Room::get_Books()": {
+          "Lines": {
+            "17": 1344
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\src\\book_room\\BookRoom.Readness.WebApi\\src\\3 - Domain\\BookRoom.Readness.Domain\\Entities\\User.cs": {
+      "BookRoom.Readness.Domain.Entities.User": {
+        "System.String BookRoom.Readness.Domain.Entities.User::get_Name()": {
+          "Lines": {
+            "8": 2972
+          },
+          "Branches": []
+        },
+        "System.String BookRoom.Readness.Domain.Entities.User::get_LastName()": {
+          "Lines": {
+            "10": 2972
+          },
+          "Branches": []
+        },
+        "System.String BookRoom.Readness.Domain.Entities.User::get_Email()": {
+          "Lines": {
+            "12": 2980
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.DateTime> BookRoom.Readness.Domain.Entities.User::get_BornDate()": {
+          "Lines": {
+            "14": 2972
+          },
+          "Branches": []
+        },
+        "System.String BookRoom.Readness.Domain.Entities.User::get_Password()": {
+          "Lines": {
+            "16": 2066
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IEnumerable`1<BookRoom.Readness.Domain.Entities.BookRooms> BookRoom.Readness.Domain.Entities.User::get_Books()": {
+          "Lines": {
+            "18": 1316
+          },
+          "Branches": []
+        }
+      }
+    }
+  }
+}
