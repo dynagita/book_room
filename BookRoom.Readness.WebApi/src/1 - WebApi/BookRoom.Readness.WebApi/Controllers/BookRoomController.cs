@@ -47,7 +47,7 @@ namespace BookRoom.Readness.WebApi.Controllers
         [HttpGet]
         [ProducesResponseType(statusCode: 200, Type = typeof(CommonResponse<CheckAvailabilityResponse>))]
         [ProducesResponseType(statusCode: 400, Type = typeof(CommonResponse<CheckAvailabilityResponse>))]
-        [Route("/availability")]
+        [Route("/api/[controller]/availability")]
         public async Task<IActionResult> Index([FromQuery]CheckAvailabilityRequest request)
         {
             var response = await _mediator.Send(request);

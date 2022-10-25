@@ -33,7 +33,7 @@ namespace BookRoom.Application.UseCases.BookRoomUseCases
             {
                 var reservation = await _repository.GetBookRoomByPeriod(request.Room.Number, request.StartDate, request.EndDate, cancellationToken);
                 var book = _mapper.Map<BookRooms>(request);
-                
+
                 if (reservation != null && reservation.Id != request.Reference)
                 {
                     book.Status = Domain.Contract.Enums.BookStatusRoom.Canceled;

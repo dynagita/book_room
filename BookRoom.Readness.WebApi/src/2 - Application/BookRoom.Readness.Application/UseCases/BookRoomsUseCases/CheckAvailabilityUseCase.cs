@@ -38,7 +38,8 @@ namespace BookRoom.Readness.Application.UseCases.BookRoomsUseCases
                     var room = await _roomRepository.GetByRoomNumberAsync(request.RoomNumber, cancellationToken);
                     
                     room.Books = room.Books.Where(x => x.StartDate >= DateTime.Now.Date && 
-                                                       x.StartDate <= request.StartDate.AddMonths(3));
+                                                       x.StartDate <= request.StartDate.AddMonths(3)
+                                                       && x.Status == Domain.Contract.Enums.BookStatusRoom.Confirmed);
 
                     result.Room = _mapper.Map<RoomResponse>(room);
 

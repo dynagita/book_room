@@ -6,6 +6,6 @@ namespace BookRoom.Domain.Repositories.EntityFramework
     {
         Task<BookRooms> GetByRoomAsync(int roomId, CancellationToken cancellationToken);
 
-        Task<BookRooms> GetBookRoomByPeriod(int roomId, DateTime startDate, DateTime endDate, CancellationToken cancellationToken);
+        Task<BookRooms> GetBookRoomByPeriod(int roomNumber, DateTime startDate, DateTime endDate, CancellationToken cancellationToken);
     }
 }
