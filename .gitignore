@@ -289,3 +289,25 @@ WingsResources/
 .bkp
 .bak
 *.gitattributes
+
+# dependencies
+/bookroom-ui/node_modules
+/bookroom-ui/.pnp
+/bookroom-ui.pnp.js
+
+# testing
+/bookroom-ui/coverage
+
+# production
+/bookroom-ui/build
+
+# misc
+/bookroom-ui/.DS_Store
+/bookroom-ui/.env.local
+/bookroom-ui/.env.development.local
+/bookroom-ui/.env.test.local
+/bookroom-ui/.env.production.local
+
+/bookroom-ui/npm-debug.log*
+/bookroom-ui/yarn-debug.log*
+/bookroom-ui/yarn-error.log*
