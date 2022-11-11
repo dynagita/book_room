@@ -1,0 +1,18 @@
+{
+	"stryker-config":{
+		"reporters": ["progress", "html", "json"],
+		"verbosity": "info",
+		"additional-timeout": 15000,
+		"project": "src/2 - Application/BookRoom.Application/BookRoom.Application.csproj",
+		"concurrency": 4,
+		"thresholds": { 
+			"high": 80, 
+			"low": 60, 
+			"break":0
+		},
+		"mutation-level": "Standard",
+		"mutate": [],
+		"ignore-mutations": [ "linq.First", "linq.Sum", "string", "statement", "block" ],
+		"ignore-methods": [ "ToString", "LogInformation", "LogError", "Append", "AppendLine", "LogDebug", "LogWarning" ]
+	}
+}
