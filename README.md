@@ -4,9 +4,29 @@
 </p>
 <p align="justify">
 <strong>
-&nbsp;&nbsp;&nbsp;&nbsp;*** It's important to explain that this application was used as a POC for checking how easily would unit tests become if I could isolate any service method into a task, I've given name as UseCase, but you can imagine those UseCases as isolated tasks. I'll still setup a stryker (mutation test) to check how effective this development approach has been. Fell free to get in touch with me and comment your point of view of this approach!
+&nbsp;&nbsp;&nbsp;&nbsp;*** It's important to explain that this application was used as a POC for checking how easily would unit tests become if I could isolate any service method into a task, I've given name as UseCase, but you can imagine those UseCases as isolated tasks. All this was done for seting up a stryker (mutation test) to check how effective this development approach would hit on system's quality. In a first moment, I'd say it works pretty well, because in an execution I could get a coverage on 90% mutation and 97% average on unit tests, what brings a high quality to project!
 </strong>
 </p>
+<p align="justify">
+<strong>
+&nbsp;&nbsp;&nbsp;&nbsp;Do not forget for you getting a nice shoot on stryker you'll have to implement a lot of UnitTests, in our cenario, those coverages were developed on BookRoom.WebApi Project. Check below coverages.
+</strong>
+</p>
+
+<p align="justify">
+&nbsp;&nbsp;&nbsp;&nbsp;Fell free to get in touch with me and comment your point of view of this approach!
+</p>
+
+Author: Daniel Yanagita
+
+LinkedIn: https://www.linkedin.com/in/daniel-yanagita-88860770/
+
+### Unit Test Coverage
+<img src="https://github.com/dynagita/book_room/blob/main/doc/mutant/firstCheck.png?raw=true" alt="stryker" />
+
+### Stryker Coverage
+<img src="https://github.com/dynagita/book_room/blob/main/doc/mutant/coverage.png?raw=true" alt="stryker" />
+
 
 ## Decisions
 ### Architecture Pattern
@@ -120,7 +140,3 @@
 </p>
 
 ### Happy Coding!
-
-Author: Daniel Yanagita
-
-LinkedIn: https://www.linkedin.com/in/daniel-yanagita-88860770/
