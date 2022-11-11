@@ -311,3 +311,6 @@ WingsResources/
 /bookroom-ui/npm-debug.log*
 /bookroom-ui/yarn-debug.log*
 /bookroom-ui/yarn-error.log*
+
+#Stryker Output
+*/StrykerOutput
