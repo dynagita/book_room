@@ -25,7 +25,7 @@ LinkedIn: https://www.linkedin.com/in/daniel-yanagita-88860770/
 <img src="https://github.com/dynagita/book_room/blob/main/doc/mutant/firstCheck.png?raw=true" alt="stryker" />
 
 ### Stryker Coverage
-<img src="https://github.com/dynagita/book_room/blob/main/doc/mutant/firstCheck.png?raw=true" alt="stryker" />
+<img src="https://github.com/dynagita/book_room/blob/main/doc/mutant/coverage.png?raw=true" alt="stryker" />
 
 
 ## Decisions
