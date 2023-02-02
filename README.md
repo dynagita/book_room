@@ -99,15 +99,15 @@ LinkedIn: https://www.linkedin.com/in/daniel-yanagita-88860770/
 <p align="justify">
 &nbsp;&nbsp;&nbsp;&nbsp;Pay attention for requirements to follow step by step listed bellow:
 <ol>
-  <li>Docker</li>
-  <li>Docker-Compose</li>
   <li>GIT</li>
+  <li>Docker</li>
+  <li>Docker-Compose</li>  
 </ol>
 </p>
 <p align="justify">
 <ol>
   <li>
-      Clone repository https://github.com/dynagita/book_room.git
+      Clone repository: git clone https://github.com/dynagita/book_room.git
       <img src="https://github.com/dynagita/book_room/blob/main/doc/setps/step1.png?raw=true" alt="Step 1"/>
   </li>  
   <li>
@@ -120,7 +120,8 @@ LinkedIn: https://www.linkedin.com/in/daniel-yanagita-88860770/
       <img src="https://github.com/dynagita/book_room/blob/main/doc/setps/step4.png?raw=true" alt="Step 4"/>
   </li>  
   <li>
-      You have just started all applications for checking system's functionalities! =D      
+      You have just started all applications for checking system's functionalities! =D<br />
+      Access: http://localhost
       <img src="https://github.com/dynagita/book_room/blob/main/doc/setps/step8.png?raw=true" alt="Step 5"/>
   </li>  
 </ol>
