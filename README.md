@@ -122,7 +122,7 @@ LinkedIn: https://www.linkedin.com/in/daniel-yanagita-88860770/
   <li>
       You have just started all applications for checking system's functionalities! =D<br />
       Access: http://localhost
-      <img src="https://github.com/dynagita/book_room/blob/main/doc/setps/step8.png?raw=true" alt="Step 5"/>
+      <img src="https://github.com/dynagita/book_room/blob/main/doc/setps/step8v2.png?raw=true" alt="Step 5"/>
   </li>  
 </ol>
 </p>
