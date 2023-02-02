@@ -24,7 +24,7 @@ export default function NewUser()
                                           Name: '',
                                           LastName: '',
                                           Email: '',
-                                          BornDate: new Date().getDate(),
+                                          BornDate: new Date(1986,1,1),
                                           Password: '',
                                           ConfirmPassword: '',
                                           PasswordError: '',
