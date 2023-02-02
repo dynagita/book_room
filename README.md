@@ -101,7 +101,6 @@ LinkedIn: https://www.linkedin.com/in/daniel-yanagita-88860770/
 <ol>
   <li>Docker</li>
   <li>Docker-Compose</li>
-  <li>NPM</li>
   <li>GIT</li>
 </ol>
 </p>
@@ -112,29 +111,17 @@ LinkedIn: https://www.linkedin.com/in/daniel-yanagita-88860770/
       <img src="https://github.com/dynagita/book_room/blob/main/doc/setps/step1.png?raw=true" alt="Step 1"/>
   </li>  
   <li>
-      Access the book_room directory: cd “clone directory” 
+      Access the book_room directory: cd “cloned directory” 
       <img src="https://github.com/dynagita/book_room/blob/main/doc/setps/step2.png?raw=true" alt="Step 2"/>
   </li>
   <li>
       Start the back-end environment: “dokcer-compose up” 
       <img src="https://github.com/dynagita/book_room/blob/main/doc/setps/step3.png?raw=true" alt="Step 3"/>
       <img src="https://github.com/dynagita/book_room/blob/main/doc/setps/step4.png?raw=true" alt="Step 4"/>
-  </li>
-  <li>
-      Access the ui-react directory: cd bookrrom-ui-react
-      <img src="https://github.com/dynagita/book_room/blob/main/doc/setps/step5.png?raw=true" alt="Step 5"/>
-  </li>
-  <li>
-      Install npm packages: npm i
-      <img src="https://github.com/dynagita/book_room/blob/main/doc/setps/step6.png?raw=true" alt="Step 6"/>
-  </li>
-  <li>
-      Run react environment: npm start
-      <img src="https://github.com/dynagita/book_room/blob/main/doc/setps/step7.png?raw=true" alt="Step 7"/>
-  </li>
+  </li>  
   <li>
       You have just started all applications for checking system's functionalities! =D      
-      <img src="https://github.com/dynagita/book_room/blob/main/doc/setps/step8.png?raw=true" alt="Step 8"/>
+      <img src="https://github.com/dynagita/book_room/blob/main/doc/setps/step8.png?raw=true" alt="Step 5"/>
   </li>  
 </ol>
 </p>

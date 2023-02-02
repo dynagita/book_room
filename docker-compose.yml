@@ -50,12 +50,13 @@ services:
     build:
       dockerfile: ./dockerfile.rds
     ports: 
-      - 5001:80
+      - 5001:5000
     depends_on:
       rabbitmq:
         condition: service_healthy
     environment:
       ASPNETCORE_ENVIRONMENT: 'Staging'
+      ASPNETCORE_URLS: "http://+:5000"
     networks:
       book_room:
         ipv4_address: 10.5.0.5
@@ -64,12 +65,13 @@ services:
     build:
       dockerfile: ./dockerfile.srv
     ports: 
-      - 5002:80
+      - 5002:5000
     depends_on:
       rabbitmq:
         condition: service_healthy
     environment:
       ASPNETCORE_ENVIRONMENT: 'Staging'
+      ASPNETCORE_URLS: "http://+:5000"
     networks:
       book_room:
         ipv4_address: 10.5.0.6
@@ -78,15 +80,25 @@ services:
     build:
       dockerfile: ./dockerfile.wrt
     ports: 
-      - 5000:80
+      - 5000:5000
     depends_on:
       rabbitmq:
         condition: service_healthy
     environment:
       ASPNETCORE_ENVIRONMENT: 'Staging'
+      ASPNETCORE_URLS: "http://+:5000"
     networks:
       book_room:
         ipv4_address: 10.5.0.7
+  ui:
+    container_name: bookroom-ui
+    build:
+      dockerfile: ./dockerfile.ui                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+    ports: 
+      - 80:80
+    networks:
+      book_room:
+        ipv4_address: 10.5.0.8
 networks:
   book_room:
     driver: bridge
