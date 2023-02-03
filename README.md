@@ -99,42 +99,30 @@ LinkedIn: https://www.linkedin.com/in/daniel-yanagita-88860770/
 <p align="justify">
 &nbsp;&nbsp;&nbsp;&nbsp;Pay attention for requirements to follow step by step listed bellow:
 <ol>
-  <li>Docker</li>
-  <li>Docker-Compose</li>
-  <li>NPM</li>
   <li>GIT</li>
+  <li>Docker</li>
+  <li>Docker-Compose</li>  
 </ol>
 </p>
 <p align="justify">
 <ol>
   <li>
-      Clone repository https://github.com/dynagita/book_room.git
+      Clone repository: git clone https://github.com/dynagita/book_room.git
       <img src="https://github.com/dynagita/book_room/blob/main/doc/setps/step1.png?raw=true" alt="Step 1"/>
   </li>  
   <li>
-      Access the book_room directory: cd “clone directory” 
+      Access the book_room directory: cd “cloned directory” 
       <img src="https://github.com/dynagita/book_room/blob/main/doc/setps/step2.png?raw=true" alt="Step 2"/>
   </li>
   <li>
       Start the back-end environment: “dokcer-compose up” 
       <img src="https://github.com/dynagita/book_room/blob/main/doc/setps/step3.png?raw=true" alt="Step 3"/>
       <img src="https://github.com/dynagita/book_room/blob/main/doc/setps/step4.png?raw=true" alt="Step 4"/>
-  </li>
+  </li>  
   <li>
-      Access the ui-react directory: cd bookrrom-ui-react
-      <img src="https://github.com/dynagita/book_room/blob/main/doc/setps/step5.png?raw=true" alt="Step 5"/>
-  </li>
-  <li>
-      Install npm packages: npm i
-      <img src="https://github.com/dynagita/book_room/blob/main/doc/setps/step6.png?raw=true" alt="Step 6"/>
-  </li>
-  <li>
-      Run react environment: npm start
-      <img src="https://github.com/dynagita/book_room/blob/main/doc/setps/step7.png?raw=true" alt="Step 7"/>
-  </li>
-  <li>
-      You have just started all applications for checking system's functionalities! =D      
-      <img src="https://github.com/dynagita/book_room/blob/main/doc/setps/step8.png?raw=true" alt="Step 8"/>
+      You have just started all applications for checking system's functionalities! =D<br />
+      Access: http://localhost
+      <img src="https://github.com/dynagita/book_room/blob/main/doc/setps/step8v2.png?raw=true" alt="Step 5"/>
   </li>  
 </ol>
 </p>
