@@ -1,8 +1,8 @@
 ﻿using BookRoom.Domain.Contract.Configurations;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using System.Reflection;
 using System.Text;
 
 namespace BookRoom.WebApi.Extensions
@@ -84,5 +84,28 @@ namespace BookRoom.WebApi.Extensions
             });
             return services;
         }
+
+        public static IServiceCollection AddApplicationHealthChecks(this IServiceCollection services, IConfiguration configuration)
+        {
+            string postGresConnectionString = configuration.GetConnectionString("Postgre")!;
+            
+            var rabbitConfig = new RabbitConfiguration();
+            configuration.Bind(nameof(RabbitConfiguration), rabbitConfig);
+            
+            services
+                .AddHealthChecks()
+                .AddNpgSql(npgsqlConnectionString: postGresConnectionString,
+                           name: "Database",
+                           failureStatus: HealthStatus.Unhealthy,
+                           tags: new string[] { "service" },
+                           timeout: TimeSpan.FromSeconds(15))
+                .AddRabbitMQ(rabbitConfig.Connection,
+                            name: "RabbitMQ",
+                            failureStatus: HealthStatus.Unhealthy,
+                            tags: new string[] { "service" },
+                            timeout: TimeSpan.FromSeconds(15));
+            return services;
+        }
+       
     }
 }
