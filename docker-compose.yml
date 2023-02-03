@@ -57,6 +57,11 @@ services:
     environment:
       ASPNETCORE_ENVIRONMENT: 'Staging'
       ASPNETCORE_URLS: "http://+:5000"
+    healthcheck:
+      test: curl http://localhost:5000/health || exit 1
+      interval: 30s
+      timeout: 15s
+      retries: 5
     networks:
       book_room:
         ipv4_address: 10.5.0.5
@@ -72,6 +77,11 @@ services:
     environment:
       ASPNETCORE_ENVIRONMENT: 'Staging'
       ASPNETCORE_URLS: "http://+:5000"
+    healthcheck:
+      test: curl http://localhost:5000/health || exit 1
+      interval: 30s
+      timeout: 15s
+      retries: 5
     networks:
       book_room:
         ipv4_address: 10.5.0.6
@@ -87,6 +97,11 @@ services:
     environment:
       ASPNETCORE_ENVIRONMENT: 'Staging'
       ASPNETCORE_URLS: "http://+:5000"
+    healthcheck:
+      test: curl http://localhost:5000/health || exit 1
+      interval: 30s
+      timeout: 15s
+      retries: 5
     networks:
       book_room:
         ipv4_address: 10.5.0.7
@@ -96,6 +111,11 @@ services:
       dockerfile: ./dockerfile.ui                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
     ports: 
       - 80:80
+    depends_on:
+      readness:
+        condition: service_healthy      
+      writable:
+        condition: service_healthy      
     networks:
       book_room:
         ipv4_address: 10.5.0.8

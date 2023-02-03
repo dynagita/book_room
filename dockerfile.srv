@@ -18,4 +18,6 @@ RUN dotnet publish "BookRoom.Service.csproj" -c Release -o /app/publish /p:UseAp
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
+RUN apt-get update
+RUN apt-get install -y curl
 ENTRYPOINT ["dotnet", "BookRoom.Service.dll"]

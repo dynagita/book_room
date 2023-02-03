@@ -1,4 +1,7 @@
-﻿using Microsoft.OpenApi.Models;
+﻿using BookRoom.Domain.Contract.Configurations;
+using BookRoom.Service.Domain.Contract.Configurations;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
+using Microsoft.OpenApi.Models;
 
 namespace BookRoom.Service.Extensions
 {
@@ -23,6 +26,28 @@ namespace BookRoom.Service.Extensions
                         }
                     });                                
             });
+            return services;
+        }
+        public static IServiceCollection AddApplicationHealthChecks(this IServiceCollection services, IConfiguration configuration)
+        {
+            var mongoConfig = new MongoConfiguration();
+            configuration.Bind(nameof(MongoConfiguration), mongoConfig);
+
+            var rabbitConfig = new RabbitConfiguration();
+            configuration.Bind(nameof(RabbitConfiguration), rabbitConfig);
+
+            services
+                .AddHealthChecks()
+                .AddMongoDb(mongoConfig.ConnectionString,
+                           name: "Database",
+                           failureStatus: HealthStatus.Unhealthy,
+                           tags: new string[] { "service" },
+                           timeout: TimeSpan.FromSeconds(15))
+                .AddRabbitMQ(rabbitConfig.Connection,
+                            name: "RabbitMQ",
+                            failureStatus: HealthStatus.Unhealthy,
+                            tags: new string[] { "service" },
+                            timeout: TimeSpan.FromSeconds(15));
             return services;
         }
     }

@@ -1,5 +1,6 @@
 ﻿using BookRoom.Readness.Domain.Contract.Configurations;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
@@ -81,6 +82,21 @@ namespace BookRoom.Readness.WebApi.Extensions
                     });
 
             });
+            return services;
+        }
+
+        public static IServiceCollection AddApplicationHealthChecks(this IServiceCollection services, IConfiguration configuration)
+        {
+            var mongoConfig = new MongoConfiguration();
+            configuration.Bind(nameof(MongoConfiguration), mongoConfig);
+
+            services
+                .AddHealthChecks()
+                .AddMongoDb(mongoConfig.ConnectionString,
+                           name: "Database",
+                           failureStatus: HealthStatus.Unhealthy,
+                           tags: new string[] { "service" },
+                           timeout: TimeSpan.FromSeconds(15));                
             return services;
         }
     }
