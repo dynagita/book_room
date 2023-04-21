@@ -10,8 +10,8 @@ using BookRoom.Domain.Queue;
 using BookRoom.Domain.Repositories.EntityFramework;
 using BookRoom.Unit.Tests.Utils;
 using FluentAssertions;
-using Microsoft.Extensions.Logging;
 using Moq;
+using Serilog;
 
 namespace BookRoom.Application.UseCases.BookRoomUseCases
 {
@@ -22,7 +22,7 @@ namespace BookRoom.Application.UseCases.BookRoomUseCases
         private readonly Mock<IRoomRepository> _roomRepository;
         private readonly Mock<IUserRepository> _userRepository;
         private readonly IMapper _mapper;
-        private readonly Mock<ILogger<CreateBookRoomUseCase>> _logger;
+        private readonly Mock<ILogger> _logger;
         private readonly Mock<IBookRoomProducer> _producer;
         private readonly Mock<IBookRoomRequestProducer> _requestProducer;
         private readonly Mock<IBookRoomValidationUseCase> _validationUseCase;
@@ -31,7 +31,7 @@ namespace BookRoom.Application.UseCases.BookRoomUseCases
         {
             _repository = new Mock<IBookRoomsRepository>();
             _mapper = MapperCreate.CreateMappers();
-            _logger = new Mock<ILogger<CreateBookRoomUseCase>>();
+            _logger = new Mock<ILogger>();
             _producer = new Mock<IBookRoomProducer>();
             _validationUseCase = new Mock<IBookRoomValidationUseCase>();
             _requestProducer = new Mock<IBookRoomRequestProducer>();

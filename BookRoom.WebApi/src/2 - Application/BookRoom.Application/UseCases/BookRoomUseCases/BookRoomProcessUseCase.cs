@@ -4,20 +4,20 @@ using BookRoom.Domain.Contract.UseCases.BookRooms;
 using BookRoom.Domain.Entities;
 using BookRoom.Domain.Queue;
 using BookRoom.Domain.Repositories.EntityFramework;
-using Microsoft.Extensions.Logging;
+using Serilog;
 
 namespace BookRoom.Application.UseCases.BookRoomUseCases
 {
     public class BookRoomProcessUseCase : IBookRoomProcessUseCase
     {
         private readonly IBookRoomsRepository _repository;
-        private readonly ILogger<BookRoomProcessUseCase> _logger;
+        private readonly ILogger _logger;
         private readonly IMapper _mapper;
         private readonly IBookRoomProducer _producer;
 
         public BookRoomProcessUseCase(
             IBookRoomsRepository repository,
-            ILogger<BookRoomProcessUseCase> logger,
+            ILogger logger,
             IMapper mapper,
             IBookRoomProducer producer)
         {
@@ -49,7 +49,7 @@ namespace BookRoom.Application.UseCases.BookRoomUseCases
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "{UseCase} - {Method} - Exception Thrown", nameof(BookRoomProcessUseCase), nameof(HandleAsync));
+                _logger.Error(ex, "{UseCase} - {Method} - Exception Thrown", nameof(BookRoomProcessUseCase), nameof(HandleAsync));
                 //Implement super resilience process here
             }
         }

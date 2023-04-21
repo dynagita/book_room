@@ -7,22 +7,22 @@ using BookRoom.Domain.Entities;
 using BookRoom.Domain.Queue;
 using BookRoom.Domain.Repositories.EntityFramework;
 using BookRoom.Unit.Tests.Utils;
-using Microsoft.Extensions.Logging;
 using Moq;
+using Serilog;
 
 namespace BookRoom.Unit.Tests.UseCases.BookRoomUseCases
 {
     public class BookRoomProcessUseCaseTest
     {
         private readonly Mock<IBookRoomsRepository> _repository;
-        private readonly Mock<ILogger<BookRoomProcessUseCase>> _logger;
+        private readonly Mock<ILogger> _logger;
         private readonly IMapper _mapper;
         private readonly Mock<IBookRoomProducer> _producer;
         private readonly IBookRoomProcessUseCase _useCase;
         public BookRoomProcessUseCaseTest()
         {
             _repository = new Mock<IBookRoomsRepository>();
-            _logger = new Mock<ILogger<BookRoomProcessUseCase>>();
+            _logger = new Mock<ILogger>();
             _mapper = MapperCreate.CreateMappers();
             _producer = new Mock<IBookRoomProducer>();
             _useCase = new BookRoomProcessUseCase(

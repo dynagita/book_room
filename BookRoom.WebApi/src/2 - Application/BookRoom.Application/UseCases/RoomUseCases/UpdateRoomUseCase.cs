@@ -8,7 +8,7 @@ using BookRoom.Domain.Contract.UseCases.Rooms;
 using BookRoom.Domain.Entities;
 using BookRoom.Domain.Queue;
 using BookRoom.Domain.Repositories.EntityFramework;
-using Microsoft.Extensions.Logging;
+using Serilog;
 
 namespace BookRoom.Application.UseCases.RoomUseCases
 {
@@ -16,12 +16,12 @@ namespace BookRoom.Application.UseCases.RoomUseCases
     {
         private readonly IRoomRepository _repository;
         private readonly IMapper _mapper;
-        private readonly ILogger<CreateRoomUseCase> _logger;
+        private readonly ILogger _logger;
         private readonly IRoomProducer _producer;
         public UpdateRoomUseCase(
             IRoomRepository repository,
             IMapper mapper,
-            ILogger<CreateRoomUseCase> logger,
+            ILogger logger,
             IRoomProducer producer)
         {
             _repository = repository;
@@ -47,7 +47,7 @@ namespace BookRoom.Application.UseCases.RoomUseCases
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "{UseCase} - {Method} - Exception Thrown", nameof(UpdateRoomUseCase), nameof(HandleAsync));
+                _logger.Error(ex, "{UseCase} - {Method} - Exception Thrown", nameof(UpdateRoomUseCase), nameof(HandleAsync));
                 return CommonResponse<RoomResponse>.BadRequest(ErrorMessages.EXCEPTION_ERROR);
             }
         }

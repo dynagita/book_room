@@ -7,10 +7,9 @@ using BookRoom.Domain.Contract.UseCases.Rooms;
 using BookRoom.Domain.Queue;
 using BookRoom.Domain.Repositories.EntityFramework;
 using BookRoom.Unit.Tests.Utils;
-using Castle.Core.Logging;
 using FluentAssertions;
-using Microsoft.Extensions.Logging;
 using Moq;
+using Serilog;
 
 namespace BookRoom.Unit.Tests.UseCases.Room
 {
@@ -18,14 +17,14 @@ namespace BookRoom.Unit.Tests.UseCases.Room
     {
         private readonly Mock<IRoomRepository> _repository;
         private readonly ICreateRoomUseCase _useCase;
-        private readonly Mock<ILogger<CreateRoomUseCase>> _logger;
+        private readonly Mock<ILogger> _logger;
         private readonly IMapper _mapper;
         private readonly Mock<IRoomProducer> _producer;
         public CreateRoomUseCaseTest()
         {        
             _repository = new Mock<IRoomRepository>();
             _mapper = MapperCreate.CreateMappers();
-            _logger = new Mock<ILogger<CreateRoomUseCase>>();
+            _logger = new Mock<ILogger>();
             _producer = new Mock<IRoomProducer>();
             _useCase = new CreateRoomUseCase(_repository.Object, _mapper, _logger.Object, _producer.Object);
         }

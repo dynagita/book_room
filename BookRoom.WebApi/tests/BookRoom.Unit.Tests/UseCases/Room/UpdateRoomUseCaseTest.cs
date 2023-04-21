@@ -9,8 +9,8 @@ using BookRoom.Domain.Queue;
 using BookRoom.Domain.Repositories.EntityFramework;
 using BookRoom.Unit.Tests.Utils;
 using FluentAssertions;
-using Microsoft.Extensions.Logging;
 using Moq;
+using Serilog;
 
 namespace BookRoom.Unit.Tests.UseCases.Room
 {
@@ -19,13 +19,13 @@ namespace BookRoom.Unit.Tests.UseCases.Room
         private readonly Mock<IRoomRepository> _repository;
         private readonly IUpdateRoomUseCase _useCase;
         private readonly IMapper _mapper;
-        private readonly Mock<ILogger<CreateRoomUseCase>> _logger;
+        private readonly Mock<ILogger> _logger;
         private readonly Mock<IRoomProducer> _producer;
         public UpdateRoomUseCaseTest()
         {
             _repository = new Mock<IRoomRepository>();
             _mapper = MapperCreate.CreateMappers();
-            _logger = new Mock<ILogger<CreateRoomUseCase>>();
+            _logger = new Mock<ILogger>();
             _producer = new Mock<IRoomProducer>();
             _useCase = new UpdateRoomUseCase(_repository.Object, _mapper, _logger.Object, _producer.Object);
         }
