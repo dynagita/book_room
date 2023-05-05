@@ -1,0 +1,38 @@
+<div class="center">
+    <input #duration type="hidden" value="1000" />
+  <div class="centerText"><h3>LOGIN</h3></div>
+  <mat-vertical-stepper [linear]="isLinear" #stepper [animationDuration]="duration.value">
+    <mat-step [stepControl]="firstFormGroup" [completed]="firstFormGroup.valid">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Preencha seu e-mail</ng-template>
+        <mat-form-field appearance="fill">
+          <mat-label>E-mail</mat-label>
+          <input matInput placeholder="E-mail" formControlName="firstCtrl" required>
+        </mat-form-field>
+        <div class="stepButtons">
+          <button mat-button (click)="GoToPassword()">Avançar</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup" label="Preencha sua senha">
+      <form [formGroup]="secondFormGroup">
+        <mat-form-field appearance="fill">
+          <mat-label>Senha</mat-label>
+          <input matInput formControlName="secondCtrl" placeholder="Senha"
+                 required type="password">
+        </mat-form-field>
+        <div class="stepButtons">
+          <button mat-button matStepperPrevious>Voltar</button>
+          <button #loginButton mat-button (click)="Login()">Login</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Verificação de Credenciais</ng-template>
+      <div class="spinnerPosition" #spinnerDiv>
+        <mat-spinner />
+      </div>
+      
+    </mat-step>
+  </mat-vertical-stepper>
+</div>

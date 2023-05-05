@@ -1,0 +1,39 @@
+.mat-stepper-horizontal {
+    margin-top: 8px;
+  }
+  
+  .mat-mdc-form-field {
+    margin-top: 16px;
+  }
+
+.center {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 50%;
+  }
+
+.centerText{
+    text-align: center;
+    color: #673ab7;
+}
+
+.mat-mdc-form-field{
+    width: 100%;
+}
+
+.stepButtons{
+    text-align: right;
+}
+
+.spinnerPosition{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+::ng-deep .mat-vertical-stepper-header{
+    pointer-events: none !important;
+}
