@@ -93,6 +93,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookRoom.Service.Unit.Tests
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookRoom.Service.Integration.Tests", "BookRoom.Service\tests\BookRoom.Service.Integration.Tests\BookRoom.Service.Integration.Tests.csproj", "{40CBE8F8-41E3-4B31-8658-00359791119C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{B36049C2-3D65-4F47-8B03-0A7CEAEA3D80}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose-dev.yml = docker-compose-dev.yml
+		docker-compose.yml = docker-compose.yml
+		dockerfile.rds = dockerfile.rds
+		dockerfile.srv = dockerfile.srv
+		dockerfile.ui = dockerfile.ui
+		dockerfile.wrt = dockerfile.wrt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
