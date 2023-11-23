@@ -1,11 +1,9 @@
 using BookRoom.Application.IoC;
 using BookRoom.Infrastructure.Database.Context;
 using BookRoom.WebApi.Extensions;
-using Elastic.Apm.NetCoreAll;
 using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using Serilog;
 using Serilog.Exceptions;
 using Serilog.Sinks.Elasticsearch;
@@ -24,15 +22,20 @@ builder.Host.ConfigureAppConfiguration((hostBuilder, configurationBuilder) =>
 
 Log.Logger = new LoggerConfiguration()
         .Enrich.FromLogContext()
-        .Enrich.WithExceptionDetails()
-        .WriteTo.Elasticsearch(new ElasticsearchSinkOptions()
-        {
-            AutoRegisterTemplate = true,
-            IndexFormat = $"{Assembly.GetExecutingAssembly().GetName().Name.ToLower().Replace(".", "-")}-{builder.Environment.EnvironmentName?.ToLower().Replace(".", "-")}-{DateTime.UtcNow:yyyy-MM}"
-        })
+        .Enrich.WithExceptionDetails()        
         .Enrich.WithProperty("Environment", builder.Environment.EnvironmentName)
         .ReadFrom.Configuration(builder.Configuration)
+        .WriteTo
+            .Elasticsearch(new ElasticsearchSinkOptions(new Uri("http://localhost:9200"))
+            {
+                AutoRegisterTemplate = true,
+                IndexFormat = $"{Assembly.GetExecutingAssembly().GetName().Name.ToLower().Replace(".", "-")}-{builder.Environment.EnvironmentName?.ToLower().Replace(".", "-")}-{DateTime.UtcNow:yyyy-MM}",
+            })
+        .WriteTo.Console()
         .CreateLogger();
+
+
+builder.Services.AddSerilog(Log.Logger);
 
 // Add services to the container.
 builder.Services.AddBootstrap(builder.Configuration);
@@ -42,9 +45,10 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwagger();
 builder.Services.AddApplicationHealthChecks(builder.Configuration);
-builder.Services.AddSingleton(Log.Logger);
 
 var provider = builder.Services.BuildServiceProvider();
+
+Log.Logger.Information("Application Starting");
 
 using (var context = provider.GetService<BookRoomDbContext>())
 {
@@ -90,8 +94,5 @@ app.UseEndpoints(endpoints =>
         ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse,
     });
 });
-
-
-app.UseAllElasticApm(builder.Configuration);
 
 app.Run();

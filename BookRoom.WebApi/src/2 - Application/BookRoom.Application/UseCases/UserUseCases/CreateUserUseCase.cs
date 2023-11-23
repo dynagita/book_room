@@ -36,6 +36,8 @@ namespace BookRoom.Application.UseCases.UserUseCases
         {
             try
             {
+                _logger.Information($"Creating new user {request.Email}");
+
                 request.Password = request.Password.ComputeHash();
 
                 var userDb = await _userRepository.GetByMailAsync(request.Email, cancellationToken);
