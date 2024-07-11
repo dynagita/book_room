@@ -58,7 +58,7 @@ LinkedIn: https://www.linkedin.com/in/daniel-yanagita-88860770/
 &nbsp;&nbsp;&nbsp;&nbsp;As concurrency should be a problem, it was clear that many people could book a room at the same time, for not letting people create and get confirmed a book at the same period, it was decided using a Queue system to receive books and processing them.
 </p>
 <p align="justify">
-&nbsp;&nbsp;&nbsp;&nbsp;A queue was choices because of it’s policy FIFO (First in, First out) guaranteeing consistency for system.
+&nbsp;&nbsp;&nbsp;&nbsp;A queue was choiced because of it’s policy FIFO (First in, First out) guaranteeing consistency for system.
 </p>
 <p align="justify">
 &nbsp;&nbsp;&nbsp;&nbsp;For coast reason’s it was choosed RabbitMQ
