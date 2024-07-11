@@ -88,7 +88,7 @@ LinkedIn: https://www.linkedin.com/in/daniel-yanagita-88860770/
    <li>
       API Gateway for organizing and centralizing routes for letting easy for website or another frontends who may be desired after MVP1
       <ul>
-        <li>NGINX would be a nice choice</li>
+        <li>KRAKEND would be a nice choice</li>
       </ul>
    </li>
 </ol>
