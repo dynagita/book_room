@@ -31,7 +31,7 @@ LinkedIn: https://www.linkedin.com/in/daniel-yanagita-88860770/
 ## Decisions
 ### Architecture Pattern
 <p align="justify">
-&nbsp;&nbsp;&nbsp;&nbsp;As Cancun is a high searched vacation place, there will be there a lot of concurrency at this system. Besides that on of non functional requirement we have to get a disponibility on 99-100%.
+&nbsp;&nbsp;&nbsp;&nbsp;As Cancun is a high searched vacation place, there will be a lot of concurrency at this system. Besides that on of non functional requirement we have to get a disponibility on 99-100%.
 </p>
 <p align="justify">
 &nbsp;&nbsp;&nbsp;&nbsp;Because of that it was chosen a CQRS and Event Driven pattern for hold the application.
